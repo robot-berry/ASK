@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>数学搜题机</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;color:#152017;background:#edf2eb}
+    *{box-sizing:border-box}body{margin:0}.page{max-width:860px;margin:auto;padding:18px 14px 48px}
+    h1{font-size:1.55rem;margin:.3rem 0}.sub{color:#536057;margin:.2rem 0 .7rem}.note{color:#6b5841;background:#fff8e9;border:1px solid #ead8b8;border-radius:10px;padding:10px 12px;margin:.5rem 0 1.2rem;font-size:.9rem}
+    .panel,.card{background:#fff;border:1px solid #d5ddd2;border-radius:16px;padding:16px;margin:12px 0;box-shadow:0 3px 14px #17321b12}
+    .upload{display:block;border:2px dashed #8da28c;border-radius:14px;padding:28px 12px;text-align:center;background:#f8faf7}
+    input{width:100%;font-size:1rem}button{width:100%;border:0;border-radius:12px;background:#246b38;color:#fff;font-size:1.08rem;font-weight:700;padding:14px;margin-top:12px}
+    button:disabled{opacity:.55}.status{font-weight:700}.progress{height:8px;background:#dfe7dc;border-radius:99px;overflow:hidden;margin-top:12px}.bar{height:100%;width:0;background:#3b8b4e;transition:width .4s}
+    .result img{display:block;width:100%;height:auto;background:#fff;border:1px solid #dce2da;border-radius:8px}.tag{display:inline-block;background:#e7f2e8;color:#215f31;border-radius:99px;padding:4px 9px;font-size:.8rem;margin-bottom:9px}
+    .error{color:#a21c1c;white-space:pre-wrap}.actions{display:flex;gap:8px;margin-top:8px}.actions a{flex:1;text-align:center;padding:9px;border-radius:9px;background:#eef3ec;color:#285f35;text-decoration:none}
+    [hidden]{display:none!important}
+  </style>
+</head>
+<body><main class="page">
+  <h1>数学搜题机</h1>
+  <p class="sub">面向小学、初中和高中数学的计算题、应用题、解答题、证明题与综合题。拍照后自动旋转、页面外框校正和安全倾斜校正，再生成原题知识图和三档思路图。</p>
+  <p class="note">系统会按题目所在学段使用相应课程知识。为保证题目完整，当前默认保留照片中的全部笔迹；黑笔、铅笔与印刷字重叠时无法安全去除。选择题、填空题请暂勿使用本数学模块。</p>
+  <section class="panel">
+    <label class="upload">选择图片或直接拍照
+      <input id="image" type="file" accept="image/*" capture="environment">
+    </label>
+    <button id="start">预处理并生成分层提示</button>
+    <div id="work" hidden>
+      <p id="status" class="status" aria-live="polite"></p><div class="progress"><div id="bar" class="bar"></div></div>
+      <p id="error" class="error" role="alert"></p>
+    </div>
+  </section>
+  <section id="results" class="result"></section>
+</main>
+<script>
+const file=document.querySelector('#image'),start=document.querySelector('#start'),work=document.querySelector('#work'),statusEl=document.querySelector('#status'),bar=document.querySelector('#bar'),errorEl=document.querySelector('#error'),results=document.querySelector('#results');
+const labels={queued:'已上传，等待处理',preprocessing:'正在校正数学题图',solving:'大模型正在生成数学分层思路',rendering:'正在生成数学四张结果图',completed:'已完成',failed:'处理失败'};
+const widths={queued:8,preprocessing:24,solving:58,rendering:84,completed:100,failed:100};
+function render(state){work.hidden=false;statusEl.textContent=labels[state.status]||state.status;bar.style.width=(widths[state.status]||5)+'%';errorEl.textContent=state.error?state.error.message||String(state.error):'';if(state.status==='completed'){results.innerHTML='';state.images.forEach((item,index)=>{const card=document.createElement('article');card.className='card';const tag=document.createElement('span');tag.className='tag';tag.textContent=['第一张 · 原题知识图','第二张 · 学霸版（最少提示）','第三张 · 普通版（标准提示）','第四张 · 基础版（详细提示）'][index]||item.kind;const img=document.createElement('img');img.src=item.url+'?v='+Date.now();img.alt=tag.textContent;img.loading=index?'lazy':'eager';const actions=document.createElement('div');actions.className='actions';const open=document.createElement('a');open.href=item.url;open.target='_blank';open.textContent='打开';const download=document.createElement('a');download.href=item.url;download.download='';download.textContent='下载';actions.append(open,download);card.append(tag,img,actions);results.append(card)});start.disabled=false}}
+async function poll(id){const deadline=Date.now()+8*60*1000;for(;;){if(Date.now()>deadline)throw new Error('处理超时，请稍后重试');await new Promise(r=>setTimeout(r,1200));const res=await fetch('/api/jobs/'+id,{cache:'no-store'});let state;try{state=await res.json()}catch(_){throw new Error('服务器返回了无法识别的状态')}if(!res.ok)throw new Error(state.detail||'无法读取任务状态');render(state);if(state.status==='completed'||state.status==='failed')break}}
+start.addEventListener('click',async()=>{const selected=file.files[0];if(!selected){alert('请先拍照或选择图片');return}start.disabled=true;results.innerHTML='';errorEl.textContent='';work.hidden=false;statusEl.textContent='正在上传';bar.style.width='3%';const body=new FormData();body.append('image',selected,selected.name||'camera.jpg');try{const res=await fetch('/api/jobs',{method:'POST',body});const state=await res.json();if(!res.ok)throw new Error(state.detail||'上传失败');render(state);await poll(state.job_id)}catch(err){render({status:'failed',error:{message:err.message}});start.disabled=false}});
+</script></body></html>

@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/test7-ocr/handwriting_mask_review.schema.json",
+  "title": "test7-OCR handwriting pixel-mask review task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "sample_id",
+    "partition",
+    "training_allowed",
+    "source",
+    "selection_evidence",
+    "annotation",
+    "review"
+  ],
+  "properties": {
+    "schema_version": { "const": "handwriting_mask_review_v1" },
+    "sample_id": { "type": "string", "pattern": "^[0-9A-Za-z._-]+$" },
+    "partition": { "const": "frozen_test" },
+    "training_allowed": { "const": false },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dataset", "image_path", "image_sha256", "width", "height", "subject", "document_group"],
+      "properties": {
+        "dataset": { "const": "testzip_math_physics_300_v1" },
+        "image_path": { "type": "string", "minLength": 1 },
+        "image_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "subject": { "enum": ["mathematics", "physics"] },
+        "document_group": { "type": "string", "minLength": 1 }
+      }
+    },
+    "selection_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source", "kind", "note"],
+        "properties": {
+          "source": { "enum": ["ocr_gold_prior_manual_evidence", "output_quality_review"] },
+          "kind": { "const": "handwriting_contamination" },
+          "note": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "mask_path", "mask_sha256", "legend_version", "class_values", "pixel_counts"],
+      "properties": {
+        "status": { "enum": ["pending", "draft", "annotated", "verified", "adjudication_required", "rejected"] },
+        "mask_path": { "type": ["string", "null"] },
+        "mask_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+        "legend_version": { "const": "handwriting_mask_v1" },
+        "class_values": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["background", "printed_content", "student_handwriting", "teacher_mark", "overlap_unrecoverable", "uncertain"],
+          "properties": {
+            "background": { "const": 0 },
+            "printed_content": { "const": 1 },
+            "student_handwriting": { "const": 2 },
+            "teacher_mark": { "const": 3 },
+            "overlap_unrecoverable": { "const": 4 },
+            "uncertain": { "const": 255 }
+          }
+        },
+        "pixel_counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["background", "printed_content", "student_handwriting", "teacher_mark", "overlap_unrecoverable", "uncertain"],
+          "properties": {
+            "background": { "type": "integer", "minimum": 0 },
+            "printed_content": { "type": "integer", "minimum": 0 },
+            "student_handwriting": { "type": "integer", "minimum": 0 },
+            "teacher_mark": { "type": "integer", "minimum": 0 },
+            "overlap_unrecoverable": { "type": "integer", "minimum": 0 },
+            "uncertain": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["annotator_id", "reviewer_id", "checks", "notes", "signoffs", "history", "updated_at_utc"],
+      "properties": {
+        "annotator_id": { "type": ["string", "null"] },
+        "reviewer_id": { "type": ["string", "null"] },
+        "checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_hash_verified", "printed_content_preserved", "student_handwriting_complete", "teacher_marks_classified", "overlap_and_uncertain_checked"],
+          "properties": {
+            "source_hash_verified": { "type": ["boolean", "null"] },
+            "printed_content_preserved": { "type": ["boolean", "null"] },
+            "student_handwriting_complete": { "type": ["boolean", "null"] },
+            "teacher_marks_classified": { "type": ["boolean", "null"] },
+            "overlap_and_uncertain_checked": { "type": ["boolean", "null"] }
+          }
+        },
+        "notes": { "type": "array", "items": { "type": "string" } },
+        "signoffs": { "type": "array", "items": { "type": "object" } },
+        "history": { "type": "array", "items": { "type": "object" } },
+        "updated_at_utc": { "type": ["string", "null"], "format": "date-time" }
+      }
+    }
+  }
+}

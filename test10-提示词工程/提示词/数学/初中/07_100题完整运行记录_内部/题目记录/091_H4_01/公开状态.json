@@ -1,0 +1,584 @@
+{
+  "job_id": "20261102T095031_6d068a55494f4c91bc6642521dbc50ec",
+  "status": "completed",
+  "created_at": "2026-11-02T09:50:31.515+00:00",
+  "updated_at": "2026-11-02T09:51:00.262+00:00",
+  "elapsed_seconds": 28.745,
+  "error": null,
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "image_count": 6,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 419,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "d069620705811d710b3f9adc9a0999feeb9ab3c1855bbc52dccde5037f2d4c56",
+      "bytes": 17721,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T095031_6d068a55494f4c91bc6642521dbc50ec/01_question_knowledge.png"
+    },
+    {
+      "filename": "02_guidance_elite.png",
+      "width": 800,
+      "height": 1103,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "26e0eb88aee8fc790f5dce2e0d7393baca18f83cb289dd6b11c46da78d8fd69a",
+      "bytes": 71594,
+      "valid": true,
+      "errors": [],
+      "kind": "elite",
+      "sequence": 2,
+      "url": "/jobs/20261102T095031_6d068a55494f4c91bc6642521dbc50ec/02_guidance_elite.png"
+    },
+    {
+      "filename": "03_guidance_upper.png",
+      "width": 800,
+      "height": 645,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "212dc840037edf14c1306c1f5a085fa27e69f356575c1d2bf70f0087002e3cd6",
+      "bytes": 49329,
+      "valid": true,
+      "errors": [],
+      "kind": "upper",
+      "sequence": 3,
+      "url": "/jobs/20261102T095031_6d068a55494f4c91bc6642521dbc50ec/03_guidance_upper.png"
+    },
+    {
+      "filename": "04_guidance_middle.png",
+      "width": 800,
+      "height": 943,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "46d5e03d67c84113c10ebb385c33937961d2f9e6507d929ffe9887d00563da0b",
+      "bytes": 58955,
+      "valid": true,
+      "errors": [],
+      "kind": "middle",
+      "sequence": 4,
+      "url": "/jobs/20261102T095031_6d068a55494f4c91bc6642521dbc50ec/04_guidance_middle.png"
+    },
+    {
+      "filename": "05_guidance_lower.png",
+      "width": 800,
+      "height": 1111,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "037c57f18ab7961ddca8a4d46cf8afd3b162f628c3f768c0145dc33223018cdb",
+      "bytes": 71641,
+      "valid": true,
+      "errors": [],
+      "kind": "lower",
+      "sequence": 5,
+      "url": "/jobs/20261102T095031_6d068a55494f4c91bc6642521dbc50ec/05_guidance_lower.png"
+    },
+    {
+      "filename": "06_guidance_novice.png",
+      "width": 800,
+      "height": 3418,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "77eb3b4b29ea3374eda2b6f16c1595eb83e3a36750f55947fc3313b7150c48c9",
+      "bytes": 240427,
+      "valid": true,
+      "errors": [],
+      "kind": "novice",
+      "sequence": 6,
+      "url": "/jobs/20261102T095031_6d068a55494f4c91bc6642521dbc50ec/06_guidance_novice.png"
+    }
+  ],
+  "analysis_audit": {
+    "source": "complete_model",
+    "model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "knowledge_points": [
+      "对数函数定义域：两个对数的真数都必须大于0，由此列出不等式组。",
+      "对数运算性质：同底对数相加时真数相乘，把两个对数合并为一个对数。",
+      "二次函数最值：合并后的真数是二次式，配方后结合定义域求最大值。",
+      "对数不等式：利用底数大于1时对数函数单调递增，把对数不等式转化为整式不等式。",
+      "定义域限制：解对数不等式所得结果必须与第（1）问的定义域取交集。"
+    ],
+    "base_formulas": [
+      {
+        "formula": "a>0",
+        "condition": "对数函数的真数必须大于0"
+      },
+      {
+        "formula": "logₐ M + logₐ N = logₐ(MN)",
+        "condition": "同底对数相加，真数相乘"
+      },
+      {
+        "formula": "y = a(x-h)² + k",
+        "condition": "二次函数配方求最值"
+      }
+    ],
+    "parts": [
+      {
+        "part": "（1）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "要求f(x)的定义域，就要保证两个对数都有意义。",
+              "对数真数大于0，所以x-1>0且7-x>0。",
+              "两个条件必须同时成立，因此取交集"
+            ],
+            "pitfall": "易错点：两个真数都必须大于0，不能只列一个不等式。"
+          }
+        ]
+      },
+      {
+        "part": "（2）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "要求f(x)的最大值，先利用对数运算性质合并两个对数。",
+              "同底对数相加，真数相乘，所以f(x)=log₂[(x-1)(7-x)]。",
+              "真数(x-1)(7-x)展开为-x²+8x-7，配方得-(x-4)²+9。",
+              "在定义域1<x<7内，x=4时真数取得最大值9，此时f(x)=log₂9。"
+            ],
+            "pitfall": "易错点：配方时注意负号，最大值在顶点处取得，且要检查顶点是否在定义域内。"
+          }
+        ]
+      },
+      {
+        "part": "（3）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "要求解不等式f(x)≥log₂8，先利用对数性质合并左边。",
+              "f(x)=log₂[(x-1)(7-x)]，所以不等式化为log₂[(x-1)(7-x)]≥log₂8。",
+              "因为底数2>1，对数函数单调递增，所以(x-1)(7-x)≥8。",
+              "请结合前面的关系，完成最后一步。"
+            ],
+            "pitfall": "易错点：解出整式不等式后必须与定义域取交集，不能忽略定义域限制。"
+          }
+        ]
+      },
+      {
+        "part": "（8）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "先整理已知条件、所求对象和限制范围。",
+              "选择对应定义或性质，把文字条件转化为数学关系。",
+              "说明每个关键条件在关系式中对应的量、范围或图形信息。",
+              "逐项代入或变形，得到仍含所求对象的中间关系并保留最后求值。"
+            ],
+            "pitfall": "注意定义域、取值范围、符号及所用关系的适用条件"
+          }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier_key": "elite",
+        "title": "学霸解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要使这个函数有意义，两个对数后面的式子需要满足什么共同条件？",
+                  "这两个条件同时成立时，x的取值需要同时满足哪两个范围？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "两个同底对数相加，能否合并成一个对数？合并后真数是什么？",
+                  "合并后的真数是一个二次式，在定义域内它的最大值出现在哪里？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "不等式两边都是同底对数，能否利用对数函数的单调性去掉对数符号？",
+                  "去掉对数符号后得到的整式不等式，需要和哪个范围取交集？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（8）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "哪个已知条件与这一问的目标联系最直接？",
+                  "还有哪个限制条件尚未使用？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "upper",
+        "title": "中上解析",
+        "knowledge_points": [
+          "对数函数定义域：两个对数的真数都必须大于0，由此列出不等式组。",
+          "对数运算性质：同底对数相加时真数相乘，把两个对数合并为一个对数。",
+          "二次函数最值：合并后的真数是二次式，配方后结合定义域求最大值。",
+          "对数不等式：利用底数大于1时对数函数单调递增，把对数不等式转化为整式不等式。",
+          "定义域限制：解对数不等式所得结果必须与第（1）问的定义域取交集。"
+        ],
+        "base_formulas": [],
+        "parts": [],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "middle",
+        "title": "中等解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目中两个对数真数分别是x-1和7-x，它们都必须大于0。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "利用同底对数相加的性质，把f(x)写成log₂[(x-1)(7-x)]。",
+                  "真数(x-1)(7-x)是开口向下的二次式，配方后结合定义域确定最大值。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "不等式f(x)≥log₂8可化为log₂[(x-1)(7-x)]≥log₂8。",
+                  "因为底数2>1，对数函数单调递增，所以转化为(x-1)(7-x)≥8，再与定义域取交集。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（8）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "先确定目标量与已知条件之间最直接的数学关系。",
+                  "再核对定义域、取值范围和关系成立的条件。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "lower",
+        "title": "中下解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由对数真数大于0，得到x-1>0且7-x>0。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由同底对数相加，f(x)=log₂[(x-1)(7-x)]。",
+                  "真数(x-1)(7-x)展开为-x²+8x-7，配方得-(x-4)²+9。",
+                  "在定义域1<x<7内，当x=4时真数取得最大值9，因此f(x)的最大值为log₂9。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "不等式f(x)≥log₂8等价于log₂[(x-1)(7-x)]≥log₂8。",
+                  "因为底数2>1，函数单调递增，所以(x-1)(7-x)≥8。",
+                  "请结合前面的关系，完成最后一步。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（8）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "把已知条件代入对应定义或性质，保留含所求量的中间关系。",
+                  "利用题设中的关键限制说明该定义或性质可以在本问使用。",
+                  "再检查定义域、符号和适用范围是否一致，并保留最后求值。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "novice",
+        "title": "学渣解析",
+        "knowledge_points": [
+          "对数函数定义域：两个对数的真数都必须大于0，由此列出不等式组。",
+          "对数运算性质：同底对数相加时真数相乘，把两个对数合并为一个对数。",
+          "二次函数最值：合并后的真数是二次式，配方后结合定义域求最大值。",
+          "对数不等式：利用底数大于1时对数函数单调递增，把对数不等式转化为整式不等式。",
+          "定义域限制：解对数不等式所得结果必须与第（1）问的定义域取交集。"
+        ],
+        "base_formulas": [
+          {
+            "formula": "a>0",
+            "condition": "对数函数的真数必须大于0"
+          },
+          {
+            "formula": "logₐ M + logₐ N = logₐ(MN)",
+            "condition": "同底对数相加，真数相乘"
+          },
+          {
+            "formula": "y = a(x-h)² + k",
+            "condition": "二次函数配方求最值"
+          }
+        ],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要求f(x)的定义域，就要保证两个对数都有意义。",
+                  "对数真数大于0，所以x-1>0且7-x>0。",
+                  "检查端点所得参数和所得参数时真数为0，不在定义域内。"
+                ],
+                "pitfall": "易错点：两个真数都必须大于0，不能只列一个不等式。"
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要求f(x)的最大值，先利用对数运算性质合并两个对数。",
+                  "同底对数相加，真数相乘，所以f(x)=log₂[(x-1)(7-x)]。",
+                  "真数(x-1)(7-x)展开为-x²+8x-7，配方得-(x-4)²+9。",
+                  "在定义域1<x<7内，x=4时真数取得最大值9，此时f(x)=log₂9。",
+                  "检查所得参数确实在定义域内，且底数2>1，对数随真数增大而增大。"
+                ],
+                "pitfall": "易错点：配方时注意负号，最大值在顶点处取得，且要检查顶点是否在定义域内。"
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要求解不等式f(x)≥log₂8，先利用对数性质合并左边。",
+                  "f(x)=log₂[(x-1)(7-x)]，所以不等式化为log₂[(x-1)(7-x)]≥log₂8。",
+                  "因为底数2>1，对数函数单调递增，所以(x-1)(7-x)≥8。",
+                  "请结合前面的关系，完成最后一步。"
+                ],
+                "pitfall": "易错点：解出整式不等式后必须与定义域取交集，不能忽略定义域限制。"
+              }
+            ]
+          },
+          {
+            "part": "（8）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "先整理已知条件、所求对象和限制范围。",
+                  "选择对应定义或性质，把文字条件转化为数学关系。",
+                  "说明每个关键条件在关系式中对应的量、范围或图形信息。",
+                  "逐项代入或变形，得到仍含所求对象的中间关系并保留最后求值。",
+                  "最后检查定义域、符号、取值范围和公式适用条件。"
+                ],
+                "pitfall": "注意定义域、取值范围、符号及所用关系的适用条件"
+              }
+            ]
+          }
+        ],
+        "pattern_summary": "处理同底对数相加时，先合并为一个对数，再结合定义域和单调性求解。"
+      }
+    ]
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 6,
+    "first_image_provisional": false,
+    "first_image_seconds": 1.857,
+    "first_image_from_created_seconds": 1.86,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 1.857,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 0.0,
+    "ocr_slot_processing_seconds": 1.817,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 26.032
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}

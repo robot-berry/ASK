@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>提示词管理 · 搜题工程</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f1f5f9;color:#17243a;font:16px/1.6 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1100px;margin:auto;padding:24px}h1{margin-bottom:8px}section{background:white;border:1px solid #dce4ed;border-radius:14px;padding:20px;margin:18px 0}.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}button,select,input{max-width:100%;min-width:0;font:inherit;padding:9px 14px;border:1px solid #bdcbdc;border-radius:8px}button{cursor:pointer;background:#fff}button.primary{background:#205caa;color:white;border-color:#205caa}button:disabled{opacity:.5;cursor:wait}textarea{display:block;width:100%;min-height:58vh;padding:18px;font:15px/1.8 Consolas,"Microsoft YaHei",monospace;border:1px solid #bdcbdc;border-radius:8px;resize:vertical;margin:16px 0}small,.muted{color:#52647c}#status{white-space:pre-wrap}a{color:#205caa}[hidden]{display:none!important}input[type=password]{max-width:100%;width:370px}
+</style>
+<main><a href="/">← 返回搜题页面</a><h1>提示词管理</h1><p class="muted">分别管理数学和物理提示词。保存后，新开始处理的任务使用新版本；正在生成的任务不受影响。</p>
+<section id="login" hidden><label for="token">主管理访问令牌</label><div class="row"><input id="token" type="password" autocomplete="current-password"><button id="signin" class="primary">登录</button></div><small>使用现有网页的主管理令牌，设备专用令牌无管理权限。</small></section>
+<p id="status" role="status" aria-live="polite"></p>
+<section id="editor" hidden><div class="row"><label>学科 <select id="subject"><option value="math">数学</option><option value="physics">物理</option></select></label><span id="version"></span><button id="reload">重新加载</button><button id="logout">退出登录</button></div>
+<p class="muted">编辑提示词正文，或导入原有 Markdown 文件。请保留五档要求及输出字段；JSON 结构和共用系统指令由工程继续约束。</p>
+<label for="file">导入文字文件</label> <input id="file" type="file" accept=".md,.txt,text/plain,text/markdown">
+<textarea id="text" aria-label="提示词正文" spellcheck="false"></textarea>
+<div class="row"><button id="save" class="primary">保存并启用</button><button id="default">载入工程默认版本</button><span id="count"></span></div>
+<hr><h2>历史版本</h2><p class="muted">选择版本会先载入编辑框；点击“保存并启用”后才恢复生效。</p><div class="row"><select id="history" aria-label="历史版本"></select><button id="restore">载入所选版本</button></div></section></main>
+<script>
+const $=id=>document.getElementById(id);let data=null,dirty=false,loadedSubject='math',busy=false;
+function message(t){$('status').textContent=t}function changed(){dirty=true;$('count').textContent=$('text').value.length+' 字符 · 尚未保存'}
+function lock(value){busy=value;document.querySelectorAll('button,select,input,textarea').forEach(e=>e.disabled=value)}
+async function api(url,options={}){const r=await fetch(url,{credentials:'same-origin',...options});const b=await r.json();if(!r.ok)throw Error(typeof b.detail==='string'?b.detail:'请求失败，请重新登录或稍后重试');return b}
+async function load(){data=await api('/api/v1/prompt-settings/'+$('subject').value);loadedSubject=data.subject;$('text').value=data.text;dirty=false;$('version').textContent=data.version?'版本 '+data.version+' · '+new Date(data.created_at).toLocaleString():'工程默认版本';$('count').textContent=data.text.length+' 字符';$('history').replaceChildren();for(const h of data.history){const o=document.createElement('option');o.value=h.version;o.textContent='版本 '+h.version+' · '+new Date(h.created_at).toLocaleString();$('history').append(o)}$('editor').hidden=false;$('login').hidden=true}
+async function action(fn){if(busy)return;lock(true);try{await fn()}catch(e){message(e.message)}finally{lock(false)}}
+$('signin').onclick=()=>action(async()=>{await api('/api/v1/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({token:$('token').value})});$('token').value='';await load();message('已登录，可以编辑提示词。')});
+$('text').oninput=changed;
+$('subject').onchange=()=>{if(dirty&&!confirm('切换学科会丢弃尚未保存的修改，继续吗？')){$('subject').value=loadedSubject;return}action(async()=>{try{await load();message('已载入。')}catch(e){$('subject').value=loadedSubject;throw e}})};
+$('reload').onclick=()=>{if(!dirty||confirm('放弃尚未保存的修改并重新加载？'))action(async()=>{await load();message('已重新加载。')})};
+$('save').onclick=()=>action(async()=>{await api('/api/v1/prompt-settings/'+loadedSubject,{method:'PUT',headers:{'Content-Type':'application/json','X-Prompt-Editor':'1'},body:JSON.stringify({text:$('text').value,revision:data.revision})});await load();message('保存成功。新开始处理的任务将使用此版本，无需重启服务。')});
+$('default').onclick=()=>{if(!dirty||confirm('用工程默认版本替换编辑框内容？')){$('text').value=data.default_text;changed();message('已载入默认版本，保存后生效。')}};
+$('restore').onclick=()=>{const h=data.history.find(h=>String(h.version)===$('history').value);if(h&&(!dirty||confirm('用历史版本替换编辑框内容？'))){$('text').value=h.text;changed();message('已载入历史版本，保存后生效。')}};
+$('file').onchange=()=>action(async()=>{const f=$('file').files[0];if(!f)return;if(f.size>150000)throw Error('文件过大');if(dirty&&!confirm('用文件内容替换尚未保存的修改？'))return;let t=await f.text();const start='## 二、发给模型的系统提示词',end='## 三、设备端排版约束';if(t.includes(start)&&t.includes(end))t=t.split(start)[1].split(end)[0].trim();$('text').value=t;changed();message('已导入，请检查后保存。');$('file').value=''});
+$('logout').onclick=()=>{if(dirty&&!confirm('放弃未保存的修改并退出？'))return;action(async()=>{await api('/api/v1/auth/logout',{method:'DELETE'});dirty=false;location.reload()})};
+window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});
+action(async()=>{try{await load();$('logout').hidden=['127.0.0.1','localhost','[::1]'].includes(location.hostname);message('已加载当前提示词，可直接编辑并保存。')}catch(e){$('login').hidden=false;message(e.message)}});
+</script></html>

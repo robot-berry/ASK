@@ -1,0 +1,582 @@
+{
+  "job_id": "20261102T095211_15e1748e28fe46a0b146e62737bcec5b",
+  "status": "completed",
+  "created_at": "2026-11-02T09:52:11.267+00:00",
+  "updated_at": "2026-11-02T09:52:36.058+00:00",
+  "elapsed_seconds": 24.789,
+  "error": null,
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "image_count": 6,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 360,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "69fb761743ae19ef1a2abc56dc3317881ce50fa5540f280594f28464041e9856",
+      "bytes": 17690,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T095211_15e1748e28fe46a0b146e62737bcec5b/01_question_knowledge.png"
+    },
+    {
+      "filename": "02_guidance_elite.png",
+      "width": 800,
+      "height": 1103,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "d38bca47d2af966ab3d842c3402039c08cf17858134c7c90e215d51b8491a441",
+      "bytes": 73776,
+      "valid": true,
+      "errors": [],
+      "kind": "elite",
+      "sequence": 2,
+      "url": "/jobs/20261102T095211_15e1748e28fe46a0b146e62737bcec5b/02_guidance_elite.png"
+    },
+    {
+      "filename": "03_guidance_upper.png",
+      "width": 800,
+      "height": 539,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "0dba515c8d3f0d0ca7ca000870cc82e07879b02059734bc2c6aac6c4199537cf",
+      "bytes": 43239,
+      "valid": true,
+      "errors": [],
+      "kind": "upper",
+      "sequence": 3,
+      "url": "/jobs/20261102T095211_15e1748e28fe46a0b146e62737bcec5b/03_guidance_upper.png"
+    },
+    {
+      "filename": "04_guidance_middle.png",
+      "width": 800,
+      "height": 1103,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "d866aa5d19ae3e3e737f77b03ce4011414732d62e94b21da15b6669e3f7a352f",
+      "bytes": 82305,
+      "valid": true,
+      "errors": [],
+      "kind": "middle",
+      "sequence": 4,
+      "url": "/jobs/20261102T095211_15e1748e28fe46a0b146e62737bcec5b/04_guidance_middle.png"
+    },
+    {
+      "filename": "05_guidance_lower.png",
+      "width": 800,
+      "height": 1531,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "45fd91cc3ba25c3fdbf75554c3245b2b799527a00ad6f219c662bd3f17453404",
+      "bytes": 103618,
+      "valid": true,
+      "errors": [],
+      "kind": "lower",
+      "sequence": 5,
+      "url": "/jobs/20261102T095211_15e1748e28fe46a0b146e62737bcec5b/05_guidance_lower.png"
+    },
+    {
+      "filename": "06_guidance_novice.png",
+      "width": 800,
+      "height": 3520,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "cf18fefb87bbaa777d1f081e8340902dbfa418a09f02126a36bae9ce4ae83661",
+      "bytes": 267100,
+      "valid": true,
+      "errors": [],
+      "kind": "novice",
+      "sequence": 6,
+      "url": "/jobs/20261102T095211_15e1748e28fe46a0b146e62737bcec5b/06_guidance_novice.png"
+    }
+  ],
+  "analysis_audit": {
+    "source": "complete_model",
+    "model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "knowledge_points": [
+      "对数函数定义域：两个对数的真数都必须大于0，由此列出不等式组。",
+      "对数运算性质：同底对数相加可合并为真数乘积的对数，便于研究整体变化。",
+      "二次函数与对数单调性：底数大于1时对数递增，内层二次式的最大值决定对数值的最大值。",
+      "对数不等式解法：利用同底对数单调性转化为真数大小关系，并注意定义域限制。"
+    ],
+    "base_formulas": [
+      {
+        "formula": "logₐ M + logₐ N = logₐ(MN)",
+        "condition": "同底对数相加，真数相乘"
+      },
+      {
+        "formula": "logₐ M > logₐ N 等价于 M > N",
+        "condition": "底数a>1时，对数函数单调递增"
+      }
+    ],
+    "parts": [
+      {
+        "part": "（1）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "要求f(x)的定义域，就要保证两个对数式都有意义。",
+              "对数真数必须大于0，所以x-10>0且34-x>0。",
+              "这两个条件同时成立，定义域是它们的交集。",
+              "再取公共部分"
+            ],
+            "pitfall": "易错点：只解出一个真数大于0就下结论，忽略两个真数必须同时为正。"
+          }
+        ]
+      },
+      {
+        "part": "（2）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "要求f(x)的最大值，先利用对数运算性质合并两个对数。",
+              "合并得f(x)=log₂[(x-10)(34-x)]，内层真数是关于x的二次式。",
+              "底数2大于1，所以对数值随真数增大而增大，只需找内层二次式的最大值。",
+              "在定义域内求出内层二次式的最大值，再代入对数式得到函数最大值。"
+            ],
+            "pitfall": "易错点：求二次式最大值时忽略定义域限制，或忘记底数大于1时对数单调递增。"
+          }
+        ]
+      },
+      {
+        "part": "（3）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "不等式f(x)≥log₂(143)中，左边可先合并为log₂[(x-10)(34-x)]。",
+              "因为底数2大于1，对数函数单调递增，所以可转化为真数大小关系。",
+              "得到(x-10)(34-x)≥143，这是一个二次不等式。",
+              "解这个二次不等式，得到x的一个范围。"
+            ],
+            "pitfall": "易错点：解出二次不等式后忘记与定义域取交集，导致解集扩大。"
+          }
+        ]
+      },
+      {
+        "part": "（143）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "先整理已知条件、所求对象和限制范围。",
+              "选择对应定义或性质，把文字条件转化为数学关系。",
+              "说明每个关键条件在关系式中对应的量、范围或图形信息。",
+              "逐项代入或变形，得到仍含所求对象的中间关系并保留最后求值。"
+            ],
+            "pitfall": "注意定义域、取值范围、符号及所用关系的适用条件"
+          }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier_key": "elite",
+        "title": "学霸解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要使这个函数有意义，两个对数后面的式子需要满足什么共同条件？",
+                  "这两个条件同时成立时，x的取值需要同时满足哪两个范围？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "两个同底对数相加，能否先合并成一个对数再研究它的变化？",
+                  "合并后真数是关于x的二次式，在定义域内它的变化趋势如何影响对数值？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "不等式两边都是同底对数，能否先利用单调性去掉对数符号？",
+                  "去掉对数符号后得到的整式不等式，需要和哪个范围取交集？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（143）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "哪个已知条件与这一问的目标联系最直接？",
+                  "还有哪个限制条件尚未使用？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "upper",
+        "title": "中上解析",
+        "knowledge_points": [
+          "对数函数定义域：两个对数的真数都必须大于0，由此列出不等式组。",
+          "对数运算性质：同底对数相加可合并为真数乘积的对数，便于研究整体变化。",
+          "二次函数与对数单调性：底数大于1时对数递增，内层二次式的最大值决定对数值的最大值。",
+          "对数不等式解法：利用同底对数单调性转化为真数大小关系，并注意定义域限制。"
+        ],
+        "base_formulas": [],
+        "parts": [],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "middle",
+        "title": "中等解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要求定义域，关键是两个对数真数x-10和34-x都必须为正。",
+                  "分别解出这两个不等式后，需要取它们的公共部分作为定义域。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "两个同底对数相加，先合并为log₂[(x-10)(34-x)]，把问题转化为研究内层二次式。",
+                  "底数2大于1，对数值随真数增大而增大，因此需找内层二次式在定义域内的最大值。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "不等式两边都是底数为2的对数，利用单调性可转化为真数之间的大小关系。",
+                  "转化时不能忽略原函数的定义域，最后解集要与定义域取交集。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（143）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "先确定目标量与已知条件之间最直接的数学关系。",
+                  "再核对定义域、取值范围和关系成立的条件。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "lower",
+        "title": "中下解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由对数真数大于0，得到x-10>0且34-x>0这两个限制条件。",
+                  "这两个条件必须同时成立，所以定义域是这两个不等式解集的交集。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "利用同底对数相加的性质，原函数可写成log₂[(x-10)(34-x)]。",
+                  "底数2大于1，所以对数值随真数增大而增大，问题转化为求内层二次式的最大值。",
+                  "内层二次式在定义域内存在最大值，求出该最大值后代入对数式即可得到函数最大值。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "不等式f(x)≥log₂(143)可化为log₂[(x-10)(34-x)]≥log₂(143)。",
+                  "因为底数2大于1，对数函数单调递增，所以等价于真数满足(x-10)(34-x)≥143。",
+                  "解这个二次不等式后，所得范围必须与第（1）问的定义域取交集。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（143）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "把已知条件代入对应定义或性质，保留含所求量的中间关系。",
+                  "利用题设中的关键限制说明该定义或性质可以在本问使用。",
+                  "再检查定义域、符号和适用范围是否一致，并保留最后求值。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "novice",
+        "title": "学渣解析",
+        "knowledge_points": [
+          "对数函数定义域：两个对数的真数都必须大于0，由此列出不等式组。",
+          "对数运算性质：同底对数相加可合并为真数乘积的对数，便于研究整体变化。",
+          "二次函数与对数单调性：底数大于1时对数递增，内层二次式的最大值决定对数值的最大值。",
+          "对数不等式解法：利用同底对数单调性转化为真数大小关系，并注意定义域限制。"
+        ],
+        "base_formulas": [
+          {
+            "formula": "x>0",
+            "condition": "对数函数的真数必须大于0"
+          },
+          {
+            "formula": "logₐ M + logₐ N = logₐ(MN)",
+            "condition": "同底对数相加，真数相乘"
+          },
+          {
+            "formula": "logₐ M > logₐ N 等价于 M > N",
+            "condition": "底数a>1时，对数函数单调递增"
+          }
+        ],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要求f(x)的定义域，就要保证两个对数式都有意义。",
+                  "对数真数必须大于0，所以x-10>0且34-x>0。",
+                  "这两个条件同时成立，定义域是它们的交集。",
+                  "最后检查定义域是否同时满足两个真数为正。"
+                ],
+                "pitfall": "易错点：只解出一个真数大于0就下结论，忽略两个真数必须同时为正。"
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要求f(x)的最大值，先利用对数运算性质合并两个对数。",
+                  "合并得f(x)=log₂[(x-10)(34-x)]，内层真数是关于x的二次式。",
+                  "底数2大于1，所以对数值随真数增大而增大，只需找内层二次式的最大值。",
+                  "在定义域内求出内层二次式的最大值，再代入对数式得到函数最大值。",
+                  "检查取得最大值时的x是否在定义域内，确保结果合理。"
+                ],
+                "pitfall": "易错点：求二次式最大值时忽略定义域限制，或忘记底数大于1时对数单调递增。"
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "不等式f(x)≥log₂(143)中，左边可先合并为log₂[(x-10)(34-x)]。",
+                  "因为底数2大于1，对数函数单调递增，所以可转化为真数大小关系。",
+                  "得到(x-10)(34-x)≥143，这是一个二次不等式。",
+                  "解这个二次不等式，得到x的一个范围。",
+                  "最后将这个范围与第（1）问的定义域取交集，检查是否满足所有条件。"
+                ],
+                "pitfall": "易错点：解出二次不等式后忘记与定义域取交集，导致解集扩大。"
+              }
+            ]
+          },
+          {
+            "part": "（143）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "先整理已知条件、所求对象和限制范围。",
+                  "选择对应定义或性质，把文字条件转化为数学关系。",
+                  "说明每个关键条件在关系式中对应的量、范围或图形信息。",
+                  "逐项代入或变形，得到仍含所求对象的中间关系并保留最后求值。",
+                  "最后检查定义域、符号、取值范围和公式适用条件。"
+                ],
+                "pitfall": "注意定义域、取值范围、符号及所用关系的适用条件"
+              }
+            ]
+          }
+        ],
+        "pattern_summary": "处理同底对数相加求最值或解不等式时，先合并对数，再利用底数大于1的单调性转化为真数关系，并始终注意定义域限制。"
+      }
+    ]
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 6,
+    "first_image_provisional": false,
+    "first_image_seconds": 1.667,
+    "first_image_from_created_seconds": 1.669,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 1.667,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 0.0,
+    "ocr_slot_processing_seconds": 1.628,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 22.241
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}

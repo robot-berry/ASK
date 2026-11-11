@@ -1,0 +1,230 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/test7-ocr/self_built_annotation.schema.json",
+  "title": "test7-OCR self-built annotation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "annotation_id",
+    "sample_id",
+    "partition",
+    "source",
+    "subject",
+    "scope",
+    "modules",
+    "review"
+  ],
+  "properties": {
+    "schema_version": { "const": "self_built_annotation_v1" },
+    "annotation_id": { "type": "string", "minLength": 1 },
+    "sample_id": { "type": "string", "minLength": 1 },
+    "partition": {
+      "enum": ["dev_eval", "regression", "frozen_test", "unassigned"]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dataset", "image_path", "image_sha256", "width", "height", "document_group"],
+      "properties": {
+        "dataset": { "type": "string", "minLength": 1 },
+        "image_path": { "type": "string", "minLength": 1 },
+        "image_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "document_group": { "type": "string", "minLength": 1 },
+        "clean_sample_id": { "type": ["string", "null"] },
+        "license": { "type": ["string", "null"] }
+      }
+    },
+    "subject": { "enum": ["mathematics", "physics"] },
+    "scope": { "enum": ["middle_school", "high_school"] },
+    "modules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eink_ocr_gold", "question_boundary_gold", "handwriting_mask_gold", "zh_photo_pair"],
+      "properties": {
+        "eink_ocr_gold": { "$ref": "#/$defs/ocrModule" },
+        "question_boundary_gold": { "$ref": "#/$defs/boundaryModule" },
+        "handwriting_mask_gold": { "$ref": "#/$defs/maskModule" },
+        "zh_photo_pair": { "$ref": "#/$defs/photoModule" }
+      }
+    },
+    "review": { "$ref": "#/$defs/review" },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["time", "actor", "action"],
+        "properties": {
+          "time": { "type": "string", "format": "date-time" },
+          "actor": { "type": "string", "minLength": 1 },
+          "action": { "type": "string", "minLength": 1 },
+          "note": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "status": {
+      "enum": ["not_applicable", "draft", "annotated", "verified", "adjudication_required", "rejected"]
+    },
+    "bbox": {
+      "type": "array",
+      "prefixItems": [
+        { "type": "number", "minimum": 0 },
+        { "type": "number", "minimum": 0 },
+        { "type": "number", "exclusiveMinimum": 0 },
+        { "type": "number", "exclusiveMinimum": 0 }
+      ],
+      "items": false,
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["block_id", "type", "bbox", "reading_order"],
+      "properties": {
+        "block_id": { "type": "string", "minLength": 1 },
+        "type": {
+          "enum": ["question_number", "printed_text", "inline_formula", "display_formula", "option_label", "option_text", "table", "geometry_figure", "force_diagram", "circuit_diagram", "function_plot", "other_figure"]
+        },
+        "bbox": { "$ref": "#/$defs/bbox" },
+        "reading_order": { "type": "integer", "minimum": 0 },
+        "text": { "type": ["string", "null"] },
+        "latex": { "type": ["string", "null"] },
+        "asset_id": { "type": ["string", "null"] },
+        "uncertain": { "type": "boolean" },
+        "note": { "type": "string" }
+      }
+    },
+    "option": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "text", "block_ids"],
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "text": { "type": "string" },
+        "block_ids": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "ignoredRegion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bbox", "category", "reason"],
+      "properties": {
+        "bbox": { "$ref": "#/$defs/bbox" },
+        "category": {
+          "enum": ["student_handwriting", "teacher_mark", "header_footer", "binding_edge", "non_question_noise", "overlap_unrecoverable", "privacy_redaction"]
+        },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    },
+    "ocrModule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "question_number", "stem_text", "options", "blocks", "ignored_regions"],
+      "properties": {
+        "status": { "$ref": "#/$defs/status" },
+        "question_number": { "type": ["string", "null"] },
+        "stem_text": { "type": "string" },
+        "options": { "type": "array", "items": { "$ref": "#/$defs/option" } },
+        "blocks": { "type": "array", "items": { "$ref": "#/$defs/block" } },
+        "ignored_regions": { "type": "array", "items": { "$ref": "#/$defs/ignoredRegion" } },
+        "uncertain_tokens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["block_id", "token", "reason"],
+            "properties": {
+              "block_id": { "type": "string" },
+              "token": { "type": "string" },
+              "reason": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "boundaryModule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "page_layout", "questions"],
+      "properties": {
+        "status": { "$ref": "#/$defs/status" },
+        "page_layout": { "enum": ["single_question", "single_column", "double_column", "mixed", "not_applicable"] },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["question_id", "bbox", "reading_order", "parent_question_id"],
+            "properties": {
+              "question_id": { "type": "string", "minLength": 1 },
+              "bbox": { "$ref": "#/$defs/bbox" },
+              "reading_order": { "type": "integer", "minimum": 0 },
+              "parent_question_id": { "type": ["string", "null"] },
+              "option_block_ids": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+            }
+          }
+        }
+      }
+    },
+    "maskModule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "mask_path", "mask_sha256", "legend_version"],
+      "properties": {
+        "status": { "$ref": "#/$defs/status" },
+        "mask_path": { "type": ["string", "null"] },
+        "mask_sha256": { "type": ["string", "null"], "pattern": "^[a-f0-9]{64}$" },
+        "legend_version": { "enum": ["handwriting_mask_v1", "not_applicable"] },
+        "class_values": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "background": { "const": 0 },
+            "printed_content": { "const": 1 },
+            "student_handwriting": { "const": 2 },
+            "teacher_mark": { "const": 3 },
+            "overlap_unrecoverable": { "const": 4 },
+            "uncertain": { "const": 255 }
+          }
+        }
+      }
+    },
+    "photoModule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "clean_sample_id", "capture_id", "device_code", "conditions", "privacy_checked"],
+      "properties": {
+        "status": { "$ref": "#/$defs/status" },
+        "clean_sample_id": { "type": ["string", "null"] },
+        "capture_id": { "type": ["string", "null"] },
+        "device_code": { "type": ["string", "null"] },
+        "conditions": {
+          "type": "array",
+          "items": { "enum": ["frontal", "perspective", "shadow", "fold_or_curve", "blur", "compression", "uneven_light", "screen_moire"] },
+          "uniqueItems": true
+        },
+        "privacy_checked": { "type": "boolean" },
+        "authorization": { "type": ["string", "null"] }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["overall_status", "annotator_id", "reviewer_id", "adjudicator_id", "notes"],
+      "properties": {
+        "overall_status": { "$ref": "#/$defs/status" },
+        "annotator_id": { "type": ["string", "null"] },
+        "reviewer_id": { "type": ["string", "null"] },
+        "adjudicator_id": { "type": ["string", "null"] },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,12 @@
+{
+  "name": "eink0065-canary",
+  "description": "Single paid local canary for the captured derivative and tangent-position problem.",
+  "cases": [
+    {
+      "id": "eink0065_canary_r1",
+      "image": "../../../../jiexi/math1/dataset/mathematics/04_EINK2K-MATH-0065.png",
+      "grade": "high",
+      "tags": ["derivative", "tangent", "range", "no-figure", "captured-regression"]
+    }
+  ]
+}

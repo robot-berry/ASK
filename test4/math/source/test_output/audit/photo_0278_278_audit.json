@@ -1,0 +1,50 @@
+{
+  "source": "D:\\robot\\Documents\\ASK\\P_DATA\\test_photo\\photo_0278_278.jpg",
+  "original_size_px": [
+    4032,
+    3024
+  ],
+  "exif_corrected_size_px": [
+    4032,
+    3024
+  ],
+  "output_size_px": [
+    4032,
+    3024
+  ],
+  "original_quality": {
+    "blur_score": 149.62,
+    "brightness": 165.751,
+    "contrast": 35.081,
+    "warnings": [],
+    "quality_ok": true
+  },
+  "processed_quality": {
+    "blur_score": 395.691,
+    "brightness": 248.826,
+    "contrast": 25.942,
+    "warnings": [
+      "image_may_be_overexposed"
+    ],
+    "quality_ok": false
+  },
+  "operations": {
+    "exif_transpose": true,
+    "grayscale": true,
+    "illumination_normalization": true,
+    "clahe_contrast_enhancement": true,
+    "perspective_correction": false,
+    "binarization": false,
+    "resize": false,
+    "crop": false
+  },
+  "parameters": {
+    "background_blur_kernel": 51,
+    "clahe_clip_limit": 1.5,
+    "clahe_tile_grid_size": [
+      8,
+      8
+    ],
+    "blur_warning_threshold": 80.0
+  }
+}

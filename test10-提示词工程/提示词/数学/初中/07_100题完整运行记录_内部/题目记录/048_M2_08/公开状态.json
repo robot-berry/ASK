@@ -1,0 +1,357 @@
+{
+  "job_id": "20261102T094504_0099d7afd6ca428cad351acb8c035e01",
+  "status": "completed",
+  "created_at": "2026-11-02T09:45:04.389+00:00",
+  "updated_at": "2026-11-02T09:45:16.580+00:00",
+  "elapsed_seconds": 12.189,
+  "error": null,
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "image_count": 6,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 225,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "995e92d74249ec7cc385c8f735fd7c8be3cdcde49bbc4fd83c832c191b781ace",
+      "bytes": 13748,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T094504_0099d7afd6ca428cad351acb8c035e01/01_question_knowledge.png"
+    },
+    {
+      "filename": "02_guidance_elite.png",
+      "width": 800,
+      "height": 279,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "0f53f7afdd29a39e316c58dfde1765138251138ec56660f0304d09100a1ff180",
+      "bytes": 19530,
+      "valid": true,
+      "errors": [],
+      "kind": "elite",
+      "sequence": 2,
+      "url": "/jobs/20261102T094504_0099d7afd6ca428cad351acb8c035e01/02_guidance_elite.png"
+    },
+    {
+      "filename": "03_guidance_upper.png",
+      "width": 800,
+      "height": 381,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "de9802c63bb7849a10612d05dd0d06928e2000d2d3c868564ac9fbdbfefac7d5",
+      "bytes": 22019,
+      "valid": true,
+      "errors": [],
+      "kind": "upper",
+      "sequence": 3,
+      "url": "/jobs/20261102T094504_0099d7afd6ca428cad351acb8c035e01/03_guidance_upper.png"
+    },
+    {
+      "filename": "04_guidance_middle.png",
+      "width": 800,
+      "height": 331,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "b5f87c3b8974e8d499432fc6b937c2896441b6c7a1bd9f561a9e2502fcdff32f",
+      "bytes": 19188,
+      "valid": true,
+      "errors": [],
+      "kind": "middle",
+      "sequence": 4,
+      "url": "/jobs/20261102T094504_0099d7afd6ca428cad351acb8c035e01/04_guidance_middle.png"
+    },
+    {
+      "filename": "05_guidance_lower.png",
+      "width": 800,
+      "height": 439,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "f25925ef523dad02da0c25f290f31c795998e26622c46e936a54b4c5b5b686c4",
+      "bytes": 26441,
+      "valid": true,
+      "errors": [],
+      "kind": "lower",
+      "sequence": 5,
+      "url": "/jobs/20261102T094504_0099d7afd6ca428cad351acb8c035e01/05_guidance_lower.png"
+    },
+    {
+      "filename": "06_guidance_novice.png",
+      "width": 800,
+      "height": 1796,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "55644a63be8d8ddc3fb116ec5c704cf2ad99543504dfd7c662091035aab5a8d3",
+      "bytes": 113325,
+      "valid": true,
+      "errors": [],
+      "kind": "novice",
+      "sequence": 6,
+      "url": "/jobs/20261102T094504_0099d7afd6ca428cad351acb8c035e01/06_guidance_novice.png"
+    }
+  ],
+  "analysis_audit": {
+    "source": "complete_model",
+    "model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "knowledge_points": [
+      "勾股定理：已知两条直角边，可求斜边长度。",
+      "直角三角形内切圆半径公式：用两条直角边和斜边表示内切圆半径。",
+      "直角三角形外接圆半径：外接圆半径等于斜边的一半。"
+    ],
+    "base_formulas": [
+      {
+        "formula": "a²+b²=c²",
+        "condition": "直角三角形中a、b为直角边，c为斜边"
+      },
+      {
+        "formula": "r=((a+b-c))/2",
+        "condition": "直角三角形中a、b为直角边，c为斜边"
+      },
+      {
+        "formula": "R=c/2",
+        "condition": "直角三角形的外接圆"
+      }
+    ],
+    "parts": [
+      {
+        "part": "1",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "已知两条直角边为48和64，目标是求内切圆半径和外接圆半径。",
+              "先用勾股定理求斜边：斜边²=48²+64²，所以斜边=√(48²+64²)。",
+              "内切圆半径r=(48+64-斜边)/2，其中分母2是公式中的常数。",
+              "外接圆半径R=斜边/2，因为直角三角形的外接圆直径就是斜边。"
+            ],
+            "pitfall": "内切圆半径公式只适用于直角三角形，且分母是2，不是某条边。"
+          }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier_key": "elite",
+        "title": "学霸解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要求内切圆和外接圆的半径，你需要先确定直角三角形的哪条边是斜边？",
+                  "已知两条直角边，你能用它们表示出斜边吗？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "upper",
+        "title": "中上解析",
+        "knowledge_points": [
+          "勾股定理：已知两条直角边，可求斜边长度。",
+          "直角三角形内切圆半径公式：用两条直角边和斜边表示内切圆半径。",
+          "直角三角形外接圆半径：外接圆半径等于斜边的一半。"
+        ],
+        "base_formulas": [],
+        "parts": [],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "middle",
+        "title": "中等解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "两条直角边分别为48和64，斜边未知，所以先求斜边。",
+                  "求出斜边后，分别代入内切圆半径公式和外接圆半径公式。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "lower",
+        "title": "中下解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由勾股定理，斜边的平方等于48的平方加64的平方。",
+                  "内切圆半径公式中，分母是常数2，分子是两条直角边之和减去斜边。",
+                  "外接圆半径等于斜边的一半，所以求出斜边后可直接用斜边除以2。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "novice",
+        "title": "学渣解析",
+        "knowledge_points": [
+          "勾股定理：已知两条直角边，可求斜边长度。",
+          "直角三角形内切圆半径公式：用两条直角边和斜边表示内切圆半径。",
+          "直角三角形外接圆半径：外接圆半径等于斜边的一半。"
+        ],
+        "base_formulas": [
+          {
+            "formula": "a²+b²=c²",
+            "condition": "直角三角形中a、b为直角边，c为斜边"
+          },
+          {
+            "formula": "r=(a+b-c)/2",
+            "condition": "直角三角形中a、b为直角边，c为斜边"
+          },
+          {
+            "formula": "R=c/2",
+            "condition": "直角三角形的外接圆"
+          }
+        ],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "已知两条直角边为48和64，目标是求内切圆半径和外接圆半径。",
+                  "先用勾股定理求斜边：斜边²=48²+64²，所以斜边=√(48²+64²)。",
+                  "内切圆半径r=(48+64-斜边)/2，其中分母2是公式中的常数。",
+                  "外接圆半径R=斜边/2，因为直角三角形的外接圆直径就是斜边。",
+                  "最后检查：斜边应大于每条直角边，且内切圆半径应小于外接圆半径。斜边c=80，代入得r=(48+64-80)÷2=————，R=80÷2=————，请你自己算一算。"
+                ],
+                "pitfall": "内切圆半径公式只适用于直角三角形，且分母是2，不是某条边。"
+              }
+            ]
+          }
+        ],
+        "pattern_summary": "已知直角三角形的两条直角边，先用勾股定理求斜边，再分别用内切圆半径公式和外接圆半径公式求解。"
+      }
+    ]
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 6,
+    "first_image_provisional": false,
+    "first_image_seconds": 2.035,
+    "first_image_from_created_seconds": 2.038,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 2.035,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 0.0,
+    "ocr_slot_processing_seconds": 1.985,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 9.789
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}

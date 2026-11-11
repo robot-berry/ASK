@@ -1,0 +1,12 @@
+{
+  "name": "screen-handwriting-canary-20260820",
+  "description": "One paid live-model canary for the current screen-photo and handwriting-safe pipeline.",
+  "cases": [
+    {
+      "id": "screen_handwriting_7",
+      "image": "../../deployment_acceptance/math_physics_optimization_20260820/model_inputs_only/7_ecca26f0.png",
+      "grade": "middle",
+      "tags": ["screen-photo", "handwriting", "generic-new-question"]
+    }
+  ]
+}

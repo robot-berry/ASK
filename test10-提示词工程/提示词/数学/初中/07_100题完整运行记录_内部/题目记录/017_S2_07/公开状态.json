@@ -1,0 +1,360 @@
+{
+  "job_id": "20261102T094108_098e380963f3417ea0ba061c367b7794",
+  "status": "completed",
+  "created_at": "2026-11-02T09:41:08.506+00:00",
+  "updated_at": "2026-11-02T09:41:44.849+00:00",
+  "elapsed_seconds": 36.341,
+  "error": null,
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "image_count": 6,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 183,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "1e9f1974f272271b8a3b27902bc053c3c678e3462d2a19ad768443d9a56d1b95",
+      "bytes": 4198,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T094108_098e380963f3417ea0ba061c367b7794/01_question_knowledge.png"
+    },
+    {
+      "filename": "02_guidance_elite.png",
+      "width": 800,
+      "height": 331,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "805261e8cf70013f88fd846a318431d8fec6162bc159878caacd7a72c2f821ac",
+      "bytes": 27706,
+      "valid": true,
+      "errors": [],
+      "kind": "elite",
+      "sequence": 2,
+      "url": "/jobs/20261102T094108_098e380963f3417ea0ba061c367b7794/02_guidance_elite.png"
+    },
+    {
+      "filename": "03_guidance_upper.png",
+      "width": 800,
+      "height": 539,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "d68f36de182adf257b4d86f8688d816f88955a7bf54ef701f3b36fa9cb401d49",
+      "bytes": 39572,
+      "valid": true,
+      "errors": [],
+      "kind": "upper",
+      "sequence": 3,
+      "url": "/jobs/20261102T094108_098e380963f3417ea0ba061c367b7794/03_guidance_upper.png"
+    },
+    {
+      "filename": "04_guidance_middle.png",
+      "width": 800,
+      "height": 331,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "0509a47582df2b12262636419a5c02d5d19d0b8aeb54b9b3a2b3059ca2271309",
+      "bytes": 22793,
+      "valid": true,
+      "errors": [],
+      "kind": "middle",
+      "sequence": 4,
+      "url": "/jobs/20261102T094108_098e380963f3417ea0ba061c367b7794/04_guidance_middle.png"
+    },
+    {
+      "filename": "05_guidance_lower.png",
+      "width": 800,
+      "height": 439,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "ddf5a2803dff07147ecd0df5849e4f5991de0a1d5729731e9eefbf7509e077e6",
+      "bytes": 32457,
+      "valid": true,
+      "errors": [],
+      "kind": "lower",
+      "sequence": 5,
+      "url": "/jobs/20261102T094108_098e380963f3417ea0ba061c367b7794/05_guidance_lower.png"
+    },
+    {
+      "filename": "06_guidance_novice.png",
+      "width": 800,
+      "height": 1894,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "c69f36ff76e301457d4733fe54b1a76cf6c55019c863b28b64a92c705457c4eb",
+      "bytes": 146622,
+      "valid": true,
+      "errors": [],
+      "kind": "novice",
+      "sequence": 6,
+      "url": "/jobs/20261102T094108_098e380963f3417ea0ba061c367b7794/06_guidance_novice.png"
+    }
+  ],
+  "analysis_audit": {
+    "source": "complete_model",
+    "model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "knowledge_points": [
+      "一元一次方程：本题中方程只含一个未知数，且未知数的次数为1。",
+      "等式的基本性质：方程两边需要同时进行相同的加减或乘除运算。",
+      "移项与合并：通过减法把常数项从左边去掉，使含未知数的项单独出现。",
+      "系数化为1：在得到未知数前有系数的形式后，两边同除以该系数。"
+    ],
+    "base_formulas": [
+      {
+        "formula": "a=b",
+        "condition": "等式两边同时加上或减去同一个数，等式仍成立"
+      },
+      {
+        "formula": "a=b",
+        "condition": "等式两边同时乘或除以同一个不为零的数，等式仍成立"
+      },
+      {
+        "formula": "ax+b=c",
+        "condition": "只含一个未知数且未知数次数为1的方程"
+      }
+    ],
+    "parts": [
+      {
+        "part": "1",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "题目要求解方程2x+7=25，未知数是x，目标是把x单独留在等号一边。",
+              "方程左边是2x与7的和，根据等式的基本性质，两边同时减去7，等式仍然成立。",
+              "两边减去7后，左边变为2x，右边变为25减7的差，这一步把常数项从含未知数的项旁去掉。",
+              "此时x前面还有系数2，根据等式的基本性质，两边同时除以2，得到x等于右边差除以2的式子。"
+            ],
+            "pitfall": "两边必须同时进行相同的运算，不能只在左边减去7或只在左边除以2。"
+          }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier_key": "elite",
+        "title": "学霸解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要求解方程，你打算先处理方程左边的哪一部分，让含未知数的项更接近单独出现？",
+                  "在把含未知数的项单独留下后，两边需要进行什么相同的运算，才能得到未知数的值？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "upper",
+        "title": "中上解析",
+        "knowledge_points": [
+          "一元一次方程：本题中方程只含一个未知数，且未知数的次数为1。",
+          "等式的基本性质：方程两边需要同时进行相同的加减或乘除运算。",
+          "移项与合并：通过减法把常数项从左边去掉，使含未知数的项单独出现。",
+          "系数化为1：在得到未知数前有系数的形式后，两边同除以该系数。"
+        ],
+        "base_formulas": [],
+        "parts": [],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "middle",
+        "title": "中等解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "方程左边是2x加7，目标是求出x，所以先看怎样把加7从左边去掉。",
+                  "根据等式的基本性质，两边同时减去7后，再考虑怎样把x前面的系数化为1。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "lower",
+        "title": "中下解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由方程2x+7=25可知，左边比2x多7，因此先利用等式性质两边同时减去7。",
+                  "减去7后，左边只剩含x的项，右边是25与7的差，这一步保持等式成立。",
+                  "接着需要把x的系数2化为1，应利用等式性质两边同时除以2，得到x的表达式。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "novice",
+        "title": "学渣解析",
+        "knowledge_points": [
+          "一元一次方程：本题中方程只含一个未知数，且未知数的次数为1。",
+          "等式的基本性质：方程两边需要同时进行相同的加减或乘除运算。",
+          "移项与合并：通过减法把常数项从左边去掉，使含未知数的项单独出现。",
+          "系数化为1：在得到未知数前有系数的形式后，两边同除以该系数。"
+        ],
+        "base_formulas": [
+          {
+            "formula": "a=b",
+            "condition": "等式两边同时加上或减去同一个数，等式仍成立"
+          },
+          {
+            "formula": "a=b",
+            "condition": "等式两边同时乘或除以同一个不为零的数，等式仍成立"
+          },
+          {
+            "formula": "ax+b=c",
+            "condition": "只含一个未知数且未知数次数为1的方程"
+          }
+        ],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要求解方程2x+7=25，未知数是x，目标是把x单独留在等号一边。",
+                  "方程左边是2x与7的和，根据等式的基本性质，两边同时减去7，等式仍然成立。",
+                  "两边减去7后，左边变为2x，右边变为25减7的差，这一步把常数项从含未知数的项旁去掉。",
+                  "此时x前面还有系数2，根据等式的基本性质，两边同时除以2，得到x等于右边差除以2的式子。",
+                  "最后把得到的x的表达式代回原方程左边，检查左右两边是否相等，完成验算。请在横线上填出x的值：x=————。"
+                ],
+                "pitfall": "两边必须同时进行相同的运算，不能只在左边减去7或只在左边除以2。"
+              }
+            ]
+          }
+        ],
+        "pattern_summary": "解一元一次方程时，先利用等式性质去掉常数项，再把未知数的系数化为1，最后代回原方程检验。"
+      }
+    ]
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 6,
+    "first_image_provisional": false,
+    "first_image_seconds": 6.809,
+    "first_image_from_created_seconds": 6.812,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 6.809,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 0.0,
+    "ocr_slot_processing_seconds": 6.74,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 29.104
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}

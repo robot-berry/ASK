@@ -1,0 +1,254 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "math_guidance_output_v6_substantive_guidance",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "subject",
+    "problem_scope",
+    "recognition_status",
+    "uncertain_items",
+    "question_blocks",
+    "source_figures",
+    "visual_evidence",
+    "knowledge_points",
+    "base_formulas",
+    "guidance"
+  ],
+  "properties": {
+    "subject": {"type": "string", "const": "mathematics"},
+    "problem_scope": {"type": "string", "const": "primary_to_high_school"},
+    "recognition_status": {"type": "string", "enum": ["clear", "uncertain"]},
+    "uncertain_items": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {"type": "string", "minLength": 1, "maxLength": 160}
+    },
+    "question_blocks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 40,
+      "items": {"$ref": "#/$defs/questionBlock"}
+    },
+    "source_figures": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {"$ref": "#/$defs/sourceFigure"}
+    },
+    "visual_evidence": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {"type": "string", "minLength": 1, "maxLength": 240}
+    },
+    "knowledge_points": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 5,
+      "items": {"type": "string", "minLength": 1, "maxLength": 80}
+    },
+    "base_formulas": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": {"$ref": "#/$defs/formula"}
+    },
+    "guidance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["advanced", "standard", "foundation"],
+      "properties": {
+        "advanced": {"$ref": "#/$defs/advancedTier"},
+        "standard": {"$ref": "#/$defs/standardTier"},
+        "foundation": {"$ref": "#/$defs/foundationTier"}
+      }
+    }
+  },
+  "$defs": {
+    "questionBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "text", "figure_id"],
+      "properties": {
+        "type": {"type": "string", "enum": ["text", "figure"]},
+        "text": {"type": "string", "maxLength": 5000},
+        "figure_id": {"type": "string", "maxLength": 40}
+      }
+    },
+    "sourceFigure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["figure_id", "bbox_1000", "caption"],
+      "properties": {
+        "figure_id": {"type": "string", "minLength": 1, "maxLength": 40},
+        "bbox_1000": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {"type": "number", "minimum": 0, "maximum": 1000}
+        },
+        "caption": {"type": "string", "maxLength": 80}
+      }
+    },
+    "formula": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["formula", "condition"],
+      "properties": {
+        "formula": {"type": "string", "minLength": 1, "maxLength": 180},
+        "condition": {"type": "string", "minLength": 1, "maxLength": 180}
+      }
+    },
+    "advancedAlternative": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method_id", "method_name", "steps"],
+      "properties": {
+        "method_id": {"type": "string", "enum": ["M2", "M3"]},
+        "method_name": {"type": "string", "minLength": 2, "maxLength": 36},
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+            "items": {"type": "string", "minLength": 4, "maxLength": 240}
+        }
+      }
+    },
+    "standardAlternative": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method_id", "method_name", "steps"],
+      "properties": {
+        "method_id": {"type": "string", "enum": ["M2", "M3"]},
+        "method_name": {"type": "string", "minLength": 2, "maxLength": 36},
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+            "items": {"type": "string", "minLength": 4, "maxLength": 260}
+        }
+      }
+    },
+    "foundationAlternative": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method_id", "method_name", "steps"],
+      "properties": {
+        "method_id": {"type": "string", "enum": ["M2", "M3"]},
+        "method_name": {"type": "string", "minLength": 2, "maxLength": 36},
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+            "items": {"type": "string", "minLength": 4, "maxLength": 280}
+        }
+      }
+    },
+    "advancedPart": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["part", "method_id", "method_name", "steps", "alternative_methods"],
+      "properties": {
+        "part": {"type": "string", "minLength": 1, "maxLength": 30},
+        "method_id": {"type": "string", "const": "M1"},
+        "method_name": {"type": "string", "minLength": 2, "maxLength": 36},
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+            "items": {"type": "string", "minLength": 4, "maxLength": 240}
+        },
+        "alternative_methods": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/advancedAlternative"}
+        }
+      }
+    },
+    "standardPart": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["part", "method_id", "method_name", "steps", "alternative_methods", "pitfall"],
+      "properties": {
+        "part": {"type": "string", "minLength": 1, "maxLength": 30},
+        "method_id": {"type": "string", "const": "M1"},
+        "method_name": {"type": "string", "minLength": 2, "maxLength": 36},
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+            "items": {"type": "string", "minLength": 4, "maxLength": 260}
+        },
+        "alternative_methods": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/standardAlternative"}
+        },
+        "pitfall": {"type": "string", "minLength": 1, "maxLength": 180}
+      }
+    },
+    "foundationPart": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["part", "method_id", "method_name", "steps", "alternative_methods"],
+      "properties": {
+        "part": {"type": "string", "minLength": 1, "maxLength": 30},
+        "method_id": {"type": "string", "const": "M1"},
+        "method_name": {"type": "string", "minLength": 2, "maxLength": 36},
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+            "items": {"type": "string", "minLength": 4, "maxLength": 280}
+        },
+        "alternative_methods": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/foundationAlternative"}
+        }
+      }
+    },
+    "advancedTier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "parts"],
+      "properties": {
+        "title": {"type": "string", "const": "学霸版"},
+        "parts": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {"$ref": "#/$defs/advancedPart"}
+        }
+      }
+    },
+    "standardTier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "parts"],
+      "properties": {
+        "title": {"type": "string", "const": "普通版"},
+        "parts": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {"$ref": "#/$defs/standardPart"}
+        }
+      }
+    },
+    "foundationTier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "parts", "pattern_summary"],
+      "properties": {
+        "title": {"type": "string", "const": "基础版"},
+        "parts": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {"$ref": "#/$defs/foundationPart"}
+        },
+        "pattern_summary": {"type": "string", "minLength": 1, "maxLength": 240}
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash",
+  "original_questions": [
+    37,
+    38,
+    42,
+    45,
+    49,
+    51,
+    52,
+    53,
+    57,
+    58,
+    59,
+    61,
+    62,
+    63,
+    64,
+    66,
+    67,
+    69
+  ],
+  "code_sha256": {
+    "isolation_quality_checks.py": "63487442f533668360563013bd3c731ed4be62cf557b28df324d1c61bf50d349",
+    "isolation_answer_blanks.py": "22325a0b8878dbe45a11b8c0172e7b36ffcfcc7a8609062383f8ff219b26f839",
+    "isolation_linear_answer_guard.py": "655126c070c8ca62684d3fe442bc8d94f39117eb32168d13008a633bb9ff26a8",
+    "compact_guidance.py": "0523028731d92ab75f20676abe58b077d96a7ae5e9aa190cb4c45aeb1296352b",
+    "search_machine_pipeline.py": "688578fac99253bba11f7e7146a8242f1e702c7847b5151f9316a99ab0f4c368"
+  },
+  "prompt_db_sha256": "98207d7c6393fa95087af5e85ec3864b5a10263f907d955c2bea87d1478291ed",
+  "max_attempts_per_case": 1,
+  "scope": "仅本地生成的文字题图和人工确认题面，不代表拍照与图形识别"
+}

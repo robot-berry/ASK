@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/test7-ocr/output_quality_review.schema.json",
+  "title": "test7-OCR final PNG quality review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "sample_id",
+    "source_sha256",
+    "output_sha256",
+    "verdict",
+    "reviewer_id",
+    "issues",
+    "notes",
+    "history",
+    "updated_at_utc"
+  ],
+  "properties": {
+    "schema_version": { "const": "output_quality_review_v1" },
+    "run_id": { "type": "string", "pattern": "^[0-9A-Za-z._-]+$" },
+    "sample_id": { "type": "string", "pattern": "^[0-9A-Za-z._-]+$" },
+    "source_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "output_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "verdict": { "enum": ["pending", "pass", "fail"] },
+    "reviewer_id": { "type": ["string", "null"] },
+    "issues": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "semantic_content_incomplete",
+        "formula_render_error",
+        "latex_source_visible",
+        "handwriting_visible",
+        "visual_crop_incomplete",
+        "visual_not_source_crop",
+        "adjacent_question_or_noise",
+        "layout_clipped_or_overflow",
+        "blank_unit_or_punctuation_missing",
+        "output_blurry_or_unreadable"
+      ],
+      "properties": {
+        "semantic_content_incomplete": { "type": ["boolean", "null"] },
+        "formula_render_error": { "type": ["boolean", "null"] },
+        "latex_source_visible": { "type": ["boolean", "null"] },
+        "handwriting_visible": { "type": ["boolean", "null"] },
+        "visual_crop_incomplete": { "type": ["boolean", "null"] },
+        "visual_not_source_crop": { "type": ["boolean", "null"] },
+        "adjacent_question_or_noise": { "type": ["boolean", "null"] },
+        "layout_clipped_or_overflow": { "type": ["boolean", "null"] },
+        "blank_unit_or_punctuation_missing": { "type": ["boolean", "null"] },
+        "output_blurry_or_unreadable": { "type": ["boolean", "null"] }
+      }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "history": { "type": "array", "items": { "type": "object" } },
+    "updated_at_utc": { "type": ["string", "null"], "format": "date-time" }
+  }
+}

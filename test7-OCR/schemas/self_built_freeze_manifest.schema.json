@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/test7-ocr/self_built_freeze_manifest.schema.json",
+  "title": "test7-OCR immutable self-built evaluation freeze manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dataset_version",
+    "created_at_utc",
+    "partition",
+    "training_allowed",
+    "evaluation_allowed",
+    "source_images_copied",
+    "source_reference_policy",
+    "content_fingerprint",
+    "summary",
+    "files"
+  ],
+  "properties": {
+    "schema_version": { "const": "self_built_freeze_manifest_v1" },
+    "dataset_version": {
+      "type": "string",
+      "pattern": "^test7-self-built-v[0-9]{4}\\.[0-9]{2}\\.[0-9]{2}(-[0-9]{2})?$"
+    },
+    "created_at_utc": { "type": "string", "format": "date-time" },
+    "partition": { "const": "frozen_test" },
+    "training_allowed": { "const": false },
+    "evaluation_allowed": { "const": true },
+    "source_images_copied": { "const": false },
+    "source_reference_policy": { "const": "dataset_name_relative_path_and_sha256" },
+    "content_fingerprint": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "summary": { "type": "object" },
+    "files": {
+      "type": "object",
+      "minProperties": 5,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["sha256", "byte_size"],
+        "properties": {
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "byte_size": { "type": "integer", "minimum": 0 }
+        }
+      }
+    }
+  }
+}

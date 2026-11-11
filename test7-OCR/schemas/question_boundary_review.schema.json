@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/test7-ocr/question_boundary_review.schema.json",
+  "title": "test7-OCR question boundary review task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "asset_id", "partition", "training_allowed", "evaluation_allowed", "source", "annotation", "review"],
+  "properties": {
+    "schema_version": { "const": "question_boundary_review_v1" },
+    "asset_id": { "type": "string", "pattern": "^SBI-BOUNDARY-[a-f0-9]{16}$" },
+    "partition": { "const": "quarantine" },
+    "training_allowed": { "const": false },
+    "evaluation_allowed": { "const": false },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dataset", "relative_path", "sha256", "width", "height", "subject", "scope", "document_group", "page_index", "page_layout"],
+      "properties": {
+        "dataset": { "const": "test7_ocr_self_built_v1" },
+        "relative_path": { "type": "string", "minLength": 1 },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "subject": { "enum": ["mathematics", "physics"] },
+        "scope": { "enum": ["middle_school", "high_school"] },
+        "document_group": { "type": "string", "minLength": 2 },
+        "page_index": { "type": "integer", "minimum": 1 },
+        "page_layout": { "enum": ["single_column", "double_column", "mixed"] }
+      }
+    },
+    "annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "questions"],
+      "properties": {
+        "status": { "enum": ["pending", "draft", "annotated", "verified", "rejected"] },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["question_id", "bbox", "reading_order", "parent_question_id", "column", "continues_on_next_page", "notes"],
+            "properties": {
+              "question_id": { "type": "string", "minLength": 1, "maxLength": 80 },
+              "bbox": {
+                "type": "array",
+                "prefixItems": [
+                  { "type": "integer", "minimum": 0 },
+                  { "type": "integer", "minimum": 0 },
+                  { "type": "integer", "minimum": 1 },
+                  { "type": "integer", "minimum": 1 }
+                ],
+                "items": false,
+                "minItems": 4,
+                "maxItems": 4
+              },
+              "reading_order": { "type": "integer", "minimum": 0 },
+              "parent_question_id": { "type": ["string", "null"] },
+              "column": { "enum": ["left", "right", "full_width", "mixed"] },
+              "continues_on_next_page": { "type": "boolean" },
+              "notes": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["annotator_id", "reviewer_id", "checks", "notes", "signoffs", "history", "updated_at_utc"],
+      "properties": {
+        "annotator_id": { "type": ["string", "null"] },
+        "reviewer_id": { "type": ["string", "null"] },
+        "checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["all_questions_present", "boundaries_complete", "options_inside_question", "reading_order_correct", "columns_and_continuations_correct"],
+          "properties": {
+            "all_questions_present": { "type": ["boolean", "null"] },
+            "boundaries_complete": { "type": ["boolean", "null"] },
+            "options_inside_question": { "type": ["boolean", "null"] },
+            "reading_order_correct": { "type": ["boolean", "null"] },
+            "columns_and_continuations_correct": { "type": ["boolean", "null"] }
+          }
+        },
+        "notes": { "type": "array", "items": { "type": "string" } },
+        "signoffs": { "type": "array", "items": { "type": "object" } },
+        "history": { "type": "array", "items": { "type": "object" } },
+        "updated_at_utc": { "type": ["string", "null"], "format": "date-time" }
+      }
+    }
+  }
+}

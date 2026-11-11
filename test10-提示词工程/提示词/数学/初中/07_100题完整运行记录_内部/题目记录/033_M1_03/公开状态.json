@@ -1,0 +1,504 @@
+{
+  "job_id": "20261102T094321_6f6af59a776f4a5d9d17d47f8c016bac",
+  "status": "completed",
+  "created_at": "2026-11-02T09:43:21.789+00:00",
+  "updated_at": "2026-11-02T09:44:07.622+00:00",
+  "elapsed_seconds": 45.831,
+  "error": null,
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "image_count": 6,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 245,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "d65514823c55fbb5d2fa3615a9e36708d1f31158249c6b7b4d7c2779defea0ef",
+      "bytes": 13906,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T094321_6f6af59a776f4a5d9d17d47f8c016bac/01_question_knowledge.png"
+    },
+    {
+      "filename": "02_guidance_elite.png",
+      "width": 800,
+      "height": 830,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "c234b01c8ac6d56d01c3c4987bac3d72fa56377bb7a52f366d205491e0a5d592",
+      "bytes": 55211,
+      "valid": true,
+      "errors": [],
+      "kind": "elite",
+      "sequence": 2,
+      "url": "/jobs/20261102T094321_6f6af59a776f4a5d9d17d47f8c016bac/02_guidance_elite.png"
+    },
+    {
+      "filename": "03_guidance_upper.png",
+      "width": 800,
+      "height": 433,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "dc2137949f52757d3b2aabce3297c9e0633ae88d696fe952f7f0d544d5cffd3c",
+      "bytes": 37051,
+      "valid": true,
+      "errors": [],
+      "kind": "upper",
+      "sequence": 3,
+      "url": "/jobs/20261102T094321_6f6af59a776f4a5d9d17d47f8c016bac/03_guidance_upper.png"
+    },
+    {
+      "filename": "04_guidance_middle.png",
+      "width": 800,
+      "height": 882,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "e9328f018a9cf79c5b5b1c8e3b8fe3f1b0459a1d74e9d4863ad2a465acdada3f",
+      "bytes": 55284,
+      "valid": true,
+      "errors": [],
+      "kind": "middle",
+      "sequence": 4,
+      "url": "/jobs/20261102T094321_6f6af59a776f4a5d9d17d47f8c016bac/04_guidance_middle.png"
+    },
+    {
+      "filename": "05_guidance_lower.png",
+      "width": 800,
+      "height": 1258,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "bc2a60995ac76a389438692d1b556578138cd875b3d98773e3a2ae45fe14949d",
+      "bytes": 84156,
+      "valid": true,
+      "errors": [],
+      "kind": "lower",
+      "sequence": 5,
+      "url": "/jobs/20261102T094321_6f6af59a776f4a5d9d17d47f8c016bac/05_guidance_lower.png"
+    },
+    {
+      "filename": "06_guidance_novice.png",
+      "width": 800,
+      "height": 3087,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "fa43bc8b2522b64a65df5eb91f572b2b825ab866a1ddb0ead82dd9fef226b91b",
+      "bytes": 222130,
+      "valid": true,
+      "errors": [],
+      "kind": "novice",
+      "sequence": 6,
+      "url": "/jobs/20261102T094321_6f6af59a776f4a5d9d17d47f8c016bac/06_guidance_novice.png"
+    }
+  ],
+  "analysis_audit": {
+    "source": "complete_model",
+    "model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "knowledge_points": [
+      "二次函数与x轴交点：令函数值为零，解对应的一元二次方程，所得根即为交点的横坐标。",
+      "二次函数对称轴：由表达式结构或一般式系数确定，反映图像左右对称的位置。",
+      "二次函数最值：结合开口方向判断顶点处取得最大值还是最小值，顶点纵坐标即为最值。"
+    ],
+    "base_formulas": [
+      {
+        "formula": "x=-b/((2a))",
+        "condition": "二次函数对称轴公式，其中a、b为一般式y=ax²+bx+c的系数"
+      },
+      {
+        "formula": "y=((4ac-b²))/((4a))",
+        "condition": "二次函数顶点纵坐标公式，其中a、b、c为一般式系数"
+      }
+    ],
+    "parts": [
+      {
+        "part": "1",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "题目要求抛物线与x轴的交点坐标，交点纵坐标必为零。",
+              "因此令y=0，得到-(x-4)(x-8)=0，这是求交点的基本依据。",
+              "两个因式的乘积为零，则至少一个因式为零，分别令x-4=0和x-8=0。",
+              "请结合前面的关系，完成最后一步。"
+            ],
+            "pitfall": "令因式为零时，注意两个因式分别对应两个不同的横坐标，不要只解出一个就结束。"
+          }
+        ]
+      },
+      {
+        "part": "2",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "题目要求对称轴，需先确定抛物线的左右对称位置。",
+              "由两根式可知图像与x轴交于横坐标4和8的两点，这两点关于对称轴对称。",
+              "也可展开为一般式，用x=-b/((2a))核对，两种方式应得到同一横坐标。"
+            ],
+            "pitfall": "对称轴是直线x=常数，不要只写一个数值而漏掉“直线x=”。"
+          }
+        ]
+      },
+      {
+        "part": "3",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "题目要求函数最大值，需结合开口方向和顶点位置判断。",
+              "二次项系数为负，图像开口向下，因此顶点处函数值最大。",
+              "顶点横坐标与对称轴相同，由两零点平均值可确定。",
+              "将顶点横坐标代入原函数式，得到最大值的未算完表达式。"
+            ],
+            "pitfall": "开口向下时顶点处取得最大值，不要与最小值混淆。"
+          }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier_key": "elite",
+        "title": "学霸解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要求抛物线与x轴的交点坐标，需要让函数式中的哪个量取什么特殊值？",
+                  "请结合前面的关系，完成最后一步。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "2",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "抛物线的对称轴与它的函数表达式之间有什么联系？",
+                  "这个表达式中的负号对图像的开口方向和对称轴的位置有什么影响？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "3",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "函数的最大值出现在图像的哪个特殊位置？",
+                  "这个最大值与抛物线的开口方向以及顶点的纵坐标有什么关系？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "upper",
+        "title": "中上解析",
+        "knowledge_points": [
+          "二次函数与x轴交点：令函数值为零，解对应的一元二次方程，所得根即为交点的横坐标。",
+          "二次函数对称轴：由表达式结构或一般式系数确定，反映图像左右对称的位置。",
+          "二次函数最值：结合开口方向判断顶点处取得最大值还是最小值，顶点纵坐标即为最值。"
+        ],
+        "base_formulas": [],
+        "parts": [],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "middle",
+        "title": "中等解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "求与x轴的交点，关键是令函数值等于零，把交点问题转化为解方程。",
+                  "请结合前面的关系，完成最后一步。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "2",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "表达式已写成两根式，两个零点关于对称轴对称，可先找对称轴位置。",
+                  "对称轴是两零点横坐标的平均值，也可化为一般式后用系数关系核对。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "3",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "函数最大值与开口方向有关，负号说明开口向下，顶点处取得最大值。",
+                  "先确定顶点横坐标，再代入函数式求纵坐标，即为最大值。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "lower",
+        "title": "中下解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由抛物线与x轴相交时纵坐标为零，可知应令函数式等于零。",
+                  "函数式已分解为两个一次因式的乘积，适合用因式分解法求根。",
+                  "分别令每个因式为零，得到两个横坐标，再与零纵坐标组合成交点坐标。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "2",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由两根式可知两个零点横坐标，对称轴位于两零点正中间。",
+                  "对称轴横坐标等于两零点横坐标的平均值，这是由图像对称性得到的。",
+                  "也可将函数式展开为一般式，用对称轴公式核对平均值结果。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "3",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由二次项系数为负可知抛物线开口向下，顶点处函数值最大。",
+                  "顶点横坐标与对称轴相同，可先由零点平均值确定。",
+                  "将顶点横坐标代入原函数式，所得函数值就是最大值的中间表达式。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "novice",
+        "title": "学渣解析",
+        "knowledge_points": [
+          "二次函数与x轴交点：令函数值为零，解对应的一元二次方程，所得根即为交点的横坐标。",
+          "二次函数对称轴：由表达式结构或一般式系数确定，反映图像左右对称的位置。",
+          "二次函数最值：结合开口方向判断顶点处取得最大值还是最小值，顶点纵坐标即为最值。"
+        ],
+        "base_formulas": [
+          {
+            "formula": "y=0",
+            "condition": "二次函数与x轴相交时，函数值为0"
+          },
+          {
+            "formula": "x=-b/(2a)",
+            "condition": "二次函数对称轴公式，其中a、b为一般式y=ax²+bx+c的系数"
+          },
+          {
+            "formula": "y=(4ac-b²)/(4a)",
+            "condition": "二次函数顶点纵坐标公式，其中a、b、c为一般式系数"
+          }
+        ],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要求抛物线与x轴的交点坐标，交点纵坐标必为零。",
+                  "因此令y=0，得到-(x-4)(x-8)=0，这是求交点的基本依据。",
+                  "两个因式的乘积为零，则至少一个因式为零，分别令x-4=0和x-8=0。",
+                  "请结合前面的关系，完成最后一步。",
+                  "最后检查两个坐标是否都满足原函数式，并确认纵坐标均为零。"
+                ],
+                "pitfall": "令因式为零时，注意两个因式分别对应两个不同的横坐标，不要只解出一个就结束。"
+              }
+            ]
+          },
+          {
+            "part": "2",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要求对称轴，需先确定抛物线的左右对称位置。",
+                  "由两根式可知图像与x轴交于横坐标4和8的两点，这两点关于对称轴对称。",
+                  "对称轴横坐标是两零点横坐标的平均值，即(4+8)/2。",
+                  "也可展开为一般式，用x=-b/(2a)核对，两种方式应得到同一横坐标。",
+                  "最后检查对称轴应写成直线形式，并确认它经过顶点。"
+                ],
+                "pitfall": "对称轴是直线x=常数，不要只写一个数值而漏掉“直线x=”。"
+              }
+            ]
+          },
+          {
+            "part": "3",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要求函数最大值，需结合开口方向和顶点位置判断。",
+                  "二次项系数为负，图像开口向下，因此顶点处函数值最大。",
+                  "顶点横坐标与对称轴相同，由两零点平均值可确定。",
+                  "将顶点横坐标代入原函数式，得到最大值的未算完表达式。",
+                  "最后检查代入的是顶点横坐标，并确认开口向下对应最大值。"
+                ],
+                "pitfall": "开口向下时顶点处取得最大值，不要与最小值混淆。"
+              }
+            ]
+          }
+        ],
+        "pattern_summary": "先由函数式结构找零点与对称轴，再结合开口方向确定顶点最值。"
+      }
+    ]
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 6,
+    "first_image_provisional": false,
+    "first_image_seconds": 1.63,
+    "first_image_from_created_seconds": 1.632,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 1.63,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 0.0,
+    "ocr_slot_processing_seconds": 1.598,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 43.422
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}

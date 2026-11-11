@@ -1,0 +1,681 @@
+{
+  "schema_version": "2.0",
+  "manifest_id": "physics_guidance_pilot20_calculation_complete_t03q14_v3",
+  "purpose": "Frozen answer-blind pilot set with the reviewed complete source replacement for TZIP-PHYS-T03-Q14; historical runs using the truncated source remain separate and must not be relabelled.",
+  "created_date": "2026-08-06",
+  "contains_gold_answers": false,
+  "dataset_root": "dataset",
+  "evidence_sources": {
+    "taxonomy": "../../analysis_outputs/question_taxonomy_300_v2_goldv4/taxonomy_working_v2.csv",
+    "question_images": "dataset_root/Test/physics"
+  },
+  "selection_rule": {
+    "subject": "physics",
+    "answer_form_in": [
+      "open_response",
+      "structured_response"
+    ],
+    "required_visual_type": "calculation_large_response",
+    "required_characteristics": [
+      "explicit_subquestions",
+      "requires_physics_formula_derivation"
+    ],
+    "excluded_visual_types": [
+      "experiment",
+      "selection",
+      "other"
+    ],
+    "visual_review_required": true,
+    "taxonomy_is_candidate_source_not_final_type_authority": true,
+    "ordering": "question_id ascending",
+    "limit": 20
+  },
+  "question_count": 20,
+  "questions": [
+    {
+      "question_id": "TZIP-PHYS-T01-Q12",
+      "subject": "physics",
+      "image_path": "Test/physics/Test1/1-12.png",
+      "image_sha256": "1895e456ee67949921033c22b1390e1b5f23fca22a99d39c5b1f15469c8fd1ce",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["a_{nB}"],
+          "prose_aliases": ["滑块运动到圆弧底端B点时的向心加速度", "B点的向心加速度"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["h_{2}"],
+          "prose_aliases": ["滑块不会从小车上掉下时允许的最大高度", "滑块释放高度的最大值"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["v_{D,\\mathrm{rel}}"],
+          "prose_aliases": ["滑块运动到最高点D时相对半圆弧轨道的速度大小", "D点相对半圆弧轨道的速度大小"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T01-Q13",
+      "subject": "physics",
+      "image_path": "Test/physics/Test1/1-13.png",
+      "image_sha256": "847d08243ce706eab76112db40fb6765c6b310c7be12126766a238dbf12e7fd7",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": [],
+          "prose_aliases": ["解锁时刻导线框中的电流方向", "线框abcd中的电流方向"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["v", "\\omega", "I_{\\mathrm{eff}}"],
+          "prose_aliases": ["线框稳定转动时的线速度", "线框稳定转动时的角速度", "线框中电流的有效值"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["s_{\\max}"],
+          "prose_aliases": ["磁场停止转动后ab边还能转过的最大路程", "ab边转过的最大路程"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T01-Q14",
+      "subject": "physics",
+      "image_path": "Test/physics/Test1/1-14.png",
+      "image_sha256": "0fce90da7bc90718ab03070a7ac78296a3841eaa28ce5dca6622ad2479a577c9",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": [],
+          "prose_aliases": ["离子源射出离子的电性", "离子的电荷性质"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["U_{\\max}"],
+          "prose_aliases": ["速度选择器两板间电压的最大值", "速度选择器的最大电压"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["q/m"],
+          "prose_aliases": ["离子的比荷", "离子经过矩形偏转磁场后射出时的比荷"]
+        },
+        {
+          "part": "（4）",
+          "symbol_aliases": [],
+          "prose_aliases": ["接收器位置距N点的距离", "接收器到N点的距离"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T01-Q15",
+      "subject": "physics",
+      "image_path": "Test/physics/Test1/1-15.png",
+      "image_sha256": "cadb42fb8c528614310c1035c2e9b151e209ad19d6ee227cf1e767ddd83051f0",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["T_{1}"],
+          "prose_aliases": ["活塞刚要离开小支架时的气体温度"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["V_{2}"],
+          "prose_aliases": ["气体最终温度对应的气缸内气体体积"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["Q"],
+          "prose_aliases": ["整个过程气体吸收的热量"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T02-Q10",
+      "subject": "physics",
+      "image_path": "Test/physics/Test2/2-10.png",
+      "image_sha256": "4eb0bf1b900ba6f38ba0eba794b2f522f7e33a94c69519c2e5eb30bf6e4384cb",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": [],
+          "prose_aliases": ["加热过程中气体分子平均速率的变化", "气体分子与汽缸壁单位面积单位时间碰撞次数的变化"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["T"],
+          "prose_aliases": ["活塞上升到指定高度时气体的温度"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["\\Delta U"],
+          "prose_aliases": ["活塞上升过程中气体内能的变化量"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T02-Q11",
+      "subject": "physics",
+      "image_path": "Test/physics/Test2/2-11.png",
+      "image_sha256": "6f1e84ef4684e27f0eeae076e05fcc6bd18b5127d0862d9df7b6f1cb740f123d",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["I"],
+          "prose_aliases": ["使天平再次平衡的电流大小", "所通电流的方向"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["B_{1}"],
+          "prose_aliases": ["匀强磁场的磁感应强度大小"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["\\Delta m"],
+          "prose_aliases": ["左右盘砝码质量差与时间的关系", "质量差随时间变化的表达关系"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T02-Q12",
+      "subject": "physics",
+      "image_path": "Test/physics/Test2/2-12.png",
+      "image_sha256": "e94160d382c0ccab52b1e7715d9fb31e2d8a5e61cb7f5ca93fcbcab7c4757348",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["\\lambda_{1}"],
+          "prose_aliases": ["基态定态轨道电子的波长"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": [],
+          "prose_aliases": ["电子轨道角动量满足量子化条件的证明"]
+        },
+        {
+          "part": "（3）①",
+          "symbol_aliases": ["r_{n}", "r_{3}"],
+          "prose_aliases": ["量子数为n的定态轨道半径表达式", "指定定态轨道的半径"]
+        },
+        {
+          "part": "（3）②",
+          "symbol_aliases": ["E_{n}", "E_{6}"],
+          "prose_aliases": ["量子数为n的定态轨道电子总能量表达式", "指定定态轨道电子的总能量"]
+        },
+        {
+          "part": "（4）",
+          "symbol_aliases": ["R"],
+          "prose_aliases": ["里德伯常量的表达式"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T02-Q13",
+      "subject": "physics",
+      "image_path": "Test/physics/Test2/2-13.png",
+      "image_sha256": "867b712614d5daf5af773f840f438fe6406a4a69fcd4579ed8dc6ddda6f62150",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["v_{B}"],
+          "prose_aliases": ["火药爆炸后物体B获得的速度大小"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["x_{\\max}"],
+          "prose_aliases": ["物体B向下减速至零过程中弹簧的最大压缩量"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["s"],
+          "prose_aliases": ["物体B两次向上减速至零之间的位移大小"]
+        },
+        {
+          "part": "（4）",
+          "symbol_aliases": [],
+          "prose_aliases": ["物体A、B、C均停止运动时物体B与C之间的距离"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T03-Q13",
+      "subject": "physics",
+      "image_path": "Test/physics/Test3/3-13.png",
+      "image_sha256": "66d2f7acd61acd14fd8e2111b54db0dfe7ee4fbee5ec80ccb9c87fa4d2e18901",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["M"],
+          "prose_aliases": ["绝热汽缸的总质量"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["T"],
+          "prose_aliases": ["活塞到达汽缸顶部时封闭气体的温度"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["\\Delta U"],
+          "prose_aliases": ["整个加热过程中气体内能的变化量"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T03-Q14",
+      "subject": "physics",
+      "image_path": "Test/physics/Test3/3-14-complete-b85ad058.png",
+      "image_sha256": "b85ad058a2bb21df9d771b381b0a05d28c8abef5ff893622f3d4e6ab45a504a3",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["h"],
+          "prose_aliases": ["AC的竖直高度"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["F_{N}"],
+          "prose_aliases": ["滑块A运动到E点时对轨道的压力"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["S"],
+          "prose_aliases": ["滑块B的总位移"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T03-Q15",
+      "subject": "physics",
+      "image_path": "Test/physics/Test3/3-15.png",
+      "image_sha256": "a0770cd23a125f6b15e3dd6f0e5cb9214b2bc8a8239826dc0b0c3a69367b1d2c",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["k", "B"],
+          "prose_aliases": ["反比例系数", "线框中心点的磁感应强度大小"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["q"],
+          "prose_aliases": ["线框转过直角时的感应电流方向", "转动过程中通过线框的电荷量"]
+        },
+        {
+          "part": "（3）①",
+          "symbol_aliases": ["Q"],
+          "prose_aliases": ["该过程在线框中产生的焦耳热"]
+        },
+        {
+          "part": "（3）②",
+          "symbol_aliases": ["\\Delta\\omega"],
+          "prose_aliases": ["线框在该转动过程中的角速度减小量"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T04-Q11",
+      "subject": "physics",
+      "image_path": "Test/physics/Test4/4-11.png",
+      "image_sha256": "1e37e54a025f1b120eba49e1cd95851ce7dcdaaaf694e95699b1df2c0a7612bd",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": [],
+          "prose_aliases": ["测温泡内气体分子的平均速率变化", "测温泡内气体分子的数密度变化"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["\\Delta U"],
+          "prose_aliases": ["状态一到状态二过程中封闭气体总内能的变化"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["T_{2}"],
+          "prose_aliases": ["低温待测物质的温度"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T04-Q12",
+      "subject": "physics",
+      "image_path": "Test/physics/Test4/4-12.png",
+      "image_sha256": "568c2ebbc98f113baa6cece376d6fe6713ada2b1fd1bb0e20926cc0d55336052",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["v", "v_{0}"],
+          "prose_aliases": ["磁场的方向", "飞机的起飞速度大小"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["E"],
+          "prose_aliases": ["电流源输出的能量"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["R"],
+          "prose_aliases": ["回收动子部分动能时电阻应满足的条件"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T04-Q13",
+      "subject": "physics",
+      "image_path": "Test/physics/Test4/4-13.png",
+      "image_sha256": "d2eba45c788effd3f139abdb068397c4fad5822ba78c20958eb1303b599c8f30",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["t_{AB}"],
+          "prose_aliases": ["滑块在AB段的运动时间", "滑块从A点运动到B点所用时间"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["F_{N}"],
+          "prose_aliases": ["滑块运动到圆弧轨道C点时受到的支持力大小", "C点轨道对滑块的支持力"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["x_{0}"],
+          "prose_aliases": ["弹簧的最大压缩量", "滑块压缩弹簧的最大形变量"]
+        },
+        {
+          "part": "（4）",
+          "symbol_aliases": ["m"],
+          "prose_aliases": ["游戏成功时滑块质量的取值范围", "满足传感器有示数且滑块不从滑板左侧滑出的质量范围"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T05-Q13",
+      "subject": "physics",
+      "image_path": "Test/physics/Test5/5-13.png",
+      "image_sha256": "4478fbbcb486b7cc191be118bcc7ebd072e07112d06150a9104085cdf58c27ec",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["v_{B}", "t_{AB}"],
+          "prose_aliases": ["滑块a滑到斜面底端B处的速度大小", "滑块a在AB段运动的时间"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["v'_{a}", "v'_{b}"],
+          "prose_aliases": ["第一次弹性碰撞后瞬间滑块a的速度大小", "第一次弹性碰撞后瞬间滑块b的速度大小"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["t_{a}", "t_{b}"],
+          "prose_aliases": ["滑块a从第一次碰撞后首次回到碰撞位置的时间", "滑块b从第一次碰撞后首次回到碰撞位置的时间"]
+        },
+        {
+          "part": "（4）",
+          "symbol_aliases": [],
+          "prose_aliases": ["从第一次碰撞到第n次碰撞经历的时间", "第n次碰撞相对第一次碰撞的累计时间"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T06-Q12",
+      "subject": "physics",
+      "image_path": "Test/physics/Test6/6-12.png",
+      "image_sha256": "c143dbbd3c0ae8332d571576e463b37de1a55ed5034270f1050951c4819452c1",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["p_{1}"],
+          "prose_aliases": ["未发生火灾时容器内气体的压强", "初始状态气体压强"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": [],
+          "prose_aliases": ["气体升温过程的V-T图像", "从初始温度到报警温度的体积温度关系图像"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["Q"],
+          "prose_aliases": ["气体从初始温度升至报警温度过程中吸收的热量", "升温全过程气体吸收的热量"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T06-Q13",
+      "subject": "physics",
+      "image_path": "Test/physics/Test6/6-13.png",
+      "image_sha256": "02d2a2e0bcef40e2167ed386ac268335ae907309d479c35b4859afcc0e853d21",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": [],
+          "prose_aliases": ["霍尔片D1与D2两个侧面的电势高低判断", "霍尔片两侧电势关系"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["k"],
+          "prose_aliases": ["霍尔系数的表达式", "霍尔系数与载流子参数的关系"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["v_{0}"],
+          "prose_aliases": ["车辆匀速行驶时的速度大小", "由霍尔电压时间图像确定的车速"]
+        },
+        {
+          "part": "（4）",
+          "symbol_aliases": [],
+          "prose_aliases": ["霍尔片除测速外的一个应用实例或设想", "霍尔元件的其他应用"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T06-Q14",
+      "subject": "physics",
+      "image_path": "Test/physics/Test6/6-14.png",
+      "image_sha256": "37c30c1753dfccd98b18d6d1405c0f14248b0a9f9eec28399d6d61498d1d221a",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": ["F_{N}"],
+          "prose_aliases": ["传输瓶甲经过圆弧管道B点时管道对其支持力大小", "B点处管道支持力"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["v_{C}"],
+          "prose_aliases": ["传输瓶甲到达C点时的速度大小", "甲经过圆弧管道后在C点的速度"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["v_{m}"],
+          "prose_aliases": ["传输瓶甲在CD段运动过程中的最大速度", "甲在调节气压后的最大速度"]
+        },
+        {
+          "part": "（4）",
+          "symbol_aliases": [],
+          "prose_aliases": ["甲乙碰撞后是否会再次发生碰撞的判断", "若再次碰撞时碰撞位置到C点的距离"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T08-Q01",
+      "subject": "physics",
+      "image_path": "Test/physics/Test8/8-1.png",
+      "image_sha256": "9d8337523a30ce3e1ac8c404892d72279ea0d8d70036c9ff707fdd4179fb18b9",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": [],
+          "prose_aliases": ["起始时间段内薄圆筒中感应电流的大小", "起始时间段内薄圆筒中感应电流的方向"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["F_{T}", "Q"],
+          "prose_aliases": ["指定时间段内每根绝缘绳的拉力大小", "指定时间段内薄圆筒产生的焦耳热"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": [],
+          "prose_aliases": ["发热圆盘工作时靠近圆心与外侧的温度高低结论", "发热圆盘径向温度分布的比较结论"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    },
+    {
+      "question_id": "TZIP-PHYS-T08-Q15",
+      "subject": "physics",
+      "image_path": "Test/physics/Test8/8-15.png",
+      "image_sha256": "ffa6a6787b40969bfdf04187d6e8c9f66159bbb2088554debf7d2988bcd2d4bf",
+      "requested_outputs": [
+        {
+          "part": "（1）",
+          "symbol_aliases": [],
+          "prose_aliases": ["霍尔元件金属导体电势较高的表面", "金属导体上下表面的电势高低判断"]
+        },
+        {
+          "part": "（2）",
+          "symbol_aliases": ["U_{H}"],
+          "prose_aliases": ["霍尔电压的表达式", "金属导体霍尔电压与题设物理量的关系"]
+        },
+        {
+          "part": "（3）",
+          "symbol_aliases": ["U"],
+          "prose_aliases": ["接触点移动到指定位置时电压表的示数", "电压表在指定接触位置的读数"]
+        }
+      ],
+      "selection_evidence": {
+        "answer_form": "open_response",
+        "visual_type": "calculation_large_response",
+        "experiment_excluded": true,
+        "visual_review_status": "verified_calculation_large_response",
+        "taxonomy_status": "working_keyword_supported"
+      }
+    }
+  ]
+}

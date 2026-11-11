@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/test7-ocr/self_built_intake_record.schema.json",
+  "title": "test7-OCR self-built source intake record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "asset_id",
+    "role",
+    "partition",
+    "training_allowed",
+    "evaluation_allowed",
+    "source",
+    "metadata",
+    "rights_and_privacy",
+    "registered_at_utc"
+  ],
+  "properties": {
+    "schema_version": { "const": "self_built_intake_record_v1" },
+    "asset_id": { "type": "string", "pattern": "^SBI-[A-Z]+-[a-f0-9]{16}$" },
+    "role": {
+      "enum": ["clean_page", "photo_capture", "boundary_page", "handwriting_capture"]
+    },
+    "partition": { "const": "quarantine" },
+    "training_allowed": { "const": false },
+    "evaluation_allowed": { "const": false },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dataset", "relative_path", "sha256", "format", "width", "height", "byte_size"],
+      "properties": {
+        "dataset": { "const": "test7_ocr_self_built_v1" },
+        "relative_path": { "type": "string", "pattern": "^sources/[a-f0-9]{64}\\.(png|jpg|webp|tif)$" },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "format": { "enum": ["PNG", "JPEG", "WEBP", "TIFF"] },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "byte_size": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["subject", "scope", "document_group", "page_index", "clean_asset_id", "device_code", "conditions", "page_layout"],
+      "properties": {
+        "subject": { "enum": ["mathematics", "physics"] },
+        "scope": { "enum": ["middle_school", "high_school"] },
+        "document_group": { "type": "string", "minLength": 2, "maxLength": 120 },
+        "page_index": { "type": "integer", "minimum": 1 },
+        "clean_asset_id": { "type": ["string", "null"], "pattern": "^SBI-CLEAN-[a-f0-9]{16}$" },
+        "device_code": { "type": ["string", "null"], "minLength": 2, "maxLength": 80 },
+        "conditions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": ["frontal", "perspective", "shadow", "fold_or_curve", "blur", "compression", "uneven_light", "screen_moire"]
+          }
+        },
+        "page_layout": {
+          "enum": ["not_applicable", "single_column", "double_column", "mixed"]
+        }
+      }
+    },
+    "rights_and_privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provenance", "license_reference", "privacy_checked", "contains_personal_data", "distribution_allowed"],
+      "properties": {
+        "provenance": { "enum": ["self_created", "licensed"] },
+        "license_reference": { "type": ["string", "null"], "maxLength": 500 },
+        "privacy_checked": { "const": true },
+        "contains_personal_data": { "const": false },
+        "distribution_allowed": { "type": "boolean" }
+      }
+    },
+    "registered_at_utc": { "type": "string", "format": "date-time" }
+  }
+}

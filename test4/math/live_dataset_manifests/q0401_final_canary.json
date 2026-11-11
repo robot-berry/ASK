@@ -1,0 +1,12 @@
+{
+  "name": "q0401-final-canary",
+  "description": "Fresh paid local canary after the strict positive semantic contract for q_0401.",
+  "cases": [
+    {
+      "id": "high_0401_r3",
+      "image": "../../../../datasets/testzip_math_physics_2000_v3_eink/mathematics/high/q_0401.png",
+      "grade": "high",
+      "tags": ["trigonometry", "no-figure", "captured-regression", "positive-contract"]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "middle-0861-single-canary",
+  "description": "Single paid canary isolated after the recovered middle_0153 run.",
+  "cases": [
+    {
+      "id": "middle_0861_r1",
+      "image": "../../../../datasets/testzip_math_physics_2000_v3_eink/mathematics/middle/q_0861.png",
+      "grade": "middle",
+      "tags": ["geometry", "multi-figure"]
+    }
+  ]
+}

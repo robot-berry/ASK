@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/test7-ocr/capture_pair_review.schema.json",
+  "title": "test7-OCR clean-page and capture pair review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "capture_asset_id", "partition", "training_allowed", "evaluation_allowed", "clean", "capture", "annotation", "review"],
+  "properties": {
+    "schema_version": {"const": "capture_pair_review_v1"},
+    "capture_asset_id": {"type": "string", "pattern": "^SBI-(PHOTO|HAND)-[a-f0-9]{16}$"},
+    "partition": {"const": "quarantine"},
+    "training_allowed": {"const": false},
+    "evaluation_allowed": {"const": false},
+    "clean": {"$ref": "#/$defs/cleanSource"},
+    "capture": {"$ref": "#/$defs/captureSource"},
+    "annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "assessment"],
+      "properties": {
+        "status": {"enum": ["pending", "draft", "annotated", "verified", "rejected"]},
+        "assessment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["same_page", "page_content_complete", "capture_usable", "conditions_confirmed", "privacy_clear", "handwriting_state"],
+          "properties": {
+            "same_page": {"type": ["boolean", "null"]},
+            "page_content_complete": {"type": ["boolean", "null"]},
+            "capture_usable": {"type": ["boolean", "null"]},
+            "conditions_confirmed": {"type": ["boolean", "null"]},
+            "privacy_clear": {"type": ["boolean", "null"]},
+            "handwriting_state": {"enum": [null, "present", "absent", "uncertain"]}
+          }
+        }
+      }
+    },
+    "review": {"$ref": "#/$defs/review"}
+  },
+  "$defs": {
+    "baseSource": {
+      "type": "object",
+      "required": ["asset_id", "dataset", "relative_path", "sha256", "width", "height", "subject", "scope", "document_group", "page_index", "distribution_allowed"],
+      "properties": {
+        "asset_id": {"type": "string"},
+        "dataset": {"const": "test7_ocr_self_built_v1"},
+        "relative_path": {"type": "string", "pattern": "^sources/[a-f0-9]{64}\\.(png|jpg|webp|tif)$"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "width": {"type": "integer", "minimum": 320},
+        "height": {"type": "integer", "minimum": 240},
+        "subject": {"enum": ["mathematics", "physics"]},
+        "scope": {"enum": ["middle_school", "high_school"]},
+        "document_group": {"type": "string", "minLength": 2},
+        "page_index": {"type": "integer", "minimum": 1},
+        "distribution_allowed": {"type": "boolean"}
+      }
+    },
+    "cleanSource": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        {"$ref": "#/$defs/baseSource"},
+        {"type": "object", "properties": {"asset_id": {"pattern": "^SBI-CLEAN-[a-f0-9]{16}$"}}}
+      ]
+    },
+    "captureSource": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        {"$ref": "#/$defs/baseSource"},
+        {
+          "type": "object",
+          "required": ["role", "device_code", "conditions"],
+          "properties": {
+            "asset_id": {"pattern": "^SBI-(PHOTO|HAND)-[a-f0-9]{16}$"},
+            "role": {"enum": ["photo_capture", "handwriting_capture"]},
+            "device_code": {"type": "string", "minLength": 2, "maxLength": 80},
+            "conditions": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {"enum": ["frontal", "perspective", "shadow", "fold_or_curve", "blur", "compression", "uneven_light", "screen_moire"]}
+            }
+          }
+        }
+      ]
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["annotator_id", "reviewer_id", "checks", "notes", "signoffs", "history", "updated_at_utc"],
+      "properties": {
+        "annotator_id": {"type": ["string", "null"]},
+        "reviewer_id": {"type": ["string", "null"]},
+        "checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["clean_capture_match", "content_and_edges_complete", "quality_usable", "conditions_and_handwriting_correct", "privacy_and_rights_rechecked"],
+          "properties": {
+            "clean_capture_match": {"type": ["boolean", "null"]},
+            "content_and_edges_complete": {"type": ["boolean", "null"]},
+            "quality_usable": {"type": ["boolean", "null"]},
+            "conditions_and_handwriting_correct": {"type": ["boolean", "null"]},
+            "privacy_and_rights_rechecked": {"type": ["boolean", "null"]}
+          }
+        },
+        "notes": {"type": "array", "items": {"type": "string"}},
+        "signoffs": {"type": "array", "items": {"type": "object"}},
+        "history": {"type": "array", "items": {"type": "object"}},
+        "updated_at_utc": {"type": ["string", "null"], "format": "date-time"}
+      }
+    }
+  }
+}

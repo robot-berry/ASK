@@ -1,0 +1,103 @@
+{
+  "source": "D:\\robot\\Documents\\ASK\\P_DATA\\test_photo\\photo_0019_19.jpg",
+  "original_size_px": [
+    3072,
+    4096
+  ],
+  "exif_corrected_size_px": [
+    3072,
+    4096
+  ],
+  "perspective_output_size_px": [
+    2900,
+    2615
+  ],
+  "output_size_px": [
+    2900,
+    2615
+  ],
+  "original_quality": {
+    "blur_score": 256.381,
+    "brightness": 85.042,
+    "contrast": 70.509,
+    "warnings": [],
+    "quality_ok": true
+  },
+  "processed_quality": {
+    "blur_score": 2109.329,
+    "brightness": 244.197,
+    "contrast": 20.464,
+    "warnings": [
+      "image_may_have_low_contrast"
+    ],
+    "quality_ok": false
+  },
+  "perspective": {
+    "perspective_corrected": true,
+    "reason": "reliable_page_quadrilateral_detected",
+    "source_corners_px": [
+      [
+        129.0,
+        865.0
+      ],
+      [
+        3028.0,
+        809.0
+      ],
+      [
+        2764.0,
+        3411.0
+      ],
+      [
+        362.0,
+        3237.0
+      ]
+    ],
+    "page_area_ratio": 0.52741,
+    "output_size_px": [
+      2900,
+      2615
+    ],
+    "geometry": {
+      "width_top": 2899.54,
+      "width_bottom": 2408.29,
+      "height_left": 2383.42,
+      "height_right": 2615.36,
+      "aspect_ratio": 1.1087,
+      "corner_angles_deg": [
+        85.5,
+        83.1,
+        91.65,
+        99.75
+      ],
+      "angle_ok": true,
+      "aspect_ok": true,
+      "size_ok": true,
+      "image_size_px": [
+        3072,
+        4096
+      ]
+    }
+  },
+  "operations": {
+    "exif_transpose": true,
+    "perspective_correction": true,
+    "grayscale": true,
+    "illumination_normalization": true,
+    "clahe_contrast_enhancement": true,
+    "sharpening": true,
+    "binarization": false,
+    "final_crop": true
+  },
+  "parameters": {
+    "background_blur_kernel": 51,
+    "clahe_clip_limit": 1.2,
+    "clahe_tile_grid_size": [
+      8,
+      8
+    ],
+    "blur_warning_threshold": 80.0,
+    "page_min_area_ratio": 0.2,
+    "page_approx_epsilon": 0.02
+  }
+}

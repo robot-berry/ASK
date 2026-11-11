@@ -1,0 +1,50 @@
+{
+  "source": "D:\\robot\\Documents\\ASK\\P_DATA\\test_photo\\photo_0417_417.jpg",
+  "original_size_px": [
+    3451,
+    1558
+  ],
+  "exif_corrected_size_px": [
+    3451,
+    1558
+  ],
+  "output_size_px": [
+    3451,
+    1558
+  ],
+  "original_quality": {
+    "blur_score": 528.455,
+    "brightness": 180.491,
+    "contrast": 36.477,
+    "warnings": [],
+    "quality_ok": true
+  },
+  "processed_quality": {
+    "blur_score": 1621.082,
+    "brightness": 244.621,
+    "contrast": 23.847,
+    "warnings": [
+      "image_may_have_low_contrast"
+    ],
+    "quality_ok": false
+  },
+  "operations": {
+    "exif_transpose": true,
+    "grayscale": true,
+    "illumination_normalization": true,
+    "clahe_contrast_enhancement": true,
+    "perspective_correction": false,
+    "binarization": false,
+    "resize": false,
+    "crop": false
+  },
+  "parameters": {
+    "background_blur_kernel": 51,
+    "clahe_clip_limit": 1.5,
+    "clahe_tile_grid_size": [
+      8,
+      8
+    ],
+    "blur_warning_threshold": 80.0
+  }
+}

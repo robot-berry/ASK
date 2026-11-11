@@ -1,0 +1,587 @@
+{
+  "job_id": "20261102T095159_c0a1b18549d340c29cbd3e6d54eede61",
+  "status": "completed",
+  "created_at": "2026-11-02T09:51:59.564+00:00",
+  "updated_at": "2026-11-02T09:52:41.852+00:00",
+  "elapsed_seconds": 42.285,
+  "error": null,
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "image_count": 6,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 360,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "31c874733bd9b00e9378f1378d136fb72602eeae437e3b396cd1a211b11e2253",
+      "bytes": 17712,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T095159_c0a1b18549d340c29cbd3e6d54eede61/01_question_knowledge.png"
+    },
+    {
+      "filename": "02_guidance_elite.png",
+      "width": 800,
+      "height": 1103,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "af26a50e5da51e9f8b339298e31d0062d1ea58ae8fcda4a0a186ecd699fca922",
+      "bytes": 77078,
+      "valid": true,
+      "errors": [],
+      "kind": "elite",
+      "sequence": 2,
+      "url": "/jobs/20261102T095159_c0a1b18549d340c29cbd3e6d54eede61/02_guidance_elite.png"
+    },
+    {
+      "filename": "03_guidance_upper.png",
+      "width": 800,
+      "height": 645,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "ca2b47ad50151eeb70ffdcc97c90e3ddcc98d1d68ea826c14904f4e604339440",
+      "bytes": 55241,
+      "valid": true,
+      "errors": [],
+      "kind": "upper",
+      "sequence": 3,
+      "url": "/jobs/20261102T095159_c0a1b18549d340c29cbd3e6d54eede61/03_guidance_upper.png"
+    },
+    {
+      "filename": "04_guidance_middle.png",
+      "width": 800,
+      "height": 1051,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "135655b72e350cb51e839a4b1c28997c5513440de6c76ee760234837b14a7182",
+      "bytes": 75933,
+      "valid": true,
+      "errors": [],
+      "kind": "middle",
+      "sequence": 4,
+      "url": "/jobs/20261102T095159_c0a1b18549d340c29cbd3e6d54eede61/04_guidance_middle.png"
+    },
+    {
+      "filename": "05_guidance_lower.png",
+      "width": 800,
+      "height": 1371,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "62f72d7153e1db02db71a9b023b504bfa1e42337763ec343f9d0019753272cc5",
+      "bytes": 98978,
+      "valid": true,
+      "errors": [],
+      "kind": "lower",
+      "sequence": 5,
+      "url": "/jobs/20261102T095159_c0a1b18549d340c29cbd3e6d54eede61/05_guidance_lower.png"
+    },
+    {
+      "filename": "06_guidance_novice.png",
+      "width": 800,
+      "height": 3778,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "9d154b79c77dc718cd5374d5e1acf4e33f64e04234f1b8c33a0f1f5492036eaf",
+      "bytes": 295423,
+      "valid": true,
+      "errors": [],
+      "kind": "novice",
+      "sequence": 6,
+      "url": "/jobs/20261102T095159_c0a1b18549d340c29cbd3e6d54eede61/06_guidance_novice.png"
+    }
+  ],
+  "analysis_audit": {
+    "source": "complete_model",
+    "model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "knowledge_points": [
+      "对数函数定义域：两个对数式的真数都必须大于零，取交集得到函数的定义域。",
+      "对数运算性质：同底对数相加可合并为真数乘积的对数，便于研究整体变化。",
+      "二次函数最值：合并后的真数是关于x的二次式，配方后可分析其在定义域内的最大值。",
+      "对数不等式：底数大于1时对数函数单调递增，去掉对数符号后不等号方向不变。",
+      "定义域限制：解对数不等式所得范围必须与定义域取交集，防止产生增解。"
+    ],
+    "base_formulas": [
+      {
+        "formula": "logₐ M + logₐ N = logₐ(MN)",
+        "condition": "a>0且a≠1，M>0，N>0"
+      },
+      {
+        "formula": "logₐ M ≥ logₐ N ⇔ M ≥ N",
+        "condition": "a>1，M>0，N>0"
+      },
+      {
+        "formula": "ab ≤ (((a+b))/2)²，当且仅当a=b时取等号",
+        "condition": "a>0，b>0"
+      }
+    ],
+    "parts": [
+      {
+        "part": "（1）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "函数由两个对数式相加而成，每个对数式中的真数都必须大于零，这是求定义域的基本依据。",
+              "两个条件缺一不可",
+              "定义域是这两个不等式解集的公共部分",
+              "把公共部分写成区间，就是(9,31)，这就是函数f(x)的定义域。"
+            ],
+            "pitfall": "易错点：只解出一个真数大于零就下结论，忽略两个真数必须同时为正。"
+          }
+        ]
+      },
+      {
+        "part": "（2）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "利用同底对数相加法则，f(x)=log₂[(x-9)(31-x)]，因此只需研究真数g(x)=(x-9)(31-x)的最大值。",
+              "展开g(x)得-x²+40x-279，配方为-(x-20)²+121，这是开口向下的二次函数。",
+              "对称轴x=20位于定义域(9,31)内，所以g(x)在x=20处取得最大值121。",
+              "因为底数2>1，对数函数单调递增，所以f(x)的最大值就是log₂121，相应x值为20。"
+            ],
+            "pitfall": "易错点：配方时忽略二次项系数为负，或未验证对称轴是否在定义域内。"
+          }
+        ]
+      },
+      {
+        "part": "（3）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "不等式f(x)≥log₂120中，底数2>1，对数函数单调递增，因此可去掉对数符号。",
+              "去掉对数后得到(x-9)(31-x)≥120，即-x²+40x-279≥120。",
+              "请结合前面的关系，完成最后一步。",
+              "这个范围必须与定义域(9,31)取交集，而[19,21]完全包含在(9,31)内。"
+            ],
+            "pitfall": "易错点：解出二次不等式后忘记与定义域取交集，导致解集扩大。"
+          }
+        ]
+      },
+      {
+        "part": "（120）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "先整理已知条件、所求对象和限制范围。",
+              "选择对应定义或性质，把文字条件转化为数学关系。",
+              "说明每个关键条件在关系式中对应的量、范围或图形信息。",
+              "逐项代入或变形，得到仍含所求对象的中间关系并保留最后求值。"
+            ],
+            "pitfall": "注意定义域、取值范围、符号及所用关系的适用条件"
+          }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier_key": "elite",
+        "title": "学霸解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要使这个函数有意义，两个对数式中的真数分别需要满足什么条件？",
+                  "这两个条件必须同时成立，还是只要其中一个成立就可以？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "两个同底对数相加，能否合并成一个对数？合并后真数有什么结构特点？",
+                  "在定义域内，这个真数何时达到最大？此时对应的自变量需要满足什么关系？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "不等式两边都是同底对数，底数大于1时，去掉对数符号后不等号方向如何变化？",
+                  "转化后的不等式需要与哪个范围取交集，才能保证原对数式有意义？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（120）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "哪个已知条件与这一问的目标联系最直接？",
+                  "还有哪个限制条件尚未使用？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "upper",
+        "title": "中上解析",
+        "knowledge_points": [
+          "对数函数定义域：两个对数式的真数都必须大于零，取交集得到函数的定义域。",
+          "对数运算性质：同底对数相加可合并为真数乘积的对数，便于研究整体变化。",
+          "二次函数最值：合并后的真数是关于x的二次式，配方后可分析其在定义域内的最大值。",
+          "对数不等式：底数大于1时对数函数单调递增，去掉对数符号后不等号方向不变。",
+          "定义域限制：解对数不等式所得范围必须与定义域取交集，防止产生增解。"
+        ],
+        "base_formulas": [],
+        "parts": [],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "middle",
+        "title": "中等解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "定义域由两个真数同时为正决定，因此要分别列出x-9>0与31-x>0。",
+                  "两个不等式解集的公共部分才是定义域，应取交集并写成区间。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "两个同底对数相加可合并为log₂[(x-9)(31-x)]，从而把问题转化为研究真数的最大值。",
+                  "真数是开口向下的二次式，配方后结合定义域判断最大值能否在对称轴处取得。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "不等式两边底数均为2且大于1，可去掉对数符号得到(x-9)(31-x)≥120。",
+                  "请结合前面的关系，完成最后一步。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（120）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "先确定目标量与已知条件之间最直接的数学关系。",
+                  "再核对定义域、取值范围和关系成立的条件。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "lower",
+        "title": "中下解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "两个条件必须同时满足，因此定义域是这两个不等式解集的交集。",
+                  "将交集写成区间形式，即得到函数f(x)的定义域。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由对数加法法则，f(x)=log₂[(x-9)(31-x)]，问题转化为求真数g(x)=(x-9)(31-x)的最大值。",
+                  "g(x)展开为-x²+40x-279，配方得-(x-20)²+121，说明它是开口向下的二次函数。",
+                  "对称轴x=20落在定义域(9,31)内，因此真数在x=20处取得最大值，再代入对数式即可求f(x)的最大值。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "因为底数2>1，对数函数单调递增，所以f(x)≥log₂120等价于(x-9)(31-x)≥120。",
+                  "整理得-x²+40x-279≥120，即x²-40x+399≤0，因式分解为(x-19)(x-21)≤0。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（120）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "把已知条件代入对应定义或性质，保留含所求量的中间关系。",
+                  "利用题设中的关键限制说明该定义或性质可以在本问使用。",
+                  "再检查定义域、符号和适用范围是否一致，并保留最后求值。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "novice",
+        "title": "学渣解析",
+        "knowledge_points": [
+          "对数函数定义域：两个对数式的真数都必须大于零，取交集得到函数的定义域。",
+          "对数运算性质：同底对数相加可合并为真数乘积的对数，便于研究整体变化。",
+          "二次函数最值：合并后的真数是关于x的二次式，配方后可分析其在定义域内的最大值。",
+          "对数不等式：底数大于1时对数函数单调递增，去掉对数符号后不等号方向不变。",
+          "定义域限制：解对数不等式所得范围必须与定义域取交集，防止产生增解。"
+        ],
+        "base_formulas": [
+          {
+            "formula": "logₐ M + logₐ N = logₐ(MN)",
+            "condition": "a>0且a≠1，M>0，N>0"
+          },
+          {
+            "formula": "logₐ M ≥ logₐ N ⇔ M ≥ N",
+            "condition": "a>1，M>0，N>0"
+          },
+          {
+            "formula": "ab ≤ ((a+b)/2)²，当且仅当a=b时取等号",
+            "condition": "a>0，b>0"
+          }
+        ],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "函数由两个对数式相加而成，每个对数式中的真数都必须大于零，这是求定义域的基本依据。",
+                  "把公共部分写成区间，就是(9,31)，这就是函数f(x)的定义域。",
+                  "检查端点：所得参数或所得参数时真数为零，对数无意义，所以端点不能包含在定义域内。"
+                ],
+                "pitfall": "易错点：只解出一个真数大于零就下结论，忽略两个真数必须同时为正。"
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "利用同底对数相加法则，f(x)=log₂[(x-9)(31-x)]，因此只需研究真数g(x)=(x-9)(31-x)的最大值。",
+                  "展开g(x)得-x²+40x-279，配方为-(x-20)²+121，这是开口向下的二次函数。",
+                  "对称轴x=20位于定义域(9,31)内，所以g(x)在x=20处取得最大值121。",
+                  "因为底数2>1，对数函数单调递增，所以f(x)的最大值就是log₂121，相应x值为20。",
+                  "检查：所得参数时两个真数分别为11和11，均为正数，说明该点确实在定义域内。"
+                ],
+                "pitfall": "易错点：配方时忽略二次项系数为负，或未验证对称轴是否在定义域内。"
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "不等式f(x)≥log₂120中，底数2>1，对数函数单调递增，因此可去掉对数符号。",
+                  "去掉对数后得到(x-9)(31-x)≥120，即-x²+40x-279≥120。",
+                  "请结合前面的关系，完成最后一步。",
+                  "这个范围必须与定义域(9,31)取交集，而[19,21]完全包含在(9,31)内。",
+                  "检查端点：所得参数和所得参数时真数乘积均为120，满足不等式，所以解集为[19,21]。"
+                ],
+                "pitfall": "易错点：解出二次不等式后忘记与定义域取交集，导致解集扩大。"
+              }
+            ]
+          },
+          {
+            "part": "（120）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "先整理已知条件、所求对象和限制范围。",
+                  "选择对应定义或性质，把文字条件转化为数学关系。",
+                  "说明每个关键条件在关系式中对应的量、范围或图形信息。",
+                  "逐项代入或变形，得到仍含所求对象的中间关系并保留最后求值。",
+                  "最后检查定义域、符号、取值范围和公式适用条件。"
+                ],
+                "pitfall": "注意定义域、取值范围、符号及所用关系的适用条件"
+              }
+            ]
+          }
+        ],
+        "pattern_summary": "先由真数大于零求定义域，再用对数运算合并，借助二次函数配方或单调性求最值，最后解对数不等式并与定义域取交集。"
+      }
+    ]
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 6,
+    "first_image_provisional": false,
+    "first_image_seconds": 1.675,
+    "first_image_from_created_seconds": 1.678,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 1.675,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 0.0,
+    "ocr_slot_processing_seconds": 1.636,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 39.613
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}

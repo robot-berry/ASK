@@ -1,0 +1,359 @@
+{
+  "job_id": "20261102T094534_f91c03ff7851404caac9af050fcfae7a",
+  "status": "completed",
+  "created_at": "2026-11-02T09:45:34.719+00:00",
+  "updated_at": "2026-11-02T09:45:49.048+00:00",
+  "elapsed_seconds": 14.327,
+  "error": null,
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "image_count": 6,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 277,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "522f5fc71cb81b2f5829fc61a18836b024f10e0c3206053585cecc9be56017d0",
+      "bytes": 14869,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T094534_f91c03ff7851404caac9af050fcfae7a/01_question_knowledge.png"
+    },
+    {
+      "filename": "02_guidance_elite.png",
+      "width": 800,
+      "height": 331,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "d5f468b4343a4bec32bc59515be173b221f3b335d9919e492a4ee208bc0766f7",
+      "bytes": 23459,
+      "valid": true,
+      "errors": [],
+      "kind": "elite",
+      "sequence": 2,
+      "url": "/jobs/20261102T094534_f91c03ff7851404caac9af050fcfae7a/02_guidance_elite.png"
+    },
+    {
+      "filename": "03_guidance_upper.png",
+      "width": 800,
+      "height": 539,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "e034c675dedb189009e511a909960340947752c25663e02f52ba1b10c7528c4a",
+      "bytes": 31120,
+      "valid": true,
+      "errors": [],
+      "kind": "upper",
+      "sequence": 3,
+      "url": "/jobs/20261102T094534_f91c03ff7851404caac9af050fcfae7a/03_guidance_upper.png"
+    },
+    {
+      "filename": "04_guidance_middle.png",
+      "width": 800,
+      "height": 383,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "ac264118a9606fa12242d80693bb838a0874fc44fd7581d8c1f230ac74e22b38",
+      "bytes": 25230,
+      "valid": true,
+      "errors": [],
+      "kind": "middle",
+      "sequence": 4,
+      "url": "/jobs/20261102T094534_f91c03ff7851404caac9af050fcfae7a/04_guidance_middle.png"
+    },
+    {
+      "filename": "05_guidance_lower.png",
+      "width": 800,
+      "height": 439,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "9f3852750e0d03be432321a0db264e2bd7c2d8d9ddfc7fc8ebe9abd0a4957409",
+      "bytes": 24325,
+      "valid": true,
+      "errors": [],
+      "kind": "lower",
+      "sequence": 5,
+      "url": "/jobs/20261102T094534_f91c03ff7851404caac9af050fcfae7a/05_guidance_lower.png"
+    },
+    {
+      "filename": "06_guidance_novice.png",
+      "width": 800,
+      "height": 1794,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "a2d9a7316290a430d29b4cca9e16516a4a5a3950734b632b3b22462138dc39da",
+      "bytes": 110361,
+      "valid": true,
+      "errors": [],
+      "kind": "novice",
+      "sequence": 6,
+      "url": "/jobs/20261102T094534_f91c03ff7851404caac9af050fcfae7a/06_guidance_novice.png"
+    }
+  ],
+  "analysis_audit": {
+    "source": "complete_model",
+    "model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "knowledge_points": [
+      "切线性质：切线垂直于过切点的半径，用于得到直角。",
+      "切线长定理：从圆外一点引圆的两条切线，切线长相等，用于确定PA与PB的关系。",
+      "垂径定理：过圆心作弦的垂线平分弦，用于求弦心距。",
+      "勾股定理：在直角三角形中建立边长之间的平方关系。"
+    ],
+    "base_formulas": [
+      {
+        "formula": "OA⊥PA，OB⊥PB",
+        "condition": "圆的切线垂直于过切点的半径"
+      },
+      {
+        "formula": "PA=PB",
+        "condition": "从圆外一点引圆的两条切线，切线长相等"
+      },
+      {
+        "formula": "a²+b²=c²",
+        "condition": "在直角三角形中，两直角边的平方和等于斜边的平方"
+      }
+    ],
+    "parts": [
+      {
+        "part": "1",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "已知圆O半径OA=20，弦AB=32，过A、B的切线交于P，要求PA。",
+              "作OH⊥AB于H，由垂径定理得AH=16，在Rt△OHA中，OH²=20²-16²，所以OH=12。",
+              "因为PA、PB是切线，所以PA=PB，且OA⊥PA，OB⊥PB，OP垂直平分AB，H在OP上。",
+              "在Rt△OAP中，OA=20，OP=OH+HP=12+HP，PA²=OP²-20²；又由△OHA~△OAP得OH/OA=AH/AP=16/1"
+            ],
+            "pitfall": "注意OH是弦心距，不是OP；OP=OH+HP，不能把OH直接当作OP。"
+          }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier_key": "elite",
+        "title": "学霸解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要求PA的长度，已知半径和弦长，你打算先利用哪个几何关系把已知量联系起来？",
+                  "切线PA与半径OA垂直，这个垂直关系能帮你构造出哪个直角三角形？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "upper",
+        "title": "中上解析",
+        "knowledge_points": [
+          "切线性质：切线垂直于过切点的半径，用于得到直角。",
+          "切线长定理：从圆外一点引圆的两条切线，切线长相等，用于确定PA与PB的关系。",
+          "垂径定理：过圆心作弦的垂线平分弦，用于求弦心距。",
+          "勾股定理：在直角三角形中建立边长之间的平方关系。"
+        ],
+        "base_formulas": [],
+        "parts": [],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "middle",
+        "title": "中等解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "已知半径20和弦AB长32，先作圆心O到弦AB的垂线，垂足为H，由垂径定理可知AH=16。",
+                  "在直角三角形OHA中，用勾股定理求出OH，再在直角三角形OAP中利用切线垂直半径建立PA与OP的关系。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "lower",
+        "title": "中下解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由垂径定理，OH垂直平分AB，所以AH=AB/2=16。",
+                  "在Rt△OHA中，OA=20，AH=16，由勾股定理得OH²=20²-16²，可求出OH。",
+                  "因为PA切圆于A，所以OA⊥PA，在Rt△OAP中，OP=OH+HP，且PA²=OP²-OA²，需先确定HP与PA的关系。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "novice",
+        "title": "学渣解析",
+        "knowledge_points": [
+          "切线性质：切线垂直于过切点的半径，用于得到直角。",
+          "切线长定理：从圆外一点引圆的两条切线，切线长相等，用于确定PA与PB的关系。",
+          "垂径定理：过圆心作弦的垂线平分弦，用于求弦心距。",
+          "勾股定理：在直角三角形中建立边长之间的平方关系。"
+        ],
+        "base_formulas": [
+          {
+            "formula": "OA⊥PA，OB⊥PB",
+            "condition": "圆的切线垂直于过切点的半径"
+          },
+          {
+            "formula": "PA=PB",
+            "condition": "从圆外一点引圆的两条切线，切线长相等"
+          },
+          {
+            "formula": "a²+b²=c²",
+            "condition": "在直角三角形中，两直角边的平方和等于斜边的平方"
+          }
+        ],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "已知圆O半径OA=20，弦AB=32，过A、B的切线交于P，要求PA。",
+                  "因为PA、PB是切线，所以PA=PB，且OA⊥PA，OB⊥PB，OP垂直平分AB，H在OP上。",
+                  "在Rt△OAP中，OA=20，OP=OH+HP=12+HP，PA²=OP²-20²；又由△OHA∽△OAP得OH/OA=AH/AP=16/1",
+                  "最后检查：相似比对应边是OH/OA=AH/AP，代入后解出PA，再验证PA>0且符合图形。"
+                ],
+                "pitfall": "注意OH是弦心距，不是OP；OP=OH+HP，不能把OH直接当作OP。"
+              }
+            ]
+          }
+        ],
+        "pattern_summary": "遇圆的切线问题，先连半径得直角，再利用切线长相等和垂径定理构造直角三角形，通过勾股定理或相似比求解。"
+      }
+    ]
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 6,
+    "first_image_provisional": false,
+    "first_image_seconds": 1.501,
+    "first_image_from_created_seconds": 1.503,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 1.501,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 0.0,
+    "ocr_slot_processing_seconds": 1.468,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 12.413
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}

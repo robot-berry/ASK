@@ -1,0 +1,16 @@
+# Local environments and generated caches
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/node_modules/
+**/.local/
+**/.codex/
+**/*.log
+# Credentials and private keys
+**/*.pem
+**/api_keys.env
+**/apikey*.txt
+**/api_key.txt

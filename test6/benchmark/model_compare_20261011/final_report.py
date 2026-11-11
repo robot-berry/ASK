@@ -1,0 +1,78 @@
+"""Generate final report from current saved results, without calls or ledger writes."""
+import json
+from pathlib import Path
+from analyze import main as analyze
+
+P=Path(__file__).resolve().parent
+analyze()
+a=json.loads((P/'analysis.json').read_text(encoding='utf-8'))
+rows=[json.loads(f.read_text(encoding='utf-8')) for f in P.glob('TZIP*__*.json')]
+names={'qwen_max':'Qwen3.8-Max（当前）','kimi':'Kimi-K2.6','glm_flash':'GLM-5.3-Flash','qwen_27b':'Qwen3.8-27B'}
+lines=['# 四模型小样本解析与时延测试', '',
+       '测试日期：2026-10-11。数学10题、物理10题，四模型均已覆盖20个题目，共80个模型—题目组合。计入此前恢复请求共85次调用。',
+       '按用户最终要求，仅比较分层解析效果与时延，不进行标准答案比对，不报告正确率。', '',
+       '## 结论', '',
+       '**GLM-5.3-Flash最值得继续联调，但本轮没有证据表明任一候选可以直接等效替代当前Max。**',
+       '- GLM成功响应的完整输出较快、分层格式较接近；但首段正文较晚，且有1题无最终正文。若重视逐层早出图，不能只看完整输出时间。',
+       '- Kimi多数题的讲解较展开，但整体更慢；出现浅层展开推导、多问格式异常，以及一题仅返回L1/L2。',
+       '- Qwen27B多数成功样本格式较整齐，但速度波动大，2题超时；部分复杂题讲解存在“或类似形式”等不具体表述。',
+       '- 当前Max本身也有格式与草稿表达问题。因此以下是原始模型响应对照，不能把“与Max不同”直接视为错误，也不能把字段齐全视为效果等同。', '',
+       '## 请求完成与分层结构', '',
+       '| 模型 | 正常结束响应 | 五层字段齐全 | Schema检查通过 | 各层小问标签一致 |',
+       '|---|---:|---:|---:|---:|']
+for k,s in a['models'].items():
+    lines.append(f'| {names[k]} | {s["completed"]}/20 | {s["five_tiers"]}/20 | {s["schema_pass"]}/20 | {s["matching_parts"]}/20 |')
+lines += ['', '“正常结束”指收到stop和流结束；“五层字段齐全”仅检查L1～L5非空；Schema检查涵盖必填字段、句数、长度和类型。均不代表推导正确或生产渲染验收通过。', '',
+          '## 时延（秒）', '',
+          '| 模型 | 成功响应首段正文均值 | 成功响应完整输出均值 | 成功响应完整输出中位数 | 全20题请求结束均值（含失败） |',
+          '|---|---:|---:|---:|---:|']
+for k,s in a['models'].items():
+    lines.append(f'| {names[k]} | {s["first_content_seconds"]["mean"]:.2f} | {s["full_seconds"]["mean"]:.2f} | {s["full_seconds"]["median"]:.2f} | {s["all_terminal_seconds"]["mean"]:.2f} |')
+lines += ['', '成功响应样本数分别为20、20、19、18。失败结束时间不是拿到可用解析的时间；表中同时展示它，避免仅看成功样本掩盖失败。', '',
+          '| 候选 | 与Max共同成功题数 | 同一批题Max均值 | 候选均值 | 每题耗时比的中位数（候选/Max） |',
+          '|---|---:|---:|---:|---:|']
+for k in ('kimi','glm_flash','qwen_27b'):
+    s=a['models'][k]
+    lines.append(f'| {names[k]} | {s["paired_cases"]} | {s["matched_max_full_seconds"]["mean"]:.2f} | {s["full_seconds"]["mean"]:.2f} | {s["paired_full_ratio_vs_max"]["median"]:.2f} |')
+lines += ['', '### 逐层交付时间', '',
+          '| 模型 | L1数组闭合均值 | 记录数 | L5数组闭合均值 | 记录数 |', '|---|---:|---:|---:|---:|']
+for k,s in a['models'].items():
+    lines.append(f'| {names[k]} | {s["l1_seconds"]["mean"]:.2f} | {s["l1_seconds"]["n"]} | {s["l5_seconds"]["mean"]:.2f} | {s["l5_seconds"]["n"]} |')
+lines += ['', '逐层计时是数组从流式正文中可解析的时刻，不是PNG实际出图时刻。首轮部分响应尚未记录逐层时间，故记录数不同，不据此计算严格成对优势。', '',
+          '## 解析审阅证据（不对标准答案评分）', '',
+          '全部80组响应做结构检查；人工重点审阅集合题、机器人概念题、绳环轨迹题、三角多问题、单摆实验题、立体几何题。审阅的是层次、针对性、可交付格式和草稿表达。', '',
+          '| 样本 | 观察 | 对替换的影响 |', '|---|---|---|',
+          '| 数学Q01 集合 | Kimi在L1/L2使用具体公式，L3已展开中间不等式；Max浅层较克制。 | 需校准浅层提示深度，不能仅因五层齐全就判定相同。 |',
+          '| 物理Q01 机器人 | GLM的L4为5句、L5为6句；Kimi与27B的L5直接点明选项。Max也出现英文“performing”。 | 候选和基准都需保留现有输出校验，直接展示原文有差异。 |',
+          '| 数学Q07 绳环轨迹 | Kimi以stop结束，但JSON仅有L1/L2，缺少L3～L5及元数据。 | 8.81秒的快速结束不是完成五层解析，不能当作速度优势。 |',
+          '| 数学Q12 三角多问 | Kimi将pit写进句子数组、缺少pit字段；27B出现“或类似固定关系”“或类似形式”；GLM逐小问给出具体关系且通过结构检查。 | 复杂题中需要同时看分层格式和解释是否具体。 |',
+          '| 物理Q10 单摆实验 | Kimi把pit字段文本混入第6句；Max也有同类格式问题；GLM覆盖5个子问，但一处L4句数超限。 | 原始模型不保证直接满足现有严格格式。 |',
+          '| 数学Q15 立体几何 | 27B超时；Max正文出现“不对”“修正”等草稿及多余句；Kimi与GLM均覆盖3问并通过Schema。 | 单个复杂题可以出现候选更整齐的情况，不能外推为整体等效。 |', '',
+          '更完整原文见 [ALL_RESPONSES.md](ALL_RESPONSES.md)，结构证据见 [quality_audit.json](quality_audit.json)。不以标准答案或模型间一致性作为正确性判据。', '',
+          '## 失败与费用', '']
+for r in sorted(rows,key=lambda x:(x['label'],x['case'])):
+    if r['status']!='ok':
+        lines.append(f'- {names[r["label"]]} / {r["case"]}：{r["status"]}，{r["elapsed_seconds"]:.3f}秒，HTTP {r.get("http_status")}；错误类型 {r.get("error_type") or r.get("finish_reason") or "流未正常完成"}。')
+lines += ['', f'- 有完整usage记录的请求按公开未缓存单价估算：**{a["known_usage_estimate_cny"]:.4f}元**。',
+          f'- 加上超时请求的保守预留与计费余量：**{a["accounted_with_reserves_cny"]:.4f}元**，低于10元上限。',
+          '- 超时请求可能已经产生部分计费，不将其当成免费；当前保留整次预留金额。上述为估算与预算占用，不是平台最终账单。',
+          '- 此前的402/403拒绝与GLM初次未完成请求均保留于ledger/history；最终表采用每题最后一次响应，费用累计包括旧调用。', '',
+          '## 测试口径和适用范围', '',
+          '- 20题均来自现有题库Test1的高中数学/物理题，非随机样本；12题有完整原题选区图片，8题仅固定OCR文字。不代表小学、初中或所有题型。',
+          '- 复用当前工程的五层提示词、系统提示词与Schema；统一JSON object模式并在提示词中附Schema。生产使用JSON Schema模式，本轮不是生产配置的逐字节复现。',
+          '- 同题四模型输入一致、串行调用、temperature=0、正文上限4096；Max/Kimi/27B要求非思考模式，GLM使用思考模式与1024思考预算。不同思考能力影响首段时延。',
+          '- Kimi最早成功的数学Q01没有显式thinking_budget，但返回reasoning_tokens为0；其余硅基流动后续调用均增加该上限。',
+          '- 恢复时保留早先已成功的4份Max和1份Kimi结果，其余继续执行；不是四模型同一瞬间的重复实验，网络/负载和时间差会影响时延。',
+          '- 时延含网络与模型输出，不含OCR、强校验、答案脱敏或六图渲染。故无法承诺换模型后生产端到端时延完全相同。',
+          '- 没有对标准答案评分，也没有用其他模型自动裁判；没有改动生产模型或账号配置。',
+          '- 小样本结论：GLM作为下一步联调候选；本轮不建议直接替换Max。实际替换需验证严格Schema、生产校验与逐层出图。', '',
+          '## 可复查文件', '',
+          '- cases.json：固定样本和输入路径。',
+          '- ledger.json：全部85次请求预算与计费记录。',
+          '- analysis.json：指标汇总；quality_audit.json：逐响应结构检查。',
+          '- TZIP*__*.json：各模型最后一次原始响应；history/：被后续调用替换前的记录。',
+          '- ALL_RESPONSES.md：按题目和模型排列的全部分层正文。', '',
+          '计价来源：[硅基流动](https://siliconflow.cn/pricing)、[阿里云Max](https://help.aliyun.com/zh/model-studio/qwen3-8-max)。价格按此前核对的每百万输入/输出token计算：Max 12/36元、Kimi 6.5/27元、GLM 0.8/2.8元、27B 3/12元，未抵扣缓存与赠金。']
+(P/'REPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+(P/'summary.json').write_text(json.dumps(a,ensure_ascii=False,indent=2),encoding='utf-8')
+print('Final report updated; no provider calls')

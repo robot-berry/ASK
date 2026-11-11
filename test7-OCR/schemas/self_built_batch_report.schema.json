@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/test7-ocr/self_built_batch_report.schema.json",
+  "title": "test7-OCR self-built quarantine batch report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "batch_id",
+    "mode",
+    "status",
+    "manifest_path",
+    "manifest_sha256",
+    "rows_in_manifest",
+    "ready_rows",
+    "failure_count",
+    "failures",
+    "rows",
+    "completed_at_utc"
+  ],
+  "properties": {
+    "schema_version": { "const": "self_built_batch_report_v1" },
+    "batch_id": {
+      "type": "string",
+      "pattern": "^BATCH-[0-9]{8}-[0-9]{6}-[0-9]{6}-[0-9a-f]{10}$"
+    },
+    "mode": { "enum": ["dry_run", "apply"] },
+    "status": {
+      "enum": ["ready", "applied", "rejected_preflight", "rejected_changed_files", "partial_failure"]
+    },
+    "manifest_path": { "type": "string", "minLength": 1 },
+    "manifest_sha256": {
+      "oneOf": [
+        { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        { "type": "null" }
+      ]
+    },
+    "rows_in_manifest": { "type": "integer", "minimum": 0, "maximum": 1000 },
+    "ready_rows": { "type": "integer", "minimum": 0, "maximum": 1000 },
+    "failure_count": { "type": "integer", "minimum": 0 },
+    "failures": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/failure" }
+    },
+    "rows": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/row" }
+    },
+    "completed_at_utc": { "type": "string", "format": "date-time" }
+  },
+  "$defs": {
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["row_number", "row_id", "error"],
+      "properties": {
+        "row_number": { "type": ["integer", "null"], "minimum": 1 },
+        "row_id": { "type": ["string", "null"] },
+        "error": { "type": "string", "minLength": 1 }
+      }
+    },
+    "row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["row_number", "row_id", "role", "asset_id", "image_sha256", "status"],
+      "properties": {
+        "row_number": { "type": "integer", "minimum": 2 },
+        "row_id": { "type": "string", "minLength": 1 },
+        "role": {
+          "enum": ["clean_page", "photo_capture", "boundary_page", "handwriting_capture"]
+        },
+        "asset_id": { "type": "string", "pattern": "^SBI-[A-Z]+-[0-9a-f]{16}$" },
+        "image_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "status": { "enum": ["ready", "registered", "already_registered", "failed"] },
+        "error": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

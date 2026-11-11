@@ -1,0 +1,360 @@
+{
+  "job_id": "20261102T093849_bd3fef40a5a04e8cb71f65818a16287a",
+  "status": "completed",
+  "created_at": "2026-11-02T09:38:49.504+00:00",
+  "updated_at": "2026-11-02T09:39:22.512+00:00",
+  "elapsed_seconds": 32.926,
+  "error": null,
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "image_count": 6,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 173,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "f270e64a926efcbd4135cec3e0e1bf5c9d4258eadfa08860a0997e940ff5ecef",
+      "bytes": 3967,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T093849_bd3fef40a5a04e8cb71f65818a16287a/01_question_knowledge.png"
+    },
+    {
+      "filename": "02_guidance_elite.png",
+      "width": 800,
+      "height": 331,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "89a13c42843f5a8222493dc5f8dd933a794d1059ade2664e3fd33273e1dbe840",
+      "bytes": 23047,
+      "valid": true,
+      "errors": [],
+      "kind": "elite",
+      "sequence": 2,
+      "url": "/jobs/20261102T093849_bd3fef40a5a04e8cb71f65818a16287a/02_guidance_elite.png"
+    },
+    {
+      "filename": "03_guidance_upper.png",
+      "width": 800,
+      "height": 487,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "dfd6c31c5a1bdeff8f2f583df76e64b8a3b35ea77fa5687d33b8bedc7cde4261",
+      "bytes": 33218,
+      "valid": true,
+      "errors": [],
+      "kind": "upper",
+      "sequence": 3,
+      "url": "/jobs/20261102T093849_bd3fef40a5a04e8cb71f65818a16287a/03_guidance_upper.png"
+    },
+    {
+      "filename": "04_guidance_middle.png",
+      "width": 800,
+      "height": 331,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "00e0af55c9a114d98aef450e1673c74ee06b3b87301d2a62154de859b589d885",
+      "bytes": 28534,
+      "valid": true,
+      "errors": [],
+      "kind": "middle",
+      "sequence": 4,
+      "url": "/jobs/20261102T093849_bd3fef40a5a04e8cb71f65818a16287a/04_guidance_middle.png"
+    },
+    {
+      "filename": "05_guidance_lower.png",
+      "width": 800,
+      "height": 439,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "3c5862546facc5c4ffa025b9c6129dd26ba7071263457b46b419fbda0b9450df",
+      "bytes": 36551,
+      "valid": true,
+      "errors": [],
+      "kind": "lower",
+      "sequence": 5,
+      "url": "/jobs/20261102T093849_bd3fef40a5a04e8cb71f65818a16287a/05_guidance_lower.png"
+    },
+    {
+      "filename": "06_guidance_novice.png",
+      "width": 800,
+      "height": 1798,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "86ec8a25c4ef2223944b496726aca4376a840315c70a02d7c5a1bb7f0f4c55df",
+      "bytes": 124818,
+      "valid": true,
+      "errors": [],
+      "kind": "novice",
+      "sequence": 6,
+      "url": "/jobs/20261102T093849_bd3fef40a5a04e8cb71f65818a16287a/06_guidance_novice.png"
+    }
+  ],
+  "analysis_audit": {
+    "source": "complete_model",
+    "model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "knowledge_points": [
+      "有理数加法：解释(-1)与乘法结果相加后等于3的关系。",
+      "乘法与加减法混合运算：说明先算乘法，再算加法的顺序。",
+      "等式的基本性质：说明如何从等式两边同时减去同一个数来简化等式。",
+      "逆运算：说明如何通过除以2来求括号里的数。"
+    ],
+    "base_formulas": [
+      {
+        "formula": "a+c=b+c",
+        "condition": "等式两边同时加上或减去同一个数，等式仍成立"
+      },
+      {
+        "formula": "a×c=b×c",
+        "condition": "等式两边同时乘或除以同一个不为零的数，等式仍成立"
+      },
+      {
+        "formula": "a+b×c",
+        "condition": "先算乘法，再算加减"
+      }
+    ],
+    "parts": [
+      {
+        "part": "1",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "题目要求填出括号里的数，使等式(-1)+2×（）=3成立。",
+              "根据混合运算顺序，先算乘法，再算加法，所以可以把2×（）看成一个整体。",
+              "由等式性质，两边同时减去(-1)，得到2×（）=3-(-1)。",
+              "因为减去一个负数等于加上它的相反数，所以3-(-1)=3+1，即2×（）=4。"
+            ],
+            "pitfall": "移项时要注意减去(-1)等于加上1，不要算成3减1。"
+          }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier_key": "elite",
+        "title": "学霸解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要使等号左边最后的结果，括号里的数乘2后，需要让(-1)加上一个怎样的数？",
+                  "括号里的数乘2后，与(-1)相加时，这个乘法的结果必须满足什么条件？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "upper",
+        "title": "中上解析",
+        "knowledge_points": [
+          "有理数加法：解释(-1)与乘法结果相加后等于3的关系。",
+          "乘法与加减法混合运算：说明先算乘法，再算加法的顺序。",
+          "等式的基本性质：说明如何从等式两边同时减去同一个数来简化等式。",
+          "逆运算：说明如何通过除以2来求括号里的数。"
+        ],
+        "base_formulas": [],
+        "parts": [],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "middle",
+        "title": "中等解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "等号左边是(-1)加上2乘括号里的数，而等号右边是3，所以先要确定2乘括号里的数应该是多少。",
+                  "根据等式两边同时减去同一个数等式仍成立，把(-1)从左边移到右边，再除以2就能得到括号里的数。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "lower",
+        "title": "中下解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由题可知，(-1)加上2乘括号里的数等于3，所以2乘括号里的数就是3减去(-1)。",
+                  "因为减去一个负数等于加上它的相反数，所以3减去(-1)可以转化为3加1。",
+                  "求出2乘括号里的数后，根据乘法和除法互为逆运算，用这个结果除以2就能得到括号里的数。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "novice",
+        "title": "学渣解析",
+        "knowledge_points": [
+          "有理数加法：解释(-1)与乘法结果相加后等于3的关系。",
+          "乘法与加减法混合运算：说明先算乘法，再算加法的顺序。",
+          "等式的基本性质：说明如何从等式两边同时减去同一个数来简化等式。",
+          "逆运算：说明如何通过除以2来求括号里的数。"
+        ],
+        "base_formulas": [
+          {
+            "formula": "a+c=b+c",
+            "condition": "等式两边同时加上或减去同一个数，等式仍成立"
+          },
+          {
+            "formula": "a×c=b×c",
+            "condition": "等式两边同时乘或除以同一个不为零的数，等式仍成立"
+          },
+          {
+            "formula": "a+b×c",
+            "condition": "先算乘法，再算加减"
+          }
+        ],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要求填出括号里的数，使等式(-1)+2×（）=3成立。",
+                  "根据混合运算顺序，先算乘法，再算加法，所以可以把2×（）看成一个整体。",
+                  "由等式性质，两边同时减去(-1)，得到2×（）=3-(-1)。",
+                  "因为减去一个负数等于加上它的相反数，所以3-(-1)=3+1，即2×（）=4。",
+                  "最后根据乘除互逆，括号里的数=4÷2=————，请你自己算出结果并代回原式检验。"
+                ],
+                "pitfall": "移项时要注意减去(-1)等于加上1，不要算成3减1。"
+              }
+            ]
+          }
+        ],
+        "pattern_summary": "遇到含未知数的混合运算等式，先按运算顺序把乘法部分看作整体，再利用等式性质逐步逆推求出未知数。"
+      }
+    ]
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 6,
+    "first_image_provisional": false,
+    "first_image_seconds": 15.646,
+    "first_image_from_created_seconds": 15.728,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 15.646,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 9.584,
+    "ocr_slot_processing_seconds": 6.033,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 16.847
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}

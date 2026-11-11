@@ -1,0 +1,50 @@
+{
+  "source": "D:\\robot\\Documents\\ASK\\P_DATA\\test_photo\\photo_0290_290.jpg",
+  "original_size_px": [
+    1102,
+    1707
+  ],
+  "exif_corrected_size_px": [
+    1707,
+    1102
+  ],
+  "output_size_px": [
+    1707,
+    1102
+  ],
+  "original_quality": {
+    "blur_score": 180.143,
+    "brightness": 155.021,
+    "contrast": 34.932,
+    "warnings": [],
+    "quality_ok": true
+  },
+  "processed_quality": {
+    "blur_score": 819.624,
+    "brightness": 246.375,
+    "contrast": 26.98,
+    "warnings": [
+      "image_may_be_overexposed"
+    ],
+    "quality_ok": false
+  },
+  "operations": {
+    "exif_transpose": true,
+    "grayscale": true,
+    "illumination_normalization": true,
+    "clahe_contrast_enhancement": true,
+    "perspective_correction": false,
+    "binarization": false,
+    "resize": false,
+    "crop": false
+  },
+  "parameters": {
+    "background_blur_kernel": 51,
+    "clahe_clip_limit": 1.5,
+    "clahe_tile_grid_size": [
+      8,
+      8
+    ],
+    "blur_warning_threshold": 80.0
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "job_id": "20261102T093949_47f1fb9e91ad4aef962d1bc4261e62b7",
+  "status": "completed",
+  "created_at": "2026-11-02T09:39:49.979+00:00",
+  "updated_at": "2026-11-02T09:40:12.255+00:00",
+  "elapsed_seconds": 22.273,
+  "error": null,
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "image_count": 6,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 173,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "7416b203a291640ad3310d45c6f454ca9cee1377cee006e2201beb2c66cac936",
+      "bytes": 4200,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T093949_47f1fb9e91ad4aef962d1bc4261e62b7/01_question_knowledge.png"
+    },
+    {
+      "filename": "02_guidance_elite.png",
+      "width": 800,
+      "height": 331,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "0734f60394ad2ec0bd2f2ef589bcd2fea86bcca3781c2f238a36670d2eaf4e53",
+      "bytes": 24849,
+      "valid": true,
+      "errors": [],
+      "kind": "elite",
+      "sequence": 2,
+      "url": "/jobs/20261102T093949_47f1fb9e91ad4aef962d1bc4261e62b7/02_guidance_elite.png"
+    },
+    {
+      "filename": "03_guidance_upper.png",
+      "width": 800,
+      "height": 539,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "75c57f041779f02bf2ea939bdbe574f16e5a8d5e2ccd7977108e16cdf010ca5c",
+      "bytes": 35082,
+      "valid": true,
+      "errors": [],
+      "kind": "upper",
+      "sequence": 3,
+      "url": "/jobs/20261102T093949_47f1fb9e91ad4aef962d1bc4261e62b7/03_guidance_upper.png"
+    },
+    {
+      "filename": "04_guidance_middle.png",
+      "width": 800,
+      "height": 331,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "bc912679281c8fd08ef5bea004a5527b58d2a8282133249267f27904b4569253",
+      "bytes": 19846,
+      "valid": true,
+      "errors": [],
+      "kind": "middle",
+      "sequence": 4,
+      "url": "/jobs/20261102T093949_47f1fb9e91ad4aef962d1bc4261e62b7/04_guidance_middle.png"
+    },
+    {
+      "filename": "05_guidance_lower.png",
+      "width": 800,
+      "height": 439,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "2f0762f94d43ab2939a16f24233d04ac7e1adbb9bff73b221cb42d230e269884",
+      "bytes": 33354,
+      "valid": true,
+      "errors": [],
+      "kind": "lower",
+      "sequence": 5,
+      "url": "/jobs/20261102T093949_47f1fb9e91ad4aef962d1bc4261e62b7/05_guidance_lower.png"
+    },
+    {
+      "filename": "06_guidance_novice.png",
+      "width": 800,
+      "height": 1902,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "b8df172015c74d233f38a92217d375b4cc3d92452bd87294cbb172ed16239eb3",
+      "bytes": 127570,
+      "valid": true,
+      "errors": [],
+      "kind": "novice",
+      "sequence": 6,
+      "url": "/jobs/20261102T093949_47f1fb9e91ad4aef962d1bc4261e62b7/06_guidance_novice.png"
+    }
+  ],
+  "analysis_audit": {
+    "source": "complete_model",
+    "model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "knowledge_points": [
+      "有理数加法：-8加上一个数得到10，需要先确定这个加数。",
+      "乘法与加法的关系：2乘括号里的数，结果就是上面确定的加数。",
+      "等式的基本性质：等式两边同时进行相同的运算，等式仍成立。",
+      "运算顺序：先算乘法，再算加法，因此要把乘法部分看成一个整体。"
+    ],
+    "base_formulas": [
+      {
+        "formula": "a+c=b+c",
+        "condition": "等式两边同时加上或减去同一个数，等式仍成立"
+      },
+      {
+        "formula": "a×c=b×c",
+        "condition": "等式两边同时乘或除以同一个不为零的数，等式仍成立"
+      },
+      {
+        "formula": "a+b×c",
+        "condition": "先算乘法，再算加减"
+      }
+    ],
+    "parts": [
+      {
+        "part": "1",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "题目要求填括号里的数，使-8加上2乘这个数的结果。",
+              "根据运算顺序，应先把2乘括号里的数看成一个整体，再与-8相加。",
+              "由-8加上这个整体等于10，可知这个整体等于10减去-8。",
+              "这个整体是括号里数的2倍，所以括号里数等于这个整体除以2。"
+            ],
+            "pitfall": "不能先算-8加2，因为乘法要先于加法计算。"
+          }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier_key": "elite",
+        "title": "学霸解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要使等号左边最后的结果，括号里的数先和2相乘后，整个左边应该先变成多少？",
+                  "括号里的数乘2后，与-8相加得到10，这个乘法的结果需要满足什么条件？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "upper",
+        "title": "中上解析",
+        "knowledge_points": [
+          "有理数加法：-8加上一个数得到10，需要先确定这个加数。",
+          "乘法与加法的关系：2乘括号里的数，结果就是上面确定的加数。",
+          "等式的基本性质：等式两边同时进行相同的运算，等式仍成立。",
+          "运算顺序：先算乘法，再算加法，因此要把乘法部分看成一个整体。"
+        ],
+        "base_formulas": [],
+        "parts": [],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "middle",
+        "title": "中等解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "等号左边是-8加上2乘括号里的数，目标是让整个左边等于10。",
+                  "可以把2乘括号里的数看成一个整体，先想-8加上什么数等于10。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "lower",
+        "title": "中下解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由运算顺序可知，左边应先算2乘括号里的数，再把结果与-8相加。",
+                  "把2乘括号里的数设为整体，根据-8加上这个整体等于10，可先确定这个整体。",
+                  "确定这个整体后，再根据它与括号里数的2倍关系，建立求括号里数的等式。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "novice",
+        "title": "学渣解析",
+        "knowledge_points": [
+          "有理数加法：-8加上一个数得到10，需要先确定这个加数。",
+          "乘法与加法的关系：2乘括号里的数，结果就是上面确定的加数。",
+          "等式的基本性质：等式两边同时进行相同的运算，等式仍成立。",
+          "运算顺序：先算乘法，再算加法，因此要把乘法部分看成一个整体。"
+        ],
+        "base_formulas": [
+          {
+            "formula": "a+c=b+c",
+            "condition": "等式两边同时加上或减去同一个数，等式仍成立"
+          },
+          {
+            "formula": "a×c=b×c",
+            "condition": "等式两边同时乘或除以同一个不为零的数，等式仍成立"
+          },
+          {
+            "formula": "a+b×c",
+            "condition": "先算乘法，再算加减"
+          }
+        ],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要求填括号里的数，使-8加上2乘这个数的结果。",
+                  "根据运算顺序，应先把2乘括号里的数看成一个整体，再与-8相加。",
+                  "由-8加上这个整体等于10，可知这个整体等于10减去-8。",
+                  "这个整体是括号里数的2倍，所以括号里数等于这个整体除以2。",
+                  "把得到的数代回原式，按先乘后加的顺序检查左边是否等于10。请在横线上填出所求的数：————。"
+                ],
+                "pitfall": "不能先算-8加2，因为乘法要先于加法计算。"
+              }
+            ]
+          }
+        ],
+        "pattern_summary": "遇到含括号的混合运算填空，先按运算顺序把乘法部分看成一个整体，再根据加减关系求出整体，最后求括号里的数。"
+      }
+    ]
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 6,
+    "first_image_provisional": false,
+    "first_image_seconds": 5.559,
+    "first_image_from_created_seconds": 5.563,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 5.559,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 0.0,
+    "ocr_slot_processing_seconds": 5.535,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 16.329
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}

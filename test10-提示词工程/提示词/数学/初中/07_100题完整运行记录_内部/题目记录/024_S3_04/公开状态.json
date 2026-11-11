@@ -1,0 +1,348 @@
+{
+  "job_id": "20261102T094206_91cb76495822494986ff849c436aa113",
+  "status": "completed",
+  "created_at": "2026-11-02T09:42:06.014+00:00",
+  "updated_at": "2026-11-02T09:42:23.467+00:00",
+  "elapsed_seconds": 17.45,
+  "error": null,
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "image_count": 6,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 307,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "cd369066c52419750d0e9ecd7875b47944ac1ca92e5809e673f46335bb3a0f40",
+      "bytes": 13012,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T094206_91cb76495822494986ff849c436aa113/01_question_knowledge.png"
+    },
+    {
+      "filename": "02_guidance_elite.png",
+      "width": 800,
+      "height": 383,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "2654e6271bf30b78cd49b8aa4101d13c1d255f7ef8036c2cfcb20fa6071f45d9",
+      "bytes": 28826,
+      "valid": true,
+      "errors": [],
+      "kind": "elite",
+      "sequence": 2,
+      "url": "/jobs/20261102T094206_91cb76495822494986ff849c436aa113/02_guidance_elite.png"
+    },
+    {
+      "filename": "03_guidance_upper.png",
+      "width": 800,
+      "height": 433,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "a016d40bf678cb5967141cc87a113c3487d0b472614fa0ef96e9a1e793e92e96",
+      "bytes": 30983,
+      "valid": true,
+      "errors": [],
+      "kind": "upper",
+      "sequence": 3,
+      "url": "/jobs/20261102T094206_91cb76495822494986ff849c436aa113/03_guidance_upper.png"
+    },
+    {
+      "filename": "04_guidance_middle.png",
+      "width": 800,
+      "height": 331,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "6d552850191c0360e933f72b4e6e081a6736f46e8f994652d93bddbc123c035c",
+      "bytes": 26120,
+      "valid": true,
+      "errors": [],
+      "kind": "middle",
+      "sequence": 4,
+      "url": "/jobs/20261102T094206_91cb76495822494986ff849c436aa113/04_guidance_middle.png"
+    },
+    {
+      "filename": "05_guidance_lower.png",
+      "width": 800,
+      "height": 439,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "57195623bbefd3b20313e46efa2ae8d13a6d9af62acae7173b7dc69b78b9daa6",
+      "bytes": 34267,
+      "valid": true,
+      "errors": [],
+      "kind": "lower",
+      "sequence": 5,
+      "url": "/jobs/20261102T094206_91cb76495822494986ff849c436aa113/05_guidance_lower.png"
+    },
+    {
+      "filename": "06_guidance_novice.png",
+      "width": 800,
+      "height": 1630,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "82182c07c0b38e08744badb8971ffe8b6c644ded59364b0fd8758380c161b98e",
+      "bytes": 121789,
+      "valid": true,
+      "errors": [],
+      "kind": "novice",
+      "sequence": 6,
+      "url": "/jobs/20261102T094206_91cb76495822494986ff849c436aa113/06_guidance_novice.png"
+    }
+  ],
+  "analysis_audit": {
+    "source": "complete_model",
+    "model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "knowledge_points": [
+      "勾股定理：在直角三角形中，两条直角边的平方和等于斜边的平方，用来由AC和BC求AB。",
+      "三角形周长：三边长度相加，求出AB后与AC、BC一起计算总长度。",
+      "直角边与斜边的对应：∠C=90°，所以AC、BC是直角边，AB是斜边，不能把AB当作直角边代入。"
+    ],
+    "base_formulas": [
+      {
+        "formula": "a²+b²=c²",
+        "condition": "直角三角形中，两直角边的平方和等于斜边的平方"
+      },
+      {
+        "formula": "C=a+b+c",
+        "condition": "三角形周长等于三边长度之和"
+      }
+    ],
+    "parts": [
+      {
+        "part": "1",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "题目已知直角三角形ABC中∠C=90°，AC=12，BC=16，目标是求斜边AB的长和三角形周长。",
+              "因为∠C是直角，AC与BC是两条直角边，AB是斜边，所以勾股定理的形式应为AC²+BC²=AB²。",
+              "把AC=12、BC=16代入，得到AB²=12²+16²，这一步对应的是两条直角边平方和等于斜边平方。"
+            ],
+            "pitfall": "不要把AB当成直角边代入勾股定理，斜边对应的是平方和的结果。"
+          }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier_key": "elite",
+        "title": "学霸解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要你求斜边AB的长和周长，已知直角边AC和BC，你打算先利用哪个条件把AB与已知边联系起来？",
+                  "在直角三角形中，已知两条直角边求斜边时，哪条关系能保证你算出的AB是唯一确定的？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "upper",
+        "title": "中上解析",
+        "knowledge_points": [
+          "勾股定理：在直角三角形中，两条直角边的平方和等于斜边的平方，用来由AC和BC求AB。",
+          "三角形周长：三边长度相加，求出AB后与AC、BC一起计算总长度。",
+          "直角边与斜边的对应：∠C=90°，所以AC、BC是直角边，AB是斜边，不能把AB当作直角边代入。"
+        ],
+        "base_formulas": [],
+        "parts": [],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "middle",
+        "title": "中等解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目给出∠C=90°，AC=12，BC=16，要求AB和周长，突破口是先确认AC、BC是直角边、AB是斜边。",
+                  "下一步应使用勾股定理建立AB与两条直角边的平方关系，再核对求周长时三边是否都已具备。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "lower",
+        "title": "中下解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由∠C=90°可知AC和BC是直角边，AB是斜边，这决定了勾股定理中三条边的对应位置。",
+                  "勾股定理适用于直角三角形，因此可把AC=12、BC=16代入两条直角边的平方和关系。",
+                  "先得到AB的平方与12、16的平方和之间的等式，再考虑开方求AB，最后把三边相加表示周长。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "novice",
+        "title": "学渣解析",
+        "knowledge_points": [
+          "勾股定理：在直角三角形中，两条直角边的平方和等于斜边的平方，用来由AC和BC求AB。",
+          "三角形周长：三边长度相加，求出AB后与AC、BC一起计算总长度。",
+          "直角边与斜边的对应：∠C=90°，所以AC、BC是直角边，AB是斜边，不能把AB当作直角边代入。"
+        ],
+        "base_formulas": [
+          {
+            "formula": "a²+b²=c²",
+            "condition": "直角三角形中，两直角边的平方和等于斜边的平方"
+          },
+          {
+            "formula": "C=a+b+c",
+            "condition": "三角形周长等于三边长度之和"
+          }
+        ],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目已知直角三角形ABC中∠C=90°，AC=12，BC=16，目标是求斜边AB的长和三角形周长。",
+                  "因为∠C是直角，AC与BC是两条直角边，AB是斜边，所以勾股定理的形式应为AC²+BC²=AB²。",
+                  "把AC=12、BC=16代入，得到AB²=12²+16²，这一步对应的是两条直角边平方和等于斜边平方。",
+                  "由AB²=144+256=400，可知AB是400的算术平方根，即AB=√400，最后一步请你自己算一算。",
+                  "求出AB后，周长应为AC+BC+AB，即12+16+AB，检查时确认三边都已使用且AB对应斜边。"
+                ],
+                "pitfall": "不要把AB当成直角边代入勾股定理，斜边对应的是平方和的结果。"
+              }
+            ]
+          }
+        ],
+        "pattern_summary": "直角三角形已知两直角边求斜边时，先确认直角边与斜边的对应，再用勾股定理列平方关系，最后按周长定义相加。"
+      }
+    ]
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 6,
+    "first_image_provisional": false,
+    "first_image_seconds": 1.532,
+    "first_image_from_created_seconds": 1.536,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 1.532,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 0.0,
+    "ocr_slot_processing_seconds": 1.498,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 15.518
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}

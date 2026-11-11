@@ -1,0 +1,30 @@
+{
+  "name": "primary-synthetic-pristine-three",
+  "description": "Three locally generated, synthetic pristine primary-school mathematics fixtures. These clean renders are not phone photos and contain no answers.",
+  "cases": [
+    {
+      "id": "primary_synth_application_001",
+      "image": "primary_01_multistep_application.png",
+      "grade": "primary",
+      "group": "synthetic-pristine",
+      "tags": ["primary", "application", "multi-step", "reasoning", "no-choice", "no-answer"],
+      "notes": "Synthetic pristine fixture generated locally; not a phone photo. Multi-step arithmetic application problem."
+    },
+    {
+      "id": "primary_synth_fraction_001",
+      "image": "primary_02_fractions_measurement.png",
+      "grade": "primary",
+      "group": "synthetic-pristine",
+      "tags": ["primary", "fractions", "measurement", "reasoning", "no-choice", "no-answer"],
+      "notes": "Synthetic pristine fixture generated locally; not a phone photo. Fraction and length-measurement reasoning problem."
+    },
+    {
+      "id": "primary_synth_geometry_001",
+      "image": "primary_03_composite_geometry.png",
+      "grade": "primary",
+      "group": "synthetic-pristine",
+      "tags": ["primary", "geometry", "diagram", "area", "perimeter", "reasoning", "no-answer"],
+      "notes": "Synthetic pristine fixture generated locally; not a phone photo. Composite-geometry problem with an actual diagram."
+    }
+  ]
+}

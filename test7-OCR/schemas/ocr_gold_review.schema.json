@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/test7-ocr/ocr_gold_review.schema.json",
+  "title": "test7-OCR OCR gold review task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "sample_id",
+    "source",
+    "candidate_prelabels",
+    "prior_manual_evidence",
+    "gold_annotation",
+    "review"
+  ],
+  "properties": {
+    "schema_version": { "const": "ocr_gold_review_v1" },
+    "sample_id": { "type": "string", "minLength": 1 },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dataset", "image_path", "image_sha256", "width", "height", "subject", "source_group", "source_index", "document_group", "include_in_benchmark", "duplicate_of", "copyright_status"],
+      "properties": {
+        "dataset": { "enum": ["gaokao_physics_300_v1", "testzip_math_physics_300_v1"] },
+        "image_path": { "type": "string", "minLength": 1 },
+        "image_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "width": { "const": 1280 },
+        "height": { "const": 720 },
+        "subject": { "enum": ["mathematics", "physics"] },
+        "source_group": { "type": "string", "minLength": 1 },
+        "source_index": { "type": "integer", "minimum": 1 },
+        "document_group": { "type": "string", "minLength": 1 },
+        "include_in_benchmark": { "type": "boolean" },
+        "duplicate_of": { "type": ["string", "null"] },
+        "copyright_status": { "enum": ["unknown_user_provided", "project_owned_synthetic_evaluation"] }
+      }
+    },
+    "candidate_prelabels": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["suggested_transcript", "normalized_agreement", "candidates", "warning"],
+      "properties": {
+        "suggested_transcript": { "type": "string" },
+        "normalized_agreement": { "type": "boolean" },
+        "candidates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["source", "transcript", "display_transcript", "automatic_text_pass"],
+            "properties": {
+              "source": { "type": "string", "minLength": 1 },
+              "transcript": { "type": "string" },
+              "display_transcript": { "type": "string" },
+              "automatic_text_pass": { "type": "boolean" },
+              "latency_seconds": { "type": ["number", "null"], "minimum": 0 }
+            }
+          }
+        },
+        "warning": { "const": "PRELABEL_IS_NOT_GOLD" }
+      }
+    },
+    "prior_manual_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semantic_complete", "exact_normalized", "error_types", "notes"],
+      "properties": {
+        "semantic_complete": { "type": ["boolean", "null"] },
+        "exact_normalized": { "type": ["boolean", "null"] },
+        "error_types": { "type": "array", "items": { "type": "string" } },
+        "notes": { "type": "string" }
+      }
+    },
+    "gold_annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "question_type", "question_number", "stem_text", "options", "canonical_transcript", "formula_status", "text_blocks", "visual_assets", "ignored_regions", "handwriting_regions"],
+      "properties": {
+        "status": { "enum": ["draft", "annotated", "adjudication_required", "verified", "excluded_duplicate", "rejected"] },
+        "question_type": { "type": "string" },
+        "question_number": { "type": ["string", "null"] },
+        "stem_text": { "type": "string" },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "text"],
+            "properties": {
+              "label": { "type": "string", "minLength": 1 },
+              "text": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "canonical_transcript": { "type": "string" },
+        "formula_status": { "enum": ["pending", "human_transcribed", "latex_verified"] },
+        "text_blocks": { "type": "array", "items": { "$ref": "#/$defs/textBlock" } },
+        "visual_assets": { "type": "array", "items": { "$ref": "#/$defs/visualAsset" } },
+        "ignored_regions": { "type": "array", "items": { "$ref": "#/$defs/region" } },
+        "handwriting_regions": { "type": "array", "items": { "$ref": "#/$defs/region" } }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["priority", "status", "annotator_id", "reviewer_1_id", "reviewer_2_id", "adjudicator_id", "checks", "notes", "history"],
+      "properties": {
+        "priority": { "enum": ["excluded", "p0_handwriting_or_noise", "p1_disagreement_or_known_error", "p2_agreed_prelabel"] },
+        "status": { "enum": ["pending", "annotated", "reviewing", "adjudication_required", "verified", "excluded_duplicate", "rejected"] },
+        "annotator_id": { "type": ["string", "null"] },
+        "reviewer_1_id": { "type": ["string", "null"] },
+        "reviewer_2_id": { "type": ["string", "null"] },
+        "adjudicator_id": { "type": ["string", "null"] },
+        "checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["text_exact", "formula_exact", "options_complete", "visual_assets_complete", "handwriting_excluded", "reading_order_correct"],
+          "properties": {
+            "text_exact": { "type": ["boolean", "null"] },
+            "formula_exact": { "type": ["boolean", "null"] },
+            "options_complete": { "type": ["boolean", "null"] },
+            "visual_assets_complete": { "type": ["boolean", "null"] },
+            "handwriting_excluded": { "type": ["boolean", "null"] },
+            "reading_order_correct": { "type": ["boolean", "null"] }
+          }
+        },
+        "notes": { "type": "array", "items": { "type": "string" } },
+        "history": { "type": "array", "items": { "type": "object" } },
+        "signoffs": { "type": "array", "items": { "type": "object" } }
+      }
+    }
+  },
+  "$defs": {
+    "bbox": {
+      "type": "array",
+      "prefixItems": [
+        { "type": "integer", "minimum": 0 },
+        { "type": "integer", "minimum": 0 },
+        { "type": "integer", "exclusiveMinimum": 0 },
+        { "type": "integer", "exclusiveMinimum": 0 }
+      ],
+      "items": false,
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "textBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["block_id", "type", "bbox", "reading_order", "text", "latex", "uncertain"],
+      "properties": {
+        "block_id": { "type": "string", "minLength": 1 },
+        "type": { "enum": ["question_number", "printed_text", "inline_formula", "display_formula", "option_label", "option_text"] },
+        "bbox": { "$ref": "#/$defs/bbox" },
+        "reading_order": { "type": "integer", "minimum": 0 },
+        "text": { "type": ["string", "null"] },
+        "latex": { "type": ["string", "null"] },
+        "uncertain": { "type": "boolean" }
+      }
+    },
+    "visualAsset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["asset_id", "kind", "source_bbox", "reading_order", "preserve_source_pixels", "redraw_allowed", "edge_complete", "contains_handwriting"],
+      "properties": {
+        "asset_id": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["table", "geometry_figure", "force_diagram", "circuit_diagram", "function_plot", "physics_diagram", "other_figure"] },
+        "source_bbox": { "$ref": "#/$defs/bbox" },
+        "reading_order": { "type": "integer", "minimum": 0 },
+        "preserve_source_pixels": { "const": true },
+        "redraw_allowed": { "const": false },
+        "edge_complete": { "type": "boolean" },
+        "contains_handwriting": { "type": "boolean" }
+      }
+    },
+    "region": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["region_id", "category", "bbox", "reason"],
+      "properties": {
+        "region_id": { "type": "string", "minLength": 1 },
+        "category": { "enum": ["student_handwriting", "teacher_mark", "watermark", "header_footer", "non_question_noise", "overlap_unrecoverable", "uncertain"] },
+        "bbox": { "$ref": "#/$defs/bbox" },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

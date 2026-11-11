@@ -1,0 +1,512 @@
+{
+  "job_id": "20261102T094723_7214cc51084c4ab7b81abf09d965b1af",
+  "status": "completed",
+  "created_at": "2026-11-02T09:47:23.872+00:00",
+  "updated_at": "2026-11-02T09:48:06.032+00:00",
+  "elapsed_seconds": 42.157,
+  "error": null,
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "image_count": 6,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 484,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "0d4e18998a03879f8f175aa4eccbede86690cf5860b1deed89b4278abe88a562",
+      "bytes": 29985,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T094723_7214cc51084c4ab7b81abf09d965b1af/01_question_knowledge.png"
+    },
+    {
+      "filename": "02_guidance_elite.png",
+      "width": 800,
+      "height": 934,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "37101d75050f8a89cfeb7d703508d51638bdf887639539a5fe8b229139e33e67",
+      "bytes": 62510,
+      "valid": true,
+      "errors": [],
+      "kind": "elite",
+      "sequence": 2,
+      "url": "/jobs/20261102T094723_7214cc51084c4ab7b81abf09d965b1af/02_guidance_elite.png"
+    },
+    {
+      "filename": "03_guidance_upper.png",
+      "width": 800,
+      "height": 539,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "71165115c41b6d169d3c39b84d2caad57933b42d77d2769101620503553deb5f",
+      "bytes": 42646,
+      "valid": true,
+      "errors": [],
+      "kind": "upper",
+      "sequence": 3,
+      "url": "/jobs/20261102T094723_7214cc51084c4ab7b81abf09d965b1af/03_guidance_upper.png"
+    },
+    {
+      "filename": "04_guidance_middle.png",
+      "width": 800,
+      "height": 1016,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "ec2f2435ece285c92131c3c1f2e9fef97a12e1c8bcf7275255e08822ccf18d1a",
+      "bytes": 71693,
+      "valid": true,
+      "errors": [],
+      "kind": "middle",
+      "sequence": 4,
+      "url": "/jobs/20261102T094723_7214cc51084c4ab7b81abf09d965b1af/04_guidance_middle.png"
+    },
+    {
+      "filename": "05_guidance_lower.png",
+      "width": 800,
+      "height": 1380,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "55d506887f93077ce49bba02012fb185d61f2322b012c07c9fd44c9c6d9c5b7e",
+      "bytes": 107151,
+      "valid": true,
+      "errors": [],
+      "kind": "lower",
+      "sequence": 5,
+      "url": "/jobs/20261102T094723_7214cc51084c4ab7b81abf09d965b1af/05_guidance_lower.png"
+    },
+    {
+      "filename": "06_guidance_novice.png",
+      "width": 800,
+      "height": 3359,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "4860e6f1e899a82062f8ac881075cccd9bf75311294393d9179a3dbc292e1743",
+      "bytes": 255508,
+      "valid": true,
+      "errors": [],
+      "kind": "novice",
+      "sequence": 6,
+      "url": "/jobs/20261102T094723_7214cc51084c4ab7b81abf09d965b1af/06_guidance_novice.png"
+    }
+  ],
+  "analysis_audit": {
+    "source": "complete_model",
+    "model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "knowledge_points": [
+      "二次函数与x轴交点：交点横坐标满足函数值为零，可用来确定解析式中的系数。",
+      "三角形面积：底边AB在x轴上，高是点C到x轴的竖直距离。",
+      "二次函数在区间上的最值：开口方向与顶点位置共同决定面积的最大值。",
+      "动点坐标与面积关系：点P的纵坐标绝对值表示到x轴的距离，需结合运动范围判断符号。"
+    ],
+    "base_formulas": [
+      {
+        "formula": "x₁+x₂=-b, x₁ₓ₂=c",
+        "condition": "抛物线与x轴交于两点时，交点横坐标是方程 x²+bx+c=0 的根"
+      },
+      {
+        "formula": "S=1/2×底×高",
+        "condition": "三角形面积公式，底为水平线段时高为竖直距离"
+      },
+      {
+        "formula": "y=a(x-h)²+k",
+        "condition": "二次函数在给定区间上的最值需结合开口方向和顶点位置判断"
+      }
+    ],
+    "parts": [
+      {
+        "part": "（1）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "题目要求抛物线 y=x²+bx+c 的解析式，已知它与x轴交于A(-4,0)和B(6,0)。",
+              "因为A、B在x轴上，所以-4和6是方程 x²+bx+c=0 的两个根。",
+              "由根与系数的关系，两根之和为 -b，两根之积为 c。",
+              "把-4和6代入，得到 -4+6=-b 以及 (-4)×6=c，由此可解出b和c。"
+            ],
+            "pitfall": "不要忽略两根之和与两根之积的符号，尤其两根之积等于c而不是-c。"
+          }
+        ]
+      },
+      {
+        "part": "（2）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "题目要求三角形ABC的面积，A、B在x轴上，C是抛物线与y轴的交点。",
+              "底边AB的长度等于A、B横坐标之差的绝对值",
+              "点C的横坐标为0，纵坐标等于解析式中的常数项c，所以高是 |c|。",
+              "三角形面积公式为 S=1/2×底×高，代入底10和高 |c| 即可。"
+            ],
+            "pitfall": "点C的纵坐标可能为负，三角形的高应取绝对值，不能直接把负的纵坐标当作高。"
+          }
+        ]
+      },
+      {
+        "part": "（3）",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "题目要求三角形PAB面积的最大值及此时P的坐标，P在A、B之间的抛物线上。",
+              "底边AB长度固定为10，面积取决于点P到x轴的距离，即高的长度。",
+              "在A、B之间，抛物线位于x轴下方，点P的纵坐标y为负，所以高为-y。",
+              "面积可表示为 S=1/2×10×(-y)，把抛物线解析式代入后得到关于x的二次函数。"
+            ],
+            "pitfall": "在A、B之间抛物线在x轴下方，高应写成-y而不是y，否则面积符号会出错。"
+          }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier_key": "elite",
+        "title": "学霸解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "已知抛物线与x轴的两个交点坐标，这两个点与解析式中的系数有什么关系？",
+                  "要确定解析式，需要把交点坐标代入后得到怎样的关系？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "三角形ABC的底边AB在x轴上，点C在y轴上，它的高对应哪一段长度？",
+                  "点C的纵坐标与抛物线解析式中的常数项有什么联系？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "点P在A、B之间的抛物线上，三角形PAB的底边AB长度是否固定？",
+                  "点P到x轴的距离如何用它的纵坐标表示，这个距离在A、B之间是否始终非负？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "upper",
+        "title": "中上解析",
+        "knowledge_points": [
+          "二次函数与x轴交点：交点横坐标满足函数值为零，可用来确定解析式中的系数。",
+          "三角形面积：底边AB在x轴上，高是点C到x轴的竖直距离。",
+          "二次函数在区间上的最值：开口方向与顶点位置共同决定面积的最大值。",
+          "动点坐标与面积关系：点P的纵坐标绝对值表示到x轴的距离，需结合运动范围判断符号。"
+        ],
+        "base_formulas": [],
+        "parts": [],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "middle",
+        "title": "中等解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "抛物线经过A(-4,0)和B(6,0)，这两个点都在x轴上，所以它们的横坐标是方程 x²+bx+c=0 的两个根。",
+                  "由根与系数的关系可以列出关于b、c的方程，再联立求出解析式。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "三角形ABC的底边AB在x轴上，AB的长度可由A、B的横坐标差得到。",
+                  "点C在y轴上，其纵坐标就是解析式中的常数项，因此高等于点C纵坐标的绝对值。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "点P在A、B之间的抛物线上，底边AB长度固定，面积大小取决于点P到x轴的距离。",
+                  "在A、B之间抛物线位于x轴下方，点P的纵坐标为负，所以高应取纵坐标的相反数。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "lower",
+        "title": "中下解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由A(-4,0)、B(6,0)在抛物线上，可知-4和6是方程 x²+bx+c=0 的两个根。",
+                  "根据根与系数的关系，两根之和等于-b，两根之积等于c，这正好对应解析式中的两个待定系数。",
+                  "把两根的具体数值代入这两个关系，就能得到b、c的方程组，解出后即得解析式。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "三角形ABC的底边AB在x轴上，A、B的横坐标分别为-4和6，所以底边AB的长度为10。",
+                  "点C是抛物线与y轴的交点，其横坐标为0，纵坐标等于解析式中的常数项c。",
+                  "因此三角形的高是点C纵坐标的绝对值，代入面积公式 S=1/2×AB×|y_C| 即可计算。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "点P在A、B之间的抛物线上，底边AB长度固定为10，所以面积只随点P到x轴的距离变化。",
+                  "在A、B之间，抛物线位于x轴下方，点P的纵坐标y为负，因此高为-y。",
+                  "面积可表示为 S=1/2×10×(-y)，再把抛物线解析式代入，得到关于x的二次函数，在A、B对应的x范围内求最值。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "novice",
+        "title": "学渣解析",
+        "knowledge_points": [
+          "二次函数与x轴交点：交点横坐标满足函数值为零，可用来确定解析式中的系数。",
+          "三角形面积：底边AB在x轴上，高是点C到x轴的竖直距离。",
+          "二次函数在区间上的最值：开口方向与顶点位置共同决定面积的最大值。",
+          "动点坐标与面积关系：点P的纵坐标绝对值表示到x轴的距离，需结合运动范围判断符号。"
+        ],
+        "base_formulas": [
+          {
+            "formula": "x₁+x₂=-b, x₁x₂=c",
+            "condition": "抛物线与x轴交于两点时，交点横坐标是方程 x²+bx+c=0 的根"
+          },
+          {
+            "formula": "S=1/2×底×高",
+            "condition": "三角形面积公式，底为水平线段时高为竖直距离"
+          },
+          {
+            "formula": "y=a(x-h)²+k",
+            "condition": "二次函数在给定区间上的最值需结合开口方向和顶点位置判断"
+          }
+        ],
+        "parts": [
+          {
+            "part": "（1）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要求抛物线 y=x²+bx+c 的解析式，已知它与x轴交于A(-4,0)和B(6,0)。",
+                  "因为A、B在x轴上，所以-4和6是方程 x²+bx+c=0 的两个根。",
+                  "由根与系数的关系，两根之和为 -b，两根之积为 c。",
+                  "把-4和6代入，得到 -4+6=-b 以及 (-4)×6=c，由此可解出b和c。",
+                  "请结合前面的关系，完成最后一步。"
+                ],
+                "pitfall": "不要忽略两根之和与两根之积的符号，尤其两根之积等于c而不是-c。"
+              }
+            ]
+          },
+          {
+            "part": "（2）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要求三角形ABC的面积，A、B在x轴上，C是抛物线与y轴的交点。",
+                  "底边AB的长度等于A、B横坐标之差的绝对值",
+                  "点C的横坐标为0，纵坐标等于解析式中的常数项c，所以高是 |c|。",
+                  "三角形面积公式为 S=1/2×底×高，代入底10和高 |c| 即可。",
+                  "计算时先确认c的符号，再取绝对值，最后检查面积单位与底、高是否对应。"
+                ],
+                "pitfall": "点C的纵坐标可能为负，三角形的高应取绝对值，不能直接把负的纵坐标当作高。"
+              }
+            ]
+          },
+          {
+            "part": "（3）",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要求三角形PAB面积的最大值及此时P的坐标，P在A、B之间的抛物线上。",
+                  "底边AB长度固定为10，面积取决于点P到x轴的距离，即高的长度。",
+                  "在A、B之间，抛物线位于x轴下方，点P的纵坐标y为负，所以高为-y。",
+                  "面积可表示为 S=1/2×10×(-y)，把抛物线解析式代入后得到关于x的二次函数。",
+                  "在A、B对应的x范围内，结合开口方向和顶点位置求最值，并检查端点与顶点是否在范围内。"
+                ],
+                "pitfall": "在A、B之间抛物线在x轴下方，高应写成-y而不是y，否则面积符号会出错。"
+              }
+            ]
+          }
+        ],
+        "pattern_summary": "先由抛物线与x轴交点确定解析式，再以固定底边和动点到x轴的距离表示面积，最后在给定区间内求二次函数最值。"
+      }
+    ]
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 6,
+    "first_image_provisional": false,
+    "first_image_seconds": 2.826,
+    "first_image_from_created_seconds": 2.829,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 2.826,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 0.0,
+    "ocr_slot_processing_seconds": 2.777,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 38.253
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}

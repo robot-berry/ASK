@@ -1,0 +1,360 @@
+{
+  "job_id": "20261102T093922_4919a087b88b436084a5d737b11327a2",
+  "status": "completed",
+  "created_at": "2026-11-02T09:39:22.768+00:00",
+  "updated_at": "2026-11-02T09:39:48.752+00:00",
+  "elapsed_seconds": 25.982,
+  "error": null,
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "image_count": 6,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 173,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "e261c282e9e156227ad13ca6c8987c5d7b2e6e68104e42d08650d8a82ba7bbe8",
+      "bytes": 4035,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T093922_4919a087b88b436084a5d737b11327a2/01_question_knowledge.png"
+    },
+    {
+      "filename": "02_guidance_elite.png",
+      "width": 800,
+      "height": 227,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "d45a6597c9dfa52b8df677ee0f691e4ed78845827533b862c2e0ba585e755517",
+      "bytes": 15232,
+      "valid": true,
+      "errors": [],
+      "kind": "elite",
+      "sequence": 2,
+      "url": "/jobs/20261102T093922_4919a087b88b436084a5d737b11327a2/02_guidance_elite.png"
+    },
+    {
+      "filename": "03_guidance_upper.png",
+      "width": 800,
+      "height": 487,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "8cac0b951ed195fdbdf557f46503021a52cd9e6eb6d1391e36d08fb23f7438a8",
+      "bytes": 31408,
+      "valid": true,
+      "errors": [],
+      "kind": "upper",
+      "sequence": 3,
+      "url": "/jobs/20261102T093922_4919a087b88b436084a5d737b11327a2/03_guidance_upper.png"
+    },
+    {
+      "filename": "04_guidance_middle.png",
+      "width": 800,
+      "height": 279,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "b87e018cae08b61a6d997b91c7db9927b95da502d5fafce51c502dcc0185355d",
+      "bytes": 13440,
+      "valid": true,
+      "errors": [],
+      "kind": "middle",
+      "sequence": 4,
+      "url": "/jobs/20261102T093922_4919a087b88b436084a5d737b11327a2/04_guidance_middle.png"
+    },
+    {
+      "filename": "05_guidance_lower.png",
+      "width": 800,
+      "height": 387,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "446bf73935d1c26fea6785ba04f8ea209067ab5925ba78ac008b737a59324b66",
+      "bytes": 23407,
+      "valid": true,
+      "errors": [],
+      "kind": "lower",
+      "sequence": 5,
+      "url": "/jobs/20261102T093922_4919a087b88b436084a5d737b11327a2/05_guidance_lower.png"
+    },
+    {
+      "filename": "06_guidance_novice.png",
+      "width": 800,
+      "height": 1642,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "fd69d96ecd5373c524cda236e9189b0c83e46c5f1b24bbcb32ac83098a87f69f",
+      "bytes": 112448,
+      "valid": true,
+      "errors": [],
+      "kind": "novice",
+      "sequence": 6,
+      "url": "/jobs/20261102T093922_4919a087b88b436084a5d737b11327a2/06_guidance_novice.png"
+    }
+  ],
+  "analysis_audit": {
+    "source": "complete_model",
+    "model_id": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "knowledge_points": [
+      "有理数加法：把-4移到等号右边时，要改变它的符号。",
+      "乘法与加减法混合运算：先算2×括号，再与-4相加。",
+      "等式的基本性质：等式两边同时加上4，等式仍然成立。",
+      "乘法与除法的互逆关系：已知积和一个因数，可求另一个因数。"
+    ],
+    "base_formulas": [
+      {
+        "formula": "a+c=b+c",
+        "condition": "等式两边同时加上或减去同一个数，等式仍成立"
+      },
+      {
+        "formula": "a c=b c",
+        "condition": "等式两边同时乘或除以同一个不为零的数，等式仍成立"
+      },
+      {
+        "formula": "a+b c",
+        "condition": "先算乘法，再算加减"
+      }
+    ],
+    "parts": [
+      {
+        "part": "1",
+        "methods": [
+          {
+            "method_id": "M1",
+            "method_name": "模型分层解析",
+            "steps": [
+              "题目要求填一个数，使-4加上2与这个数的积等于6。",
+              "根据等式性质，两边同时加4，得到2×括号=6+4。",
+              "这里2×括号表示2乘括号里的数，括号里的数就是积除以2。",
+              "先算6+4=10，再算10÷2，就能得到括号里的数。"
+            ],
+            "pitfall": "移项时忘记把-4变成+4，导致右边算错。"
+          }
+        ]
+      }
+    ],
+    "tiers": [
+      {
+        "tier_key": "elite",
+        "title": "学霸解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "要使等式成立，括号里的数需要满足什么关系？",
+                  "已知的-4和2×括号之间是什么运算顺序？"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "upper",
+        "title": "中上解析",
+        "knowledge_points": [
+          "有理数加法：把-4移到等号右边时，要改变它的符号。",
+          "乘法与加减法混合运算：先算2×括号，再与-4相加。",
+          "等式的基本性质：等式两边同时加上4，等式仍然成立。",
+          "乘法与除法的互逆关系：已知积和一个因数，可求另一个因数。"
+        ],
+        "base_formulas": [],
+        "parts": [],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "middle",
+        "title": "中等解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "等号左边是-4加上2×括号，目标是让整个左边等于6。",
+                  "先把-4移到等号右边，再看2×括号等于什么。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "lower",
+        "title": "中下解析",
+        "knowledge_points": [],
+        "base_formulas": [],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "由等式两边同时加4，左边只剩2×括号，右边变成6+4。",
+                  "因为2×括号表示2与括号内数的积，所以括号内数等于积除以2。",
+                  "把6+4先算出来，再除以2，就能得到括号里的数。"
+                ],
+                "pitfall": ""
+              }
+            ]
+          }
+        ],
+        "pattern_summary": ""
+      },
+      {
+        "tier_key": "novice",
+        "title": "学渣解析",
+        "knowledge_points": [
+          "有理数加法：把-4移到等号右边时，要改变它的符号。",
+          "乘法与加减法混合运算：先算2×括号，再与-4相加。",
+          "等式的基本性质：等式两边同时加上4，等式仍然成立。",
+          "乘法与除法的互逆关系：已知积和一个因数，可求另一个因数。"
+        ],
+        "base_formulas": [
+          {
+            "formula": "a+c=b+c",
+            "condition": "等式两边同时加上或减去同一个数，等式仍成立"
+          },
+          {
+            "formula": "a c=b c",
+            "condition": "等式两边同时乘或除以同一个不为零的数，等式仍成立"
+          },
+          {
+            "formula": "a+b c",
+            "condition": "先算乘法，再算加减"
+          }
+        ],
+        "parts": [
+          {
+            "part": "1",
+            "methods": [
+              {
+                "method_id": "M1",
+                "method_name": "",
+                "steps": [
+                  "题目要求填一个数，使-4加上2与这个数的积等于6。",
+                  "根据等式性质，两边同时加4，得到2×括号=6+4。",
+                  "这里2×括号表示2乘括号里的数，括号里的数就是积除以2。",
+                  "先算6+4=10，再算10÷2，就能得到括号里的数。",
+                  "最后把得到的数代回原式，检查-4加上2乘这个数是否等于6。请在横线上填出所求的数：————。"
+                ],
+                "pitfall": "移项时忘记把-4变成+4，导致右边算错。"
+              }
+            ]
+          }
+        ],
+        "pattern_summary": "遇到含未知数的等式，先用等式性质把已知项移到一边，再根据乘除关系求出未知数。"
+      }
+    ]
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 6,
+    "first_image_provisional": false,
+    "first_image_seconds": 9.909,
+    "first_image_from_created_seconds": 9.912,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 9.909,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 0.0,
+    "ocr_slot_processing_seconds": 9.864,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 15.497
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}

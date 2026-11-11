@@ -1,0 +1,236 @@
+{
+  "job_id": "20260827T064815_f4605449dcfb46c592fc6433a7d4aad1",
+  "status": "failed",
+  "created_at": "2026-08-27T06:48:15.757+00:00",
+  "updated_at": "2026-08-27T06:48:24.020+00:00",
+  "original_filename": "photo_0004_4.jpg",
+  "original_path": "audit/original.upload",
+  "images": [
+    {
+      "path": "D:\\robot\\Documents\\ASK\\picture\\test6\\math\\source\\joint_test_output\\20260827T064815_f4605449dcfb46c592fc6433a7d4aad1\\01_question_knowledge.png",
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 807,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "337bdbb4fcf1c9a5c0698aa26a8224b72ba6aa43bc334eb9a8cbeeca08b7a384",
+      "bytes": 189147,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1
+    }
+  ],
+  "error": {
+    "type": "RuntimeError",
+    "message": "缺少DASHSCOPE_API_KEY；请在source/api_keys.env中配置轮换后的密钥"
+  },
+  "processing_started_at": "2026-08-27T06:48:15.771+00:00",
+  "queue_wait_seconds": 0.014,
+  "preprocess": {
+    "job_id": "test5_584b49ebabe04d48",
+    "png": "png/test5_584b49ebabe04d48.png",
+    "pdf": "pdf/test5_584b49ebabe04d48.pdf",
+    "markdown": "markdown/test5_584b49ebabe04d48.md",
+    "width": 1200,
+    "height": 1211,
+    "handwriting_mode": "local-test5-reflow",
+    "rotation": 0,
+    "rotation_confidence": 1.0,
+    "rotation_method": "test5-local-ocr",
+    "quality": "test5-reflow",
+    "elapsed_seconds": 6.672,
+    "ocr_text": "N5. How many different digits can you find in this picture?\nA5 B6 C7 D9 E13",
+    "question_count": 1,
+    "questions": [],
+    "questions_pdf": "",
+    "questions_markdown": "",
+    "deskew_detected_angle": -2.008,
+    "deskew_applied_angle": -2.008,
+    "deskew_confidence": 1.0,
+    "deskew_status": "test5-local",
+    "cleanup_method": "test5-ocr-reflow",
+    "reference_match": "",
+    "reference_confidence": 0.0,
+    "perspective_status": "not-needed",
+    "perspective_confidence": 0.0,
+    "analysis_reference": "analysis_reference/test5_584b49ebabe04d48.png",
+    "analysis_reference_audit": {
+      "generated": true,
+      "generation_method": "test5-enhanced-original",
+      "authoritative_output_modified": false,
+      "printed_text_count": 2,
+      "formula_block_count": 0,
+      "illustration_count": 1,
+      "illustration_outputs": 1,
+      "ocr_character_count": 75,
+      "question_cropped": true,
+      "included_in_provider_request": true
+    },
+    "capture_type": "test5-local-reflow",
+    "capture_confidence": 1.0,
+    "illustration_images": [
+      "illustrations/test5_584b49ebabe04d48_01.png"
+    ],
+    "fast_preview": {
+      "generation_method": "test5-pre-ocr-geometry-light",
+      "ocr_executed": false,
+      "rotation": 0,
+      "perspective_corrected": false,
+      "deskew_angle": -2.008,
+      "width": 3778,
+      "height": 2374,
+      "decode_ms": 74.234,
+      "auto_rotate_ms": 4.827,
+      "document_detection_ms": 46.857,
+      "perspective_warp_ms": 4.313,
+      "deskew_ms": 33.042,
+      "illumination_ms": 1020.811,
+      "elapsed_ms": 1184.083
+    },
+    "fast_first_image_render_ms": 84.722,
+    "render_source_path": "audit/preprocessed_source.png",
+    "local_first_image_render_ms": 68.821,
+    "adaptive_image_policy": {
+      "ocr_quality_score": 0.65,
+      "ocr_quality": "high",
+      "send_enhanced_original": true,
+      "send_illustration_crops": true,
+      "reason": "low_ocr_or_figure_requires_extra_views"
+    },
+    "analysis_reference_request_path": "audit/test5_enhanced_original.png",
+    "illustration_request_count": 1,
+    "illustration_request_failures": [],
+    "ocr_provider_audit": {
+      "available": true,
+      "source": "test5-local-rapidocr",
+      "character_count": 75,
+      "sent_character_count": 75,
+      "truncated": false,
+      "sha256": "56956e20f6928b449fe9e6ce0f942050228b2c9bac5d6cb756f7084ea325185c",
+      "illustration_crop_count": 1,
+      "included_in_provider_request": true
+    }
+  },
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_advanced.png",
+      "03_guidance_standard.png",
+      "04_guidance_foundation.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png"
+    ],
+    "image_count": 1,
+    "files": [
+      {
+        "path": "D:\\robot\\Documents\\ASK\\picture\\test6\\math\\source\\joint_test_output\\20260827T064815_f4605449dcfb46c592fc6433a7d4aad1\\01_question_knowledge.png",
+        "filename": "01_question_knowledge.png",
+        "width": 800,
+        "height": 807,
+        "mode": "L",
+        "format": "PNG",
+        "dpi": [
+          225.7806,
+          225.7806
+        ],
+        "display_width_cm": 9.0,
+        "sha256": "337bdbb4fcf1c9a5c0698aa26a8224b72ba6aa43bc334eb9a8cbeeca08b7a384",
+        "bytes": 189147,
+        "valid": true,
+        "errors": [],
+        "kind": "question_knowledge",
+        "sequence": 1
+      }
+    ],
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 4,
+      "content_order": [
+        "question_knowledge",
+        "advanced",
+        "standard",
+        "foundation"
+      ]
+    }
+  },
+  "streaming": {
+    "enabled": true,
+    "published_images": 1,
+    "first_image_provisional": false,
+    "first_image_seconds": 1.315,
+    "first_image_from_created_seconds": 1.329,
+    "provider_prefix_ms": null,
+    "first_image_source": "test5-local-ocr-reflow",
+    "first_image_refinement_pending": false,
+    "model_required_for_first_image": false,
+    "initial_first_image_source": "test5-fast-local-preview",
+    "first_image_refined_seconds": 8.085
+  },
+  "request_image": {
+    "path": "D:\\robot\\Documents\\ASK\\picture\\test6\\math\\source\\joint_test_output\\20260827T064815_f4605449dcfb46c592fc6433a7d4aad1\\audit\\preprocessed_source.png",
+    "sha256": "417c7068eefb531dc2ec2f2b6dec585ffadabc616a44312addbe6af7fafa4852",
+    "bytes": 1050392,
+    "width": 1200,
+    "height": 1211,
+    "mode": "RGB",
+    "format": "PNG",
+    "transmitted_media_type": "image/png",
+    "same_bytes_as_render_source": true,
+    "role": "test5_local_reflow",
+    "authoritative_for_bbox": true,
+    "request_position": 1
+  },
+  "analysis_reference_image": {
+    "path": "D:\\robot\\Documents\\ASK\\picture\\test6\\math\\source\\joint_test_output\\20260827T064815_f4605449dcfb46c592fc6433a7d4aad1\\audit\\test5_enhanced_original.png",
+    "sha256": "43d1230d5895a3861264b2692655b1635506ae5cc9948687be4fc1493a3a307e",
+    "bytes": 4281067,
+    "width": 2595,
+    "height": 1513,
+    "mode": "RGB",
+    "format": "PNG",
+    "transmitted_media_type": "image/png",
+    "same_bytes_as_render_source": false,
+    "role": "test5_enhanced_original_reference",
+    "authoritative_for_bbox": false,
+    "request_position": 2
+  },
+  "illustration_request_images": [
+    {
+      "path": "D:\\robot\\Documents\\ASK\\picture\\test6\\math\\source\\joint_test_output\\20260827T064815_f4605449dcfb46c592fc6433a7d4aad1\\audit\\test5_illustration_crop_01.png",
+      "sha256": "298abb7df062ac042e99180daa7dc261363a684bdb3ef976aeec95c4403cae26",
+      "bytes": 839181,
+      "width": 809,
+      "height": 878,
+      "mode": "RGB",
+      "format": "PNG",
+      "transmitted_media_type": "image/png",
+      "same_bytes_as_render_source": false,
+      "role": "test5_illustration_crop",
+      "authoritative_for_bbox": false,
+      "request_position": 3,
+      "source_crop_index": 1
+    }
+  ],
+  "model_routing": {
+    "tier": "simple",
+    "score": 0,
+    "reasons": [],
+    "part_count": 1,
+    "ocr_character_count": 75,
+    "selected_model_id": "qwen3.7-flash-2026-07-15"
+  },
+  "elapsed_seconds": 8.25
+}

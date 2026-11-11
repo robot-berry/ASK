@@ -1,0 +1,30 @@
+{
+  "name": "representative-four",
+  "description": "Serial middle/high-school live-model canaries; run one new job at a time and review manually.",
+  "cases": [
+    {
+      "id": "high_0401_r1",
+      "image": "../../../../datasets/testzip_math_physics_2000_v3_eink/mathematics/high/q_0401.png",
+      "grade": "high",
+      "tags": ["trigonometry", "no-figure"]
+    },
+    {
+      "id": "high_0402_r1",
+      "image": "../../../../datasets/testzip_math_physics_2000_v3_eink/mathematics/high/q_0402.png",
+      "grade": "high",
+      "tags": ["solid-geometry", "figure"]
+    },
+    {
+      "id": "middle_0153_r1",
+      "image": "../../../../datasets/testzip_math_physics_2000_v3_eink/mathematics/middle/middle_0153.png",
+      "grade": "middle",
+      "tags": ["statistics"]
+    },
+    {
+      "id": "middle_0861_r1",
+      "image": "../../../../datasets/testzip_math_physics_2000_v3_eink/mathematics/middle/q_0861.png",
+      "grade": "middle",
+      "tags": ["geometry", "multi-figure"]
+    }
+  ]
+}

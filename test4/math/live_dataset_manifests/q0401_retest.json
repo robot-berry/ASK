@@ -1,0 +1,12 @@
+{
+  "name": "q0401-retest",
+  "description": "Fresh paid local canary after the captured q_0401 trigonometric-identity repair.",
+  "cases": [
+    {
+      "id": "high_0401_r2",
+      "image": "../../../../datasets/testzip_math_physics_2000_v3_eink/mathematics/high/q_0401.png",
+      "grade": "high",
+      "tags": ["trigonometry", "no-figure", "captured-regression", "post-fix"]
+    }
+  ]
+}

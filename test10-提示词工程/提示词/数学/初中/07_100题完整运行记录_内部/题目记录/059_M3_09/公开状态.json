@@ -1,0 +1,92 @@
+{
+  "job_id": "20261102T094556_c410040ddfbf4e1eb0620f4108c539ee",
+  "status": "failed",
+  "created_at": "2026-11-02T09:45:56.169+00:00",
+  "updated_at": "2026-11-02T09:46:12.670+00:00",
+  "elapsed_seconds": 16.498,
+  "error": {
+    "type": "IsolatedQualityError",
+    "message": "解析未通过本机测试的数学关系、计算或答案边界检查，已停止展示解析，请换题重试或交由老师核查。"
+  },
+  "image_contract": {
+    "valid": true,
+    "expected": [
+      "01_question_knowledge.png",
+      "02_guidance_elite.png",
+      "03_guidance_upper.png",
+      "04_guidance_middle.png",
+      "05_guidance_lower.png",
+      "06_guidance_novice.png"
+    ],
+    "observed": [
+      "01_question_knowledge.png"
+    ],
+    "image_count": 1,
+    "errors": [],
+    "contract": {
+      "width_px": 800,
+      "mode": "L",
+      "format": "PNG",
+      "display_width_cm": 9.0,
+      "height": "content_auto",
+      "image_count": 6,
+      "content_order": [
+        "question_knowledge",
+        "elite",
+        "upper",
+        "middle",
+        "lower",
+        "novice"
+      ]
+    }
+  },
+  "images": [
+    {
+      "filename": "01_question_knowledge.png",
+      "width": 800,
+      "height": 277,
+      "mode": "L",
+      "format": "PNG",
+      "dpi": [
+        225.7806,
+        225.7806
+      ],
+      "display_width_cm": 9.0,
+      "sha256": "d2e65e8724ae5152e7ebd97f68adb606b36735ca49ebf4cd9be9379fcc710c21",
+      "bytes": 14915,
+      "valid": true,
+      "errors": [],
+      "kind": "question_knowledge",
+      "sequence": 1,
+      "url": "/jobs/20261102T094556_c410040ddfbf4e1eb0620f4108c539ee/01_question_knowledge.png"
+    }
+  ],
+  "streaming": {
+    "enabled": true,
+    "published_images": 1,
+    "first_image_provisional": false,
+    "first_image_seconds": 4.243,
+    "first_image_from_created_seconds": 4.247,
+    "first_image_refinement_pending": false,
+    "first_image_refined_seconds": 4.243,
+    "first_guidance_from_created_seconds": null,
+    "model_first_content_ms": null,
+    "initial_first_image_source": "test5-local-ocr-typeset",
+    "first_image_source": "test5-local-ocr-typeset",
+    "model_required_for_first_image": false,
+    "provider_prefix_ms": null,
+    "guidance_tiers": {}
+  },
+  "concurrency": {
+    "ocr_slot_wait_seconds": 0.0,
+    "ocr_slot_processing_seconds": 4.201,
+    "model_slot_wait_seconds": 0.0,
+    "model_call_seconds": 12.242
+  },
+  "scheduler": {
+    "queue_depth_observed": 1,
+    "worker_count": 3,
+    "ocr_concurrency": 2,
+    "model_concurrency": 3
+  }
+}
