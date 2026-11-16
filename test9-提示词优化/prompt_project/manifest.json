@@ -1,0 +1,20 @@
+{
+  "project": "test9-prompt-project",
+  "base": {
+    "math": ["base/math/数学题解析提示词.md", "base/math/数学题解析紧凑提示词.md"],
+    "physics": ["base/physics/物理题解析提示词.md", "base/physics/物理题解析紧凑提示词.md"]
+  },
+  "curriculum": {"math": "curriculum/math", "physics": "curriculum/physics"},
+  "test10": "test10/提示词",
+  "math_guidance": {
+    "version": "math_unified_v1",
+    "template": "prompts/统一数学提示词.md",
+    "runtime_loader": "test10_prompts.py",
+    "purpose": "Test9 数学五层思路引导；按学期和题面抽取统一文件内部专题段"
+  },
+  "seal": {
+    "version_registry": "registry.json",
+    "template": "prompts/seal_generation_v1.md",
+    "schema": "schemas/seal_generation_v1.schema.json"
+  }
+}

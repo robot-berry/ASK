@@ -7,6 +7,7 @@ prompt_root = project / '提示词'
 math_root = prompt_root / '数学'
 compact_path = project.parents[1] / 'picture/test9-提示词优化/math/source/数学题解析紧凑提示词.md'
 out = prompt_root / '统一数学提示词.md'
+central_out = project.parents[1] / 'picture/test9-提示词优化/prompt_project/prompts/统一数学提示词.md'
 
 
 def first_heading(text):
@@ -96,6 +97,9 @@ parts.append('''
 ''')
 
 out.write_text(''.join(parts).rstrip() + '\n', encoding='utf-8')
+central_out.parent.mkdir(parents=True, exist_ok=True)
+central_out.write_text(out.read_text(encoding='utf-8'), encoding='utf-8')
 print(json.dumps({'output': str(out), 'sections': len(files),
+                   'central_output': str(central_out),
                    'chars': len(out.read_text(encoding='utf-8')),
                    'bytes': out.stat().st_size}, ensure_ascii=False))
