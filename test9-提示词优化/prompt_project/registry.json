@@ -1,0 +1,21 @@
+{
+  "project": "stateless-seal-prompts",
+  "current_version": "seal_generation_v1",
+  "versions": {
+    "seal_generation_v1": {
+      "status": "active",
+      "template": "prompts/seal_generation_v1.md",
+      "schema": "schemas/seal_generation_v1.schema.json",
+      "purpose": "Generate three complete single-choice math seal questions from one search result",
+      "required_variables": [
+        "request_id",
+        "question_text",
+        "knowledge",
+        "l2",
+        "l3",
+        "l4"
+      ],
+      "validator_contract": "test11-complete-mcq-v3"
+    }
+  }
+}
