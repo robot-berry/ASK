@@ -1,0 +1,340 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>高中数学 · 提取进度</title><style>
+:root{
+  color-scheme:light;
+  --surface:#fcfcfb; --plane:#f9f9f7; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,.10);
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --good:#0ca30c; --warning:#fab219; --critical:#d03b3b;
+}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){
+  color-scheme:dark;
+  --surface:#1a1a19; --plane:#0d0d0d; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --surface:#1a1a19; --plane:#0d0d0d; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,.10);
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+}
+*{box-sizing:border-box}
+body{margin:0;padding:32px;background:var(--plane);color:var(--ink);
+  font:14px/1.55 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+.wrap{max-width:1040px;margin:0 auto}
+h1{font-size:22px;margin:0 0 4px}
+.sub{color:var(--ink2);margin:0 0 24px}
+.card{background:var(--surface);border:1px solid var(--ring);border-radius:10px;padding:20px;margin-bottom:16px}
+h2{font-size:15px;margin:0 0 14px;font-weight:600}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(184px,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--ring);border-radius:10px;padding:14px 16px}
+.tile .k{color:var(--ink2);font-size:12px}
+.tile .v{font-size:26px;font-weight:600;margin-top:2px}
+.tile .d{color:var(--muted);font-size:12px}
+.legend{display:flex;gap:18px;color:var(--ink2);font-size:12px;margin-bottom:10px;flex-wrap:wrap}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.row{display:grid;grid-template-columns:88px 1fr 132px;align-items:center;gap:12px;
+  padding:5px 0}
+.row .lbl{color:var(--ink2)}
+.track{display:flex;height:14px;border-radius:4px;overflow:hidden;background:var(--grid);gap:2px}
+.seg{height:100%}
+.seg:first-child{border-radius:4px 0 0 4px}
+.seg:last-child{border-radius:0 4px 4px 0}
+.num{font-variant-numeric:tabular-nums;color:var(--ink2);font-size:12px;text-align:right}
+.hdr{display:grid;grid-template-columns:88px 1fr 132px;gap:12px;color:var(--muted);font-size:11px;
+  border-bottom:1px solid var(--grid);padding-bottom:4px;margin-bottom:4px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--grid);font-variant-numeric:tabular-nums}
+th{color:var(--ink2);font-weight:600;font-size:12px}
+td.src{font-family:ui-monospace,Consolas,monospace;font-size:11.5px;word-break:break-all}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--ink)}
+.dot{width:8px;height:8px;border-radius:50%}
+details summary{cursor:pointer;color:var(--ink2);font-size:13px}
+.note{color:var(--muted);font-size:12px}
+button{font:inherit;font-size:12px;padding:4px 10px;border-radius:6px;border:1px solid var(--ring);
+  background:var(--surface);color:var(--ink2);cursor:pointer}
+</style></head><body><div class="wrap">
+<h1>高中数学 · 提取进度</h1>
+<p class="sub">题库中共 1001 个高中文件 · 文本已可用 1001（100%） · PDF 页级 OCR 36535/36535 页（100%） · 知识主题文件夹 38（1868 条思路）</p>
+<div class="tiles">
+<div class="tile"><div class="k">1 资料盘点</div><div class="v">100%</div><div class="d">1001 个文件已登记</div></div>
+<div class="tile"><div class="k">2 文本可提取</div><div class="v">100%</div><div class="d">1001/1001 个文件</div></div>
+<div class="tile"><div class="k">3 OCR 扫描件</div><div class="v">100.0%</div><div class="d">36535/36535 页 · 扫完 515/515 份</div></div>
+<div class="tile"><div class="k">4 知识框架</div><div class="v">38/38</div><div class="d">主题文件夹 · 1868 条思路</div></div>
+<div class="tile"><div class="k">5 思路提取</div><div class="v">1868</div><div class="d">条思路（含 OCR 增补 5202 条要点）· 依据覆盖 146/151 份来源</div></div>
+<div class="tile"><div class="k">6 题库精读</div><div class="v">30/30</div><div class="d">份来源通读完毕 · 入库 1476 条精读条目</div></div>
+</div>
+<div class="card" style="margin-top:16px"><h2>来源 · 页级 OCR 进度</h2>
+<p class="note">页数以 PDF 实际页数为准（<code>_tools/page_counts.py</code> 缓存）；未开始的 PDF 也计入分母。</p>
+<table><thead><tr><th>资料</th><th>文件</th><th>已识别 / 总页</th><th>进度</th></tr></thead><tbody>
+<tr><td class="src">2026怎样解题-高中数学解题方法与技巧.pdf</td><td>1/1 份</td><td>324 / 324</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:324;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">43、更高更妙的高中数学思想与方法第16版.pdf</td><td>1/1 份</td><td>537 / 537</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:537;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">《高考数学•优质解法》（405P）.pdf</td><td>1/1 份</td><td>405 / 405</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:405;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">高中数学•解题黄金模版_2023.pdf</td><td>1/1 份</td><td>298 / 298</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:298;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">高中数学三年核心知识点汇总-924e19d85929.pdf</td><td>1/1 份</td><td>101 / 101</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:101;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">高中数学各题型通用答题模板 必背公式.pdf</td><td>1/1 份</td><td>35 / 35</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:35;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">高中数学学习思维与解题通法（第2版）去水印版.pdf</td><td>1/1 份</td><td>358 / 358</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:358;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">高中数学破题36大招(详例精编).pdf</td><td>1/1 份</td><td>224 / 224</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:224;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">高中数学解题方法.pdf</td><td>1/1 份</td><td>405 / 405</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:405;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">高中数学解题方法与技巧_《中学生学习报》编辑部编1987.pdf</td><td>1/1 份</td><td>187 / 187</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:187;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">02-【数学】解题觉醒27版</td><td>6/6 份</td><td>555 / 555</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:555;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">170.高中数学万能解题模版大全解析方法共484页PDF电子版</td><td>1/1 份</td><td>484 / 484</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:484;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">2026版高中数学知识点归纳及题型方法总结手册填空版和背记版</td><td>2/2 份</td><td>186 / 186</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:186;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">2026重难点培优讲义</td><td>2/2 份</td><td>668 / 668</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:668;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">2026高考数学全基础题型</td><td>2/2 份</td><td>837 / 837</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:837;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">2027年高考数学一轮复习讲义</td><td>188/188 份</td><td>6522 / 6522</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:6522;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">2027版 数学核心方法 高一 高二 高三</td><td>3/3 份</td><td>989 / 989</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:989;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">46.中学手绘数学知识点总结</td><td>4/4 份</td><td>598 / 598</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:598;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">A279   2025届新高考数学必刷题5000题</td><td>188/188 份</td><td>4484 / 4484</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:4484;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">BFD240911</td><td>1/1 份</td><td>405 / 405</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:405;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">G 规避高中数学130个易错点</td><td>1/1 份</td><td>76 / 76</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:76;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">G 高中数学必背公式大全</td><td>3/3 份</td><td>63 / 63</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:63;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">GZSX012复旦附中高中数学二级结论记背手册P39- 25年无水印</td><td>1/1 份</td><td>39 / 39</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:39;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">【024】高中数学知识点速查速记</td><td>1/1 份</td><td>207 / 207</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:207;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">【187】高中数学 秒杀公式+核心知识点+二级结论</td><td>3/3 份</td><td>44 / 44</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:44;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">【4B24】高中数学手写笔记（一线）数学知识点梳理笔记纯手写非常经典75页</td><td>2/2 份</td><td>233 / 233</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:233;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">【A049】高考数学解题模型一本通</td><td>3/3 份</td><td>750 / 750</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:750;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">【B83】289个高中数学解题秒杀公式(1)</td><td>1/1 份</td><td>14 / 14</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:14;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">【C0388】新高考高中数学知识点总结全归纳电子版选修必修公式定理word素材</td><td>9/9 份</td><td>331 / 331</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:331;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">文档</td><td>4/4 份</td><td>952 / 952</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:952;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">新高考高中数学《题型总结》+高一高二培优压轴专练</td><td>20/20 份</td><td>5743 / 5743</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:5743;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">浙大优辅-高中数学各个击破（全套23册）</td><td>23/23 份</td><td>2270 / 2270</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:2270;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">王文勇高考数学大招集锦【26-25】</td><td>24/24 份</td><td>5132 / 5132</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:5132;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">蒋老师高一数学+高二</td><td>9/9 份</td><td>1252 / 1252</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:1252;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">高中数学必背知识点手册</td><td>1/1 份</td><td>125 / 125</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:125;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">高中数学方法题型一本通</td><td>2/2 份</td><td>478 / 478</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:478;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">高考数学破题36招</td><td>1/1 份</td><td>224 / 224</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:224;background:var(--s3)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+</tbody></table></div>
+<div class="card"><h2>分学期提取情况</h2>
+<div class="legend">
+<span><i class="sw" style="background:var(--s1)"></i>docx 文本层（已提取）</span>
+<span><i class="sw" style="background:var(--s3)"></i>PDF 已扫完</span>
+<span><i class="sw" style="background:var(--warning)"></i>PDF 进行中（有 PARTIAL）</span>
+<span><i class="sw" style="background:var(--grid)"></i>PDF 未开始</span>
+</div>
+<div class="hdr"><span>学期</span><span>文件构成</span><span>文本可用 / 总数</span></div>
+<div class="row">
+<span class="lbl">高一/上</span>
+<div class="track" role="img" aria-label="6 个 docx 文本层">
+<span class="seg" style="flex:6;background:var(--s1)" title="高一/上 · docx 文本层：6"></span>
+</div>
+<span class="num">6 / 6　·　6 主题</span>
+</div>
+<div class="row">
+<span class="lbl">高一/下</span>
+<div class="track" role="img" aria-label="5 个 docx 文本层">
+<span class="seg" style="flex:5;background:var(--s1)" title="高一/下 · docx 文本层：5"></span>
+</div>
+<span class="num">5 / 5　·　6 主题</span>
+</div>
+<div class="row">
+<span class="lbl">高二/上</span>
+<div class="track" role="img" aria-label="3 个 docx 文本层，2 个 PDF 已扫完">
+<span class="seg" style="flex:3;background:var(--s1)" title="高二/上 · docx 文本层：3"></span>
+<span class="seg" style="flex:2;background:var(--s3)" title="高二/上 · PDF 已扫完：2"></span>
+</div>
+<span class="num">5 / 5　·　3 主题</span>
+</div>
+<div class="row">
+<span class="lbl">高二/下</span>
+<div class="track" role="img" aria-label="5 个 docx 文本层，3 个 PDF 已扫完">
+<span class="seg" style="flex:5;background:var(--s1)" title="高二/下 · docx 文本层：5"></span>
+<span class="seg" style="flex:3;background:var(--s3)" title="高二/下 · PDF 已扫完：3"></span>
+</div>
+<span class="num">8 / 8　·　5 主题</span>
+</div>
+<div class="row">
+<span class="lbl">高三/上</span>
+<div class="track" role="img" aria-label="461 个 docx 文本层，486 个 PDF 已扫完">
+<span class="seg" style="flex:461;background:var(--s1)" title="高三/上 · docx 文本层：461"></span>
+<span class="seg" style="flex:486;background:var(--s3)" title="高三/上 · PDF 已扫完：486"></span>
+</div>
+<span class="num">947 / 947　·　9 主题</span>
+</div>
+<div class="row">
+<span class="lbl">高三/下</span>
+<div class="track" role="img" aria-label="6 个 docx 文本层，24 个 PDF 已扫完">
+<span class="seg" style="flex:6;background:var(--s1)" title="高三/下 · docx 文本层：6"></span>
+<span class="seg" style="flex:24;background:var(--s3)" title="高三/下 · PDF 已扫完：24"></span>
+</div>
+<span class="num">30 / 30　·　9 主题</span>
+</div>
+</div>
+<div class="card"><h2>解题思路 · 依据覆盖</h2><p class="note">「已用作依据」= 该来源出现在某个 <code>解题思路.md</code> 的「依据」中（顶部出处，或增补节里逐讲的「依据」行）；「可作依据」= 题库里同类的文件数。这一步与 OCR 进度无关：思路是从 docx 与已扫出的 OCR 文本里读出来的。</p><table><thead><tr><th>来源</th><th>已用作依据</th><th>可作依据</th><th>进度</th></tr></thead><tbody>
+<tr><td class="src">一轮复习讲义·解析版</td><td>93</td><td>94</td><td><div class="track" role="img" aria-label="99%" style="width:160px"><span class="seg" style="flex:93;background:var(--s1)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">各专题解题技巧·解析版</td><td>26</td><td>26</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:26;background:var(--s1)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">蒋老师章节 docx</td><td>19</td><td>19</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:19;background:var(--s1)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">A049 解题模型一本通</td><td>2</td><td>6</td><td><div class="track" role="img" aria-label="33%" style="width:160px"><span class="seg" style="flex:2;background:var(--s1)"></span><span class="seg" style="flex:4;background:var(--grid)"></span></div></td></tr>
+<tr><td class="src">王文勇大招集锦 docx</td><td>6</td><td>6</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:6;background:var(--s1)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td></tr>
+</tbody></table></div>
+<div class="card"><h2>解题思路 · 题库精读（其他题库来源）</h2><p class="note">逐个来源通读 <code>题库/</code> 里的方法类资料，把书中方法写成条目并入对应主题的「其他题库来源精读」节。已读完全书 30/30 份，入库 1476 条。「读到页」= 该来源在 <code>解题思路.md</code> 中被引用到的最大页码；进度条只反映被引用的页段覆盖，未到末尾的多是书末答案页、附录或尚未派出的页段。</p><table><thead><tr><th>来源</th><th>总页</th><th>读到页</th><th>条目</th><th>进度</th><th>状态</th></tr></thead><tbody>
+<tr><td>A049</td><td>428</td><td>425</td><td>99</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:425;background:var(--s1)"></span><span class="seg" style="flex:3;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>浙大优辅</td><td>2270</td><td>23/23 册已读</td><td>338</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>核心方法高三</td><td>351</td><td>246</td><td>51</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:246;background:var(--s1)"></span><span class="seg" style="flex:105;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>核心方法高一</td><td>303</td><td>222</td><td>37</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:222;background:var(--s1)"></span><span class="seg" style="flex:81;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>核心方法高二</td><td>335</td><td>196</td><td>13</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:196;background:var(--s1)"></span><span class="seg" style="flex:139;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>申老师必修1</td><td>333</td><td>333</td><td>105</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:333;background:var(--s1)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>申老师必修2</td><td>276</td><td>274</td><td>54</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:274;background:var(--s1)"></span><span class="seg" style="flex:2;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>申老师选修1</td><td>352</td><td>352</td><td>56</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:352;background:var(--s1)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>申老师选修2</td><td>300</td><td>254</td><td>41</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:254;background:var(--s1)"></span><span class="seg" style="flex:46;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>申老师选修3</td><td>162</td><td>162</td><td>29</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:162;background:var(--s1)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>高一培优必修1</td><td>247</td><td>214</td><td>35</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:214;background:var(--s1)"></span><span class="seg" style="flex:33;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>高一培优必修2</td><td>290</td><td>281</td><td>45</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:281;background:var(--s1)"></span><span class="seg" style="flex:9;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>高二培优选修1</td><td>329</td><td>329</td><td>14</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:329;background:var(--s1)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>重难点培优</td><td>452</td><td>423</td><td>45</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:423;background:var(--s1)"></span><span class="seg" style="flex:29;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>更高更妙</td><td>537</td><td>432</td><td>42</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:432;background:var(--s1)"></span><span class="seg" style="flex:105;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>小白书</td><td>501</td><td>498</td><td>84</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:498;background:var(--s1)"></span><span class="seg" style="flex:3;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>万能模板</td><td>484</td><td>237</td><td>13</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:237;background:var(--s1)"></span><span class="seg" style="flex:247;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>优质解法</td><td>405</td><td>405</td><td>99</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:405;background:var(--s1)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>解题方法</td><td>405</td><td>405</td><td>63</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:405;background:var(--s1)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>解题通法</td><td>358</td><td>300</td><td>19</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:300;background:var(--s1)"></span><span class="seg" style="flex:58;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>怎样解题</td><td>324</td><td>246</td><td>9</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:246;background:var(--s1)"></span><span class="seg" style="flex:78;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>黄金模板</td><td>298</td><td>234</td><td>18</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:234;background:var(--s1)"></span><span class="seg" style="flex:64;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>方法题型一本通</td><td>252</td><td>197</td><td>14</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:197;background:var(--s1)"></span><span class="seg" style="flex:55;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>破题36招</td><td>224</td><td>217</td><td>35</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:217;background:var(--s1)"></span><span class="seg" style="flex:7;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>解题觉醒大招册</td><td>137</td><td>65</td><td>6</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:65;background:var(--s1)"></span><span class="seg" style="flex:72;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>解题觉醒解析册</td><td>219</td><td>218</td><td>11</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:218;background:var(--s1)"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>1987解题方法</td><td>187</td><td>178</td><td>38</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:178;background:var(--s1)"></span><span class="seg" style="flex:9;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>函数篇</td><td>238</td><td>216</td><td>15</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:216;background:var(--s1)"></span><span class="seg" style="flex:22;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>申老师一轮一册</td><td>279</td><td>260</td><td>23</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:260;background:var(--s1)"></span><span class="seg" style="flex:19;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+<tr><td>申老师一轮二册</td><td>322</td><td>298</td><td>25</td><td><div class="track" role="img" aria-label="100%" style="width:150px"><span class="seg" style="flex:298;background:var(--s1)"></span><span class="seg" style="flex:24;background:var(--grid)"></span></div></td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已读完</span></td></tr>
+</tbody></table></div>
+<div class="card"><h2>解题思路 · 分模块（一轮复习讲义）</h2><p class="note">按讲号归入高三上学期 9 个模块文件夹（讲号与模块有重叠：35/36/38/39 归平面向量，37 归三角形，85—87 归集合逻辑与计数原理）。「读到末页」= 该讲已 OCR 的页全部读过；其余讲只读过扫描已到达的前段（浅色段），尾页扫完后在「增补二」「增补三」节补记。</p><table><thead><tr><th>模块</th><th>已提取讲数</th><th>总讲数</th><th>进度</th><th>读到末页</th></tr></thead><tbody>
+<tr><td class="src">01-函数与导数</td><td>22</td><td>22</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:22;background:var(--s1)"></span><span class="seg" style="flex:0;background:var(--s1);opacity:.45"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td>22</td></tr>
+<tr><td class="src">02-不等式</td><td>4</td><td>4</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:4;background:var(--s1)"></span><span class="seg" style="flex:0;background:var(--s1);opacity:.45"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td>4</td></tr>
+<tr><td class="src">03-三角函数与解三角形</td><td>8</td><td>8</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:8;background:var(--s1)"></span><span class="seg" style="flex:0;background:var(--s1);opacity:.45"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td>8</td></tr>
+<tr><td class="src">04-平面向量与复数</td><td>4</td><td>4</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:4;background:var(--s1)"></span><span class="seg" style="flex:0;background:var(--s1);opacity:.45"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td>4</td></tr>
+<tr><td class="src">05-立体几何</td><td>11</td><td>11</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:11;background:var(--s1)"></span><span class="seg" style="flex:0;background:var(--s1);opacity:.45"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td>11</td></tr>
+<tr><td class="src">06-数列</td><td>6</td><td>6</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:6;background:var(--s1)"></span><span class="seg" style="flex:0;background:var(--s1);opacity:.45"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td>6</td></tr>
+<tr><td class="src">07-概率统计</td><td>8</td><td>8</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:8;background:var(--s1)"></span><span class="seg" style="flex:0;background:var(--s1);opacity:.45"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td>8</td></tr>
+<tr><td class="src">08-解析几何</td><td>26</td><td>26</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:26;background:var(--s1)"></span><span class="seg" style="flex:0;background:var(--s1);opacity:.45"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td>26</td></tr>
+<tr><td class="src">09-集合逻辑与计数原理</td><td>4</td><td>4</td><td><div class="track" role="img" aria-label="100%" style="width:160px"><span class="seg" style="flex:4;background:var(--s1)"></span><span class="seg" style="flex:0;background:var(--s1);opacity:.45"></span><span class="seg" style="flex:1;background:var(--grid)"></span></div></td><td>4</td></tr>
+</tbody></table></div>
+<div class="card"><h2>OCR 页级进度（未扫完的先列）</h2><table><thead><tr><th>学期</th><th>PDF</th><th>已识别</th><th>总页数</th><th>剩余</th><th>状态</th></tr></thead><tbody>
+<tr><td>高三/上</td><td class="src">2026怎样解题-高中数学解题方法与技巧.pdf</td><td>324</td><td>324</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">43、更高更妙的高中数学思想与方法第16版.pdf</td><td>537</td><td>537</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">《高考数学•优质解法》（405P）.pdf</td><td>405</td><td>405</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">高中数学•解题黄金模版_2023.pdf</td><td>298</td><td>298</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">高中数学三年核心知识点汇总-924e19d85929.pdf</td><td>101</td><td>101</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">高中数学各题型通用答题模板 必背公式.pdf</td><td>35</td><td>35</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">高中数学学习思维与解题通法（第2版）去水印版.pdf</td><td>358</td><td>358</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">高中数学破题36大招(详例精编).pdf</td><td>224</td><td>224</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">高中数学解题方法.pdf</td><td>405</td><td>405</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">高中数学解题方法与技巧_《中学生学习报》编辑部编1987.pdf</td><td>187</td><td>187</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">数学封面.pdf</td><td>1</td><td>1</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">数学解题觉醒-第1册 主书.pdf</td><td>183</td><td>183</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">数学解题觉醒-第1册 主书文档提取2026.03.29 19.48.pdf</td><td>11</td><td>11</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">数学解题觉醒-第2册 名师大招册.pdf</td><td>137</td><td>137</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">数学解题觉醒-第3册 大招解析册.pdf</td><td>219</td><td>219</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">考前急救图.pdf</td><td>4</td><td>4</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">高中数学万能解题模板.pdf</td><td>484</td><td>484</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">2026高中数学填空版《知识点归纳及题型方法总结手册》.pdf</td><td>93</td><td>93</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">2026高中数学背记版《知识点归纳及题型方法总结手册》.pdf</td><td>93</td><td>93</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">2026重难点培优讲义学生版.pdf</td><td>216</td><td>216</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">2026重难点培优讲义教师版.pdf</td><td>452</td><td>452</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">2026版小白书【电子版PDF】包含全内容，无水印.pdf</td><td>501</td><td>501</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">2026版答案【电子PDF】.pdf</td><td>336</td><td>336</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">目录.pdf</td><td>21</td><td>21</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第10讲对数与对数函数.pdf</td><td>9</td><td>9</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第11讲函数的图像.pdf</td><td>15</td><td>15</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第12讲函数与方程.pdf</td><td>11</td><td>11</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第13讲函数模型及其应用.pdf</td><td>9</td><td>9</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第14讲导数的概念与运算.pdf</td><td>14</td><td>14</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第15讲单调性问题.pdf</td><td>16</td><td>16</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第16讲极值与最值.pdf</td><td>12</td><td>12</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第17讲幂指对比较大小.pdf</td><td>11</td><td>11</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第18讲函数的综合应用.pdf</td><td>13</td><td>13</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第19讲原函数与导函数混合还原.pdf</td><td>18</td><td>18</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第1讲集合.pdf</td><td>8</td><td>8</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第20讲三次函数的图象和性质.pdf</td><td>17</td><td>17</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第21讲极值点偏移.pdf</td><td>19</td><td>19</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第22讲双变量问题.pdf</td><td>14</td><td>14</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第23讲不等式恒成立.pdf</td><td>22</td><td>22</td><td>—</td><td>已扫完</td></tr>
+<tr><td>高三/上</td><td class="src">第24讲不等式的证明问题.pdf</td><td>18</td><td>18</td><td>—</td><td>已扫完</td></tr>
+</tbody></table><p class="note">共 515 份 PDF 已有 OCR 文本，此处按剩余页数列出前 40 份。每轮每份最多约 180 秒（且至少 10 页），末尾标注 PARTIAL，下一轮从断点续扫。</p></div>
+<div class="card"><h2>来源资料清单（按顶层文件夹）</h2>
+<table><thead><tr><th>资料</th><th>文件数</th><th>文本可用</th><th>待 OCR</th><th>状态</th></tr></thead><tbody>
+<tr><td class="src">2027年高考数学一轮复习讲义</td><td>374</td><td>374</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">A279   2025届新高考数学必刷题5000题</td><td>374</td><td>374</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">高中数学各专题解题技巧</td><td>53</td><td>53</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">【C0388】新高考高中数学知识点总结全归纳电子版选修必修公式定理word素材</td><td>35</td><td>35</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">王文勇高考数学大招集锦【26-25】</td><td>30</td><td>30</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">蒋老师高一数学+高二</td><td>28</td><td>28</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">新高考高中数学《题型总结》+高一高二培优压轴专练</td><td>24</td><td>24</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">浙大优辅-高中数学各个击破（全套23册）</td><td>23</td><td>23</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">02-【数学】解题觉醒27版</td><td>6</td><td>6</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">【A049】高考数学解题模型一本通</td><td>6</td><td>6</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">文档</td><td>6</td><td>6</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">46.中学手绘数学知识点总结</td><td>4</td><td>4</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">2027版 数学核心方法 高一 高二 高三</td><td>3</td><td>3</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">G 高中数学必背公式大全</td><td>3</td><td>3</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">【187】高中数学 秒杀公式+核心知识点+二级结论</td><td>3</td><td>3</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">2026版高中数学知识点归纳及题型方法总结手册填空版和背记版</td><td>2</td><td>2</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">2026重难点培优讲义</td><td>2</td><td>2</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">2026高考数学全基础题型</td><td>2</td><td>2</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">【4B24】高中数学手写笔记（一线）数学知识点梳理笔记纯手写非常经典75页</td><td>2</td><td>2</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">高中数学方法题型一本通</td><td>2</td><td>2</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">2026怎样解题-高中数学解题方法与技巧.pdf</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">43、更高更妙的高中数学思想与方法第16版.pdf</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">《高考数学•优质解法》（405P）.pdf</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">高中数学•解题黄金模版_2023.pdf</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">高中数学三年核心知识点汇总-924e19d85929.pdf</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">高中数学各题型通用答题模板 必背公式.pdf</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">高中数学学习思维与解题通法（第2版）去水印版.pdf</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">高中数学破题36大招(详例精编).pdf</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">高中数学解题方法.pdf</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">高中数学解题方法与技巧_《中学生学习报》编辑部编1987.pdf</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">17.高中高三高考总复习知识解题技巧归纳总结教程材资料提分课程重点</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">170.高中数学万能解题模版大全解析方法共484页PDF电子版</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">BFD240911</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">G 规避高中数学130个易错点</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">GZSX012复旦附中高中数学二级结论记背手册P39- 25年无水印</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">【024】高中数学知识点速查速记</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">【B83】289个高中数学解题秒杀公式(1)</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">高中数学必背知识点手册</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+<tr><td class="src">高考数学破题36招</td><td>1</td><td>1</td><td>0</td><td><span class="badge"><i class="dot" style="background:var(--good)"></i>已提取</span></td></tr>
+</tbody></table>
+</div>
+<div class="card"><h2>主题明细（思路条目 / 知识点条目）</h2><table><thead><tr><th>学期</th><th>主题文件夹</th><th>思路条目</th><th>引用来源</th><th>其中 PDF</th><th>知识点条目</th></tr></thead><tbody>
+<tr><td>高一/上</td><td class="src">00-必备数值</td><td>4</td><td>1</td><td>0</td><td>9</td></tr>
+<tr><td>高一/上</td><td class="src">01-集合与逻辑</td><td>30</td><td>6</td><td>4</td><td>7</td></tr>
+<tr><td>高一/上</td><td class="src">02-一元二次函数方程与不等式</td><td>46</td><td>9</td><td>6</td><td>9</td></tr>
+<tr><td>高一/上</td><td class="src">03-函数的概念与性质</td><td>121</td><td>13</td><td>7</td><td>13</td></tr>
+<tr><td>高一/上</td><td class="src">04-指数与对数函数</td><td>42</td><td>8</td><td>4</td><td>10</td></tr>
+<tr><td>高一/上</td><td class="src">05-三角函数</td><td>62</td><td>10</td><td>6</td><td>14</td></tr>
+<tr><td>高一/下</td><td class="src">01-平面向量</td><td>37</td><td>9</td><td>5</td><td>10</td></tr>
+<tr><td>高一/下</td><td class="src">02-解三角形</td><td>31</td><td>8</td><td>4</td><td>7</td></tr>
+<tr><td>高一/下</td><td class="src">03-立体几何初步</td><td>71</td><td>8</td><td>5</td><td>11</td></tr>
+<tr><td>高一/下</td><td class="src">04-统计</td><td>32</td><td>7</td><td>5</td><td>6</td></tr>
+<tr><td>高一/下</td><td class="src">05-概率</td><td>23</td><td>8</td><td>5</td><td>6</td></tr>
+<tr><td>高一/下</td><td class="src">06-复数</td><td>14</td><td>6</td><td>4</td><td>6</td></tr>
+<tr><td>高二/上</td><td class="src">01-空间向量与立体几何</td><td>48</td><td>7</td><td>4</td><td>10</td></tr>
+<tr><td>高二/上</td><td class="src">02-直线与圆</td><td>50</td><td>11</td><td>7</td><td>12</td></tr>
+<tr><td>高二/上</td><td class="src">03-圆锥曲线</td><td>71</td><td>13</td><td>7</td><td>21</td></tr>
+<tr><td>高二/下</td><td class="src">01-数列</td><td>52</td><td>13</td><td>7</td><td>11</td></tr>
+<tr><td>高二/下</td><td class="src">02-导数及其应用</td><td>72</td><td>12</td><td>6</td><td>15</td></tr>
+<tr><td>高二/下</td><td class="src">03-计数原理</td><td>39</td><td>9</td><td>5</td><td>7</td></tr>
+<tr><td>高二/下</td><td class="src">04-随机变量与分布</td><td>36</td><td>10</td><td>5</td><td>7</td></tr>
+<tr><td>高二/下</td><td class="src">05-统计案例</td><td>21</td><td>7</td><td>4</td><td>5</td></tr>
+<tr><td>高三/上</td><td class="src">01-函数与导数</td><td>157</td><td>44</td><td>30</td><td>17</td></tr>
+<tr><td>高三/上</td><td class="src">02-不等式</td><td>41</td><td>19</td><td>14</td><td>9</td></tr>
+<tr><td>高三/上</td><td class="src">03-三角函数与解三角形</td><td>84</td><td>23</td><td>14</td><td>10</td></tr>
+<tr><td>高三/上</td><td class="src">04-平面向量与复数</td><td>51</td><td>17</td><td>11</td><td>6</td></tr>
+<tr><td>高三/上</td><td class="src">05-立体几何</td><td>79</td><td>25</td><td>18</td><td>7</td></tr>
+<tr><td>高三/上</td><td class="src">06-数列</td><td>92</td><td>25</td><td>16</td><td>7</td></tr>
+<tr><td>高三/上</td><td class="src">07-概率统计</td><td>50</td><td>19</td><td>14</td><td>6</td></tr>
+<tr><td>高三/上</td><td class="src">08-解析几何</td><td>176</td><td>46</td><td>37</td><td>10</td></tr>
+<tr><td>高三/上</td><td class="src">09-集合逻辑与计数原理</td><td>52</td><td>18</td><td>13</td><td>4</td></tr>
+<tr><td>高三/下</td><td class="src">01-选填策略</td><td>13</td><td>6</td><td>4</td><td>6</td></tr>
+<tr><td>高三/下</td><td class="src">02-函数与导数压轴</td><td>37</td><td>12</td><td>7</td><td>11</td></tr>
+<tr><td>高三/下</td><td class="src">03-不等式与代数变形</td><td>21</td><td>8</td><td>4</td><td>5</td></tr>
+<tr><td>高三/下</td><td class="src">04-三角与解三角形压轴</td><td>5</td><td>4</td><td>0</td><td>4</td></tr>
+<tr><td>高三/下</td><td class="src">05-向量与立体几何</td><td>5</td><td>5</td><td>2</td><td>5</td></tr>
+<tr><td>高三/下</td><td class="src">06-数列压轴</td><td>26</td><td>11</td><td>4</td><td>6</td></tr>
+<tr><td>高三/下</td><td class="src">07-概率统计</td><td>10</td><td>5</td><td>2</td><td>4</td></tr>
+<tr><td>高三/下</td><td class="src">08-圆锥曲线压轴</td><td>45</td><td>12</td><td>7</td><td>15</td></tr>
+<tr><td>高三/下</td><td class="src">09-新题型与应试</td><td>22</td><td>10</td><td>8</td><td>5</td></tr>
+</tbody></table>
+<p class="note">OCR 结果写入 <code>题库/_ocr/</code>。重新生成：<code>python -I _tools/build_progress.py</code></p></div>
+</div></body></html>
